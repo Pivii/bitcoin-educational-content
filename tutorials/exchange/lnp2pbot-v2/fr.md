@@ -1,6 +1,5 @@
 ---
-name: LN P2P Bot v2
-
+name: LNP2PBot
 description: Guide complet pour utiliser LNP2PBot et échanger des bitcoins en P2P
 ---
 
@@ -79,58 +78,78 @@ Commencez par installer un portefeuille Lightning compatible. Voici nos recomman
 1. Ouvrez Telegram
 2. Recherchez "@lnp2pBot" dans la barre de recherche
 3. Cliquez sur "Start" ou envoyez la commande "/start"
-4. Le bot vous guidera à travers la configuration initiale
+4. Le bot vous demandera de créer un nom d'utilisateur (pseudo) si vous n'en avez pas encore
+5. Le bot vous guidera à travers la configuration initiale
 
 ## 3. Rejoindre la communauté
 
 - Rejoignez le canal principal : @lnp2pbot_marketplace
-- Pour les francophones : @lnp2pbot_fr
 - Canal des annonces : @lnp2pbot_exchange
 
-# Comment Acheter des Bitcoins
+# Acheter et Vendre des Bitcoins
 
-## 1. Trouver une offre de vente
+Il existe deux méthodes principales pour échanger des bitcoins sur LNP2PBot :
+1. Parcourir et répondre aux offres existantes dans le marketplace
+2. Créer sa propre offre d'achat ou de vente
 
-Deux méthodes sont possibles :
+Dans ce guide, nous allons voir en détail comment :
+- Acheter des bitcoins à partir d'une offre existante
+- Vendre des bitcoins en créant votre propre offre
 
-1. **Parcourir les offres existantes** :
-   - Utilisez la commande `/p2p` pour voir les offres actives
-   - Filtrez par devise avec `/p2p EUR` (exemple pour l'euro)
+## Comment Acheter des Bitcoins
 
-2. **Créer votre propre ordre d'achat** :
-   - Utilisez `/buy [montant] [devise]`
-   - Exemple : `/buy 100 EUR`
+### 1. Trouver et sélectionner une offre
 
-## 2. Répondre à une offre
+![Sélection d'une offre de vente](assets/1.webp)
+Parcourez les offres dans @lnp2pbot_marketplace et cliquez sur le bouton "Buy" sous l'annonce qui vous intéresse.
 
-1. Cliquez sur le bouton "TAKE OFFER" sous l'annonce
-2. Suivez les instructions du bot
-3. Confirmez les détails de la transaction
-4. Le vendeur recevra une notification
+### 2. Valider l'offre et le montant
 
-## 3. Processus de paiement
+![Validation de l'offre](assets/2.webp)
+1. Confirmez votre choix de l'offre
+2. Indiquez le montant en devise fiat que vous souhaitez acheter
+3. Le bot vous demandera de fournir une facture Lightning (invoice) correspondant au montant en satoshis
 
-1. Attendez que le vendeur verrouille les bitcoins en escrow
-2. Effectuez le paiement via la méthode convenue
-3. Confirmez le paiement dans le chat
-4. Les bitcoins seront automatiquement envoyés à votre portefeuille
+### 3. Mise en relation avec le vendeur
 
-# Comment Vendre des Bitcoins
+![Mise en relation](assets/3.webp)
+Une fois l'invoice envoyée, le bot vous met en relation avec le vendeur.
 
-## 1. Créer une offre de vente
+### 4. Communication avec le vendeur
 
-1. Utilisez la commande `/sell [montant] [devise]`
-   Exemple : `/sell 50 EUR`
-2. Spécifiez vos méthodes de paiement acceptées
-3. Définissez votre prime (pourcentage au-dessus/en dessous du prix du marché)
+![Chat privé](assets/4.webp)
+Cliquez sur le pseudo du vendeur pour ouvrir un canal de discussion privé où vous pourrez échanger les détails du paiement fiat.
 
-## 2. Gérer une vente
+### 5. Confirmation du paiement
 
-1. Lorsqu'un acheteur répond, vérifiez son profil et sa réputation
-2. Verrouillez les bitcoins en escrow
-3. Attendez la confirmation du paiement
-4. Vérifiez la réception du paiement
-5. Confirmez la transaction
+![Confirmation du paiement](assets/5.webp)
+Après avoir effectué le paiement fiat, utilisez la commande `/fiatsent` dans le chat du bot.
+
+### 6. Finalisation de la transaction
+
+![Notation du vendeur](assets/6.webp)
+Une fois la transaction terminée, vous pourrez noter le vendeur et la transaction sera clôturée.
+
+## Comment Vendre des Bitcoins
+
+### 1. Créer une offre de vente
+
+Pour créer une offre de vente, utilisez la commande :
+
+`/sell <montant_sats> <montant_fiat> <devise> <méthode_paiement>`
+
+Exemple : `/sell 100000 50 EUR revolut`
+
+### 2. Gérer la vente
+
+1. Lorsqu'un acheteur répond à votre offre, vous recevrez une notification
+2. Vérifiez le profil et la réputation de l'acheteur
+3. Verrouillez les bitcoins en escrow avec la commande `/lock`
+4. Attendez la confirmation du paiement fiat de l'acheteur (`/fiatsent`)
+5. Vérifiez la réception du paiement sur votre compte
+6. Confirmez la transaction avec `/release`
+
+> 💡 **Conseil** : Pour une première utilisation, commencez par de petits montants pour vous familiariser avec le processus.
 
 # Bonnes Pratiques et Sécurité
 
