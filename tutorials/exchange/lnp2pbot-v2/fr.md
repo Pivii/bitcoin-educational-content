@@ -61,7 +61,7 @@ Commencez par installer un portefeuille Lightning compatible. Voici nos recomman
 
 ### Notes importantes sur d'autres portefeuilles
 
-> ⚠️ **Avant de vendre des sats** : Assurez-vous que votre portefeuille supporte les factures "hold" (factures en attente), qui sont utilisées par le bot comme système d'escrow.
+⚠️ **Important** : Avant de vendre des sats, assurez-vous que votre portefeuille supporte les factures "hold" (factures en attente), qui sont utilisées par le bot comme système d'escrow.
 
 - **Wallet of Satoshi** : Fonctionne bien pour recevoir des sats, mais peut avoir des délais de mise à jour du solde en cas d'annulation d'une vente.
   
@@ -69,9 +69,9 @@ Commencez par installer un portefeuille Lightning compatible. Voici nos recomman
   
 - **Aqua** : Fonctionne pour recevoir des sats, mais peut avoir des délais importants (jusqu'à 48h) pour la mise à jour du solde en cas d'annulation d'une vente.
 
-> 💡 **Conseil** : Pour une expérience optimale, privilégiez les portefeuilles recommandés (Breez, Phoenix ou Blixt).
+💡 **Conseil** : Pour une expérience optimale, privilégiez les portefeuilles recommandés (Breez, Phoenix ou Blixt).
 
-> ⚠️ N'oubliez pas de sauvegarder vos phrases de récupération dans un endroit sûr.
+⚠️ **Important** : N'oubliez pas de sauvegarder vos phrases de récupération dans un endroit sûr.
 
 ## 2. Démarrer avec LNP2PBot
 
@@ -100,56 +100,62 @@ Dans ce guide, nous allons voir en détail comment :
 
 ### 1. Trouver et sélectionner une offre
 
-![Sélection d'une offre de vente](assets/fr/1.webp)
+![Sélection d'une offre de vente](assets/fr/01.webp)
 Parcourez les offres dans @lnp2pbot_marketplace et cliquez sur le bouton "Buy" sous l'annonce qui vous intéresse.
 
 ### 2. Valider l'offre et le montant
 
-![Validation de l'offre](assets/fr/2.webp)
+![Validation de l'offre](assets/fr/02.webp)
 1. Confirmez votre choix de l'offre
 2. Indiquez le montant en devise fiat que vous souhaitez acheter
 3. Le bot vous demandera de fournir une facture Lightning (invoice) correspondant au montant en satoshis
 
 ### 3. Mise en relation avec le vendeur
 
-![Mise en relation](assets/fr/3.webp)
+![Mise en relation](assets/fr/03.webp)
 Une fois l'invoice envoyée, le bot vous met en relation avec le vendeur.
 
 ### 4. Communication avec le vendeur
 
-![Chat privé](assets/fr/4.webp)
+![Chat privé](assets/fr/04.webp)
 Cliquez sur le pseudo du vendeur pour ouvrir un canal de discussion privé où vous pourrez échanger les détails du paiement fiat.
 
 ### 5. Confirmation du paiement
 
-![Confirmation du paiement](assets/fr/5.webp)
-Après avoir effectué le paiement fiat, utilisez la commande `/fiatsent` dans le chat du bot.
-
-### 6. Finalisation de la transaction
-
-![Notation du vendeur](assets/fr/6.webp)
-Une fois la transaction terminée, vous pourrez noter le vendeur et la transaction sera clôturée.
+![Confirmation du paiement](assets/fr/05.webp)
+Après avoir effectué le paiement fiat, utilisez la commande `/fiatsent` dans le chat du bot. Une fois la transaction terminée, vous pourrez noter le vendeur et la transaction sera clôturée.
 
 ## Comment Vendre des Bitcoins
 
 ### 1. Créer une offre de vente
 
+![Création d'une offre de vente](assets/fr/06.webp)
 Pour créer une offre de vente, utilisez la commande :
 
 `/sell <montant_sats> <montant_fiat> <devise> <méthode_paiement>`
 
 Exemple : `/sell 100000 50 EUR revolut`
 
-### 2. Gérer la vente
+### 2. Confirmation de la création de l'ordre
 
-1. Lorsqu'un acheteur répond à votre offre, vous recevrez une notification
-2. Vérifiez le profil et la réputation de l'acheteur
-3. Verrouillez les bitcoins en escrow avec la commande `/lock`
-4. Attendez la confirmation du paiement fiat de l'acheteur (`/fiatsent`)
-5. Vérifiez la réception du paiement sur votre compte
-6. Confirmez la transaction avec `/release`
+![Confirmation de l'ordre de vente](assets/fr/07.webp)
+Une fois l'ordre créé, vous verrez une confirmation avec la possibilité d'annuler l'ordre en utilisant la commande `/cancel`.
 
-> 💡 **Conseil** : Pour une première utilisation, commencez par de petits montants pour vous familiariser avec le processus.
+### 3. Gérer la vente
+
+![Prise de l'ordre par un acheteur](assets/fr/08.webp)
+1. Lorsqu'un acheteur répond à votre offre, vous recevrez une notification avec un QR code et une invoice à payer.
+2. Vérifiez le profil et la réputation de l'acheteur.
+
+![Mise en relation avec l'acheteur](assets/fr/09.webp)
+3. Verrouillez les bitcoins en escrow avec la commande `/lock`.
+4. Attendez la confirmation du paiement fiat de l'acheteur (`/fiatsent`).
+5. Vérifiez la réception du paiement sur votre compte.
+
+![Confirmation de la fin de l'ordre](assets/fr/10.webp)
+6. Confirmez la transaction avec `/release` et terminez l'ordre. Vous aurez la possibilité de noter l'acheteur.
+
+💡 **Conseil** : Pour une première utilisation, commencez par de petits montants pour vous familiariser avec le processus.
 
 # Bonnes Pratiques et Sécurité
 
@@ -182,4 +188,4 @@ Exemple : `/sell 100000 50 EUR revolut`
 - GitHub : https://github.com/lnp2pBot/bot
 - Support : @lnp2pbot_support
 
-> 💡 Pour une expérience optimale, commencez par de petites transactions pour vous familiariser avec le système.
+💡 **Conseil** : Pour une expérience optimale, commencez par de petites transactions pour vous familiariser avec le système.
