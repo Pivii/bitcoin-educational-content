@@ -100,34 +100,34 @@ Dans ce guide, nous allons voir en détail comment :
 
 ### 1. Trouver et sélectionner une offre
 
-![Sélection d'une offre de vente](assets/1.webp)
+![Sélection d'une offre de vente](assets/fr/1.webp)
 Parcourez les offres dans @lnp2pbot_marketplace et cliquez sur le bouton "Buy" sous l'annonce qui vous intéresse.
 
 ### 2. Valider l'offre et le montant
 
-![Validation de l'offre](assets/2.webp)
+![Validation de l'offre](assets/fr/2.webp)
 1. Confirmez votre choix de l'offre
 2. Indiquez le montant en devise fiat que vous souhaitez acheter
 3. Le bot vous demandera de fournir une facture Lightning (invoice) correspondant au montant en satoshis
 
 ### 3. Mise en relation avec le vendeur
 
-![Mise en relation](assets/3.webp)
+![Mise en relation](assets/fr/3.webp)
 Une fois l'invoice envoyée, le bot vous met en relation avec le vendeur.
 
 ### 4. Communication avec le vendeur
 
-![Chat privé](assets/4.webp)
+![Chat privé](assets/fr/4.webp)
 Cliquez sur le pseudo du vendeur pour ouvrir un canal de discussion privé où vous pourrez échanger les détails du paiement fiat.
 
 ### 5. Confirmation du paiement
 
-![Confirmation du paiement](assets/5.webp)
+![Confirmation du paiement](assets/fr/5.webp)
 Après avoir effectué le paiement fiat, utilisez la commande `/fiatsent` dans le chat du bot.
 
 ### 6. Finalisation de la transaction
 
-![Notation du vendeur](assets/6.webp)
+![Notation du vendeur](assets/fr/6.webp)
 Une fois la transaction terminée, vous pourrez noter le vendeur et la transaction sera clôturée.
 
 ## Comment Vendre des Bitcoins
