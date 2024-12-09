@@ -75,16 +75,16 @@ Commencez par installer un portefeuille Lightning compatible. Voici nos recomman
 
 ## 2. Démarrer avec LNP2PBot
 
-1. Ouvrez Telegram
-2. Recherchez "@lnp2pBot" dans la barre de recherche
+1. Cliquez sur ce lien pour accéder au bot : [@lnp2pBot](https://t.me/lnp2pbot)
+2. Telegram s'ouvrira automatiquement
 3. Cliquez sur "Start" ou envoyez la commande "/start"
 4. Le bot vous demandera de créer un nom d'utilisateur (pseudo) si vous n'en avez pas encore
 5. Le bot vous guidera à travers la configuration initiale
 
 ## 3. Rejoindre la communauté
 
-- Rejoignez le canal principal : @lnp2pbot_marketplace
-- Canal des annonces : @lnp2pbot_exchange
+- Rejoignez le canal principal : [@p2plightning](https://t.me/p2plightning)
+- Support : [@lnp2pbotHelp](https://t.me/lnp2pbotHelp)
 
 # Acheter et Vendre des Bitcoins
 
@@ -101,14 +101,15 @@ Dans ce guide, nous allons voir en détail comment :
 ### 1. Trouver et sélectionner une offre
 
 ![Sélection d'une offre de vente](assets/fr/01.webp)
-Parcourez les offres dans @lnp2pbot_marketplace et cliquez sur le bouton "Buy" sous l'annonce qui vous intéresse.
+Parcourez les offres dans [@p2plightning](https://t.me/p2plightning) et cliquez sur le bouton "Acheter des satoshis" sous l'annonce qui vous intéresse.
 
 ### 2. Valider l'offre et le montant
 
 ![Validation de l'offre](assets/fr/02.webp)
-1. Confirmez votre choix de l'offre
-2. Indiquez le montant en devise fiat que vous souhaitez acheter
-3. Le bot vous demandera de fournir une facture Lightning (invoice) correspondant au montant en satoshis
+1. Retournez sur le chat du bot
+2. Confirmez votre choix de l'offre
+3. Indiquez le montant en devise fiat que vous souhaitez acheter
+4. Le bot vous demandera de fournir une facture Lightning (invoice) correspondant au montant en satoshis
 
 ### 3. Mise en relation avec le vendeur
 
@@ -130,11 +131,18 @@ Après avoir effectué le paiement fiat, utilisez la commande `/fiatsent` dans l
 ### 1. Créer une offre de vente
 
 ![Création d'une offre de vente](assets/fr/06.webp)
-Pour créer une offre de vente, utilisez la commande :
+Pour créer une offre de vente, il suffit d'utiliser la commande :
 
-`/sell <montant_sats> <montant_fiat> <devise> <méthode_paiement>`
+`/sell`
 
-Exemple : `/sell 100000 50 EUR revolut`
+Le bot vous guidera ensuite étape par étape :
+1. Choisissez votre devise
+2. Indiquez le montant de satoshis à vendre
+3. Pour le prix, vous avez deux options :
+   - Définir un prix fixe pour la quantité de satoshis
+   - Utiliser le prix du marché avec la possibilité d'appliquer un premium (positif ou négatif)
+
+💡 **Conseil** : Le premium vous permet d'ajuster votre prix par rapport au cours du marché. Par exemple, un premium de -1% signifie que vous vendez 1% moins cher que le prix du marché.
 
 ### 2. Confirmation de la création de l'ordre
 
@@ -148,14 +156,14 @@ Une fois l'ordre créé, vous verrez une confirmation avec la possibilité d'ann
 2. Vérifiez le profil et la réputation de l'acheteur.
 
 ![Mise en relation avec l'acheteur](assets/fr/09.webp)
-3. Verrouillez les bitcoins en escrow avec la commande `/lock`.
-4. Attendez la confirmation du paiement fiat de l'acheteur (`/fiatsent`).
-5. Vérifiez la réception du paiement sur votre compte.
+3. Cliquez sur le pseudo de l'acheteur pour ouvrir un canal de discussion privé.
+4. Communiquez les détails du paiement fiat à l'acheteur.
+5. Attendez la confirmation du paiement fiat de l'acheteur.
+6. Vérifiez la réception du paiement sur votre compte.
 
 ![Confirmation de la fin de l'ordre](assets/fr/10.webp)
-6. Confirmez la transaction avec `/release` et terminez l'ordre. Vous aurez la possibilité de noter l'acheteur.
+7. Confirmez la transaction avec `/release` et terminez l'ordre. Vous aurez la possibilité de noter l'acheteur.
 
-💡 **Conseil** : Pour une première utilisation, commencez par de petits montants pour vous familiariser avec le processus.
 
 # Bonnes Pratiques et Sécurité
 
@@ -186,6 +194,4 @@ Une fois l'ordre créé, vous verrez une confirmation avec la possibilité d'ann
 - Site officiel : https://lnp2pbot.com/
 - Documentation : https://lnp2pbot.com/learn/
 - GitHub : https://github.com/lnp2pBot/bot
-- Support : @lnp2pbot_support
-
-💡 **Conseil** : Pour une expérience optimale, commencez par de petites transactions pour vous familiariser avec le système.
+- Support : [@lnp2pbotHelp](https://t.me/lnp2pbotHelp)
