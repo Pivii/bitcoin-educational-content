@@ -1,11 +1,11 @@
-id: 
+id: e6bcb210-610b-487d-970c-7cce85273e3c
 
-builder: Lnp2pBot
+builder: Lnp2p
 
 tags:
   - open-source
   - peer-to-peer
-  - bitcoin-only
+  - no-kyc
 
 category: peer-to-peer
 
@@ -16,7 +16,7 @@ credits:
 
 # Proofreading metadata
 
-original_language:
+original_language: fr
 proofreading:
   - language: fr
     last_contribution_date: 2024-12-09

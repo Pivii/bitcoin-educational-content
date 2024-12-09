@@ -9,7 +9,7 @@ description: Guide complet pour utiliser LNP2PBot et échanger des bitcoins en P
 
 Bitcoin est avant tout une technologie permettant d'échanger de la valeur directement entre individus, sans intermédiaire. Le réseau Lightning étend cette capacité en permettant des transactions instantanées et à très faible coût, tout en préservant les propriétés fondamentales de Bitcoin.
 
-L'achat et la vente de bitcoin de pair-à-pair (P2P) est l'une des méthodes les plus privées pour acquérir ou céder des bitcoins. LNP2PBot est un bot Telegram qui facilite les échanges P2P sur le réseau Lightning, permettant des transactions rapides, à faible coût et sans KYC.
+L'achat et la vente de bitcoin de pair-à-pair (P2P) est l'une des méthodes les plus privées pour acquérir ou céder des bitcoins. LNP2PBot est un bot Telegram open source qui facilite les échanges P2P sur le réseau Lightning, permettant des transactions rapides, à faible coût et sans KYC.
 
 ## Pourquoi utiliser LNP2PBot ?
 
