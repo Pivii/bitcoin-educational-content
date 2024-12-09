@@ -189,6 +189,23 @@ Une fois l'ordre créé, vous verrez une confirmation avec la possibilité d'ann
 3. Fournissez toutes les preuves nécessaires
 4. Attendez l'intervention d'un modérateur
 
+# Comparaison avec d'autres solutions
+
+Lnp2pbot présente plusieurs avantages et inconvénients par rapport à d'autres solutions d'échange P2P comme Peach, Bisq, HodlHodl, et Robosat :
+
+## Avantages de Lnp2pbot :
+- **Pas de KYC requis** : Contrairement à certaines plateformes, Lnp2pbot ne nécessite pas de vérification d'identité, préservant ainsi la confidentialité des utilisateurs.
+- **Transactions rapides** : Grâce au réseau Lightning, les transactions sont presque instantanées.
+- **Faibles frais** : Les coûts de transaction sont réduits par rapport aux échanges traditionnels.
+- **Disponibilité mobile** : LNP2PBot est accessible via Telegram, ce qui le rend facilement utilisable sur les appareils mobiles.
+- **Simplicité d'utilisation** : L'interface de Lnp2pbot est intuitive, ce qui facilite son utilisation même pour les utilisateurs moins expérimentés.
+
+## Inconvénients de Lnp2pbot :
+- **Dépendance à Telegram** : L'utilisation de Lnp2pbot nécessite un compte Telegram, ce qui peut ne pas convenir à tous les utilisateurs.
+- **Moins de liquidité** : Comparé à des plateformes plus établies comme Bisq, la liquidité peut être plus limitée.
+
+En comparaison, des solutions comme Bisq offrent une plus grande liquidité et une interface de bureau, mais peuvent impliquer des frais plus élevés et des temps de transaction plus longs. HodlHodl et Robosat, quant à eux, offrent également des échanges sans KYC mais avec des structures de frais et des interfaces différentes.
+
 # Ressources Utiles
 
 - Site officiel : https://lnp2pbot.com/
