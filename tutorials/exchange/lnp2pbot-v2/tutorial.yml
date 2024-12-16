@@ -1,11 +1,11 @@
 id: e6bcb210-610b-487d-970c-7cce85273e3c
 
-builder: Lnp2pbot
+builder: lnp2pbot
 
 tags:
-  - open-source
-  - peer-to-peer
-  - no-kyc
+  - privacy
+  - lightning
+  - guide
 
 category: peer-to-peer
 
