@@ -29,7 +29,7 @@ L'achat et la vente de bitcoin de pair-à-pair (P2P) est l'une des méthodes les
 Pour utiliser Lnp2pbot, vous aurez besoin :
 
 1. Un portefeuille Lightning Network (Breez, Phoenix ou Blixt recommandés)
-2. L'application Telegram installée
+2. L'application Telegram installée (https://telegram.org/)
 3. Un compte Telegram avec un nom d'utilisateur défini
 
 # Installation et Configuration
