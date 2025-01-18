@@ -95,7 +95,7 @@ Accédez aux méthodes de paiement via l'onglet Paramètres (image 8)
 - Choisissez votre devise
 - Sélectionnez votre méthode de paiement préférée
 
-*Types de méthodes de paiement disponibles*
+*Types de méthodes de paiement disponibles :*
 
 ***Les virements bancaires disponibles :***
 - SEPA (standard ou instantané)
@@ -116,7 +116,7 @@ Systèmes de paiement spécifiques par pays :
 - Bizum (Espagne)
 - Faster Payments (Royaume-Uni)
 
-**Paiements en personne**
+***Les paiements en personne :***
 
 ![Configuration des paiements en personne](assets/fr/05.webp)
 - Sélectionnez "Meetup"
