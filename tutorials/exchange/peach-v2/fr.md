@@ -30,13 +30,9 @@ Peach s'efforce de stocker le minimum absolu de données sur ses utilisateurs. V
 
 Pour rappel un hash est une donnée rendue méconnaissable, similaire à un chiffrement. Les mêmes données produiront toujours le même hash, permettant de détecter les doublons sans connaître les données d'origine.
 
-*Pour plus d'explication sur le hachage, vous pouvez consulter cet ebook rédigé par Loïc Morel :
+*Pour plus d'explication sur le hachage, vous pouvez suivre sur ce cours :*
 
-[Bitcoin et la cryptographie](https://www.pandul.fr/_files/ugd/23ab18_7cf468f563804bf586d8ade77cb5ab96.pdf)
-
-*Ou bien suivre sur ce cours : 
-
-https://planb.network/fr/courses/cyp201
+https://planb.network/courses/cyp201
 
 **Qui peut voir mes détails de paiement ?**
 
@@ -50,16 +46,17 @@ https://planb.network/fr/courses/cyp201
 
 ![Installation de Peach](assets/fr/01.webp)
 
-1. Téléchargez l'application depuis [Peach Bitcoin](https://peachbitcoin.com/fr/quick-start/).
-2. Suivez les instructions d'installation sur votre appareil.
-3. Lors de l'installation, vous serez invité à choisir si vous souhaitez partager certaines données pour améliorer l'application Peach. (image 1)
-4. Sur l'écran suivant (image 2), vous aurez deux options : 
-   - Si vous êtes un nouvel utilisateur, cliquez sur "New user" pour créer un nouveau profil
-   - Si vous avez déjà un compte, utilisez "Restore" pour restaurer votre profil existant
-5. Si vous avez un code de parrainage, vous pouvez l'entrer à ce moment-là.
-6. Pour la restauration d'un compte existant (image 3), vous aurez besoin : 
-   - De votre fichier de sauvegarde (backup)
-   - Du mot de passe permettant de déchiffrer ce fichier
+- Téléchargez l'application depuis [Peach Bitcoin](https://peachbitcoin.com/fr/quick-start/).
+- Suivez les instructions d'installation sur votre appareil.
+- Lors de l'installation, vous serez invité à choisir si vous souhaitez partager certaines données pour améliorer l'application Peach. (image 1)
+- Sur l'écran suivant (image 2), vous aurez deux options : 
+	- Si vous êtes un nouvel utilisateur, cliquez sur "New user" pour créer un nouveau profil
+	- Si vous avez déjà un compte, utilisez "Restore" pour restaurer votre profil existant
+- Si vous avez un code de parrainage, vous pouvez l'entrer à ce moment-là.
+- Pour la restauration d'un compte existant (image 3), vous aurez besoin : 
+	- De votre fichier de sauvegarde (backup)
+	- Du mot de passe permettant de déchiffrer ce fichier
+
 ### 2. Présentation des Écrans Principaux
 
 L'application Peach est organisée autour de quatre écrans principaux accessibles depuis la barre de navigation inférieure :
@@ -69,21 +66,21 @@ L'application Peach est organisée autour de quatre écrans principaux accessibl
 - **Home** : L'écran principal pour acheter et vendre des bitcoins. C'est ici que vous pourrez créer de nouvelles transactions et accéder aux offres disponibles.
 
 - **Wallet** : Votre portefeuille bitcoin intégré qui vous permet de :
-  - Consulter votre solde
-  - Recevoir des bitcoins
-  - Envoyer des bitcoins
-  - Voir l'historique de vos transactions
+	- Consulter votre solde
+	- Recevoir des bitcoins
+	- Envoyer des bitcoins
+	- Voir l'historique de vos transactions
 
 - **Trades** : Le centre de gestion de vos échanges où vous retrouverez :
-  - Vos transactions en cours
-  - L'historique complet de vos échanges
-  - Le statut de chaque transaction
+	- Vos transactions en cours
+	- L'historique complet de vos échanges
+	- Le statut de chaque transaction
 
 - **Paramètres** : Le hub de configuration de votre compte permettant de :
-  - Gérer vos méthodes de paiement
-  - Configurer vos sauvegardes
-  - Personnaliser vos préférences
-  - Accéder à l'aide et au support
+	- Gérer vos méthodes de paiement
+	- Configurer vos sauvegardes
+	- Personnaliser vos préférences
+	- Accéder à l'aide et au support
 
 ### 3. Configurer ses moyens de paiements
 
@@ -94,18 +91,18 @@ Accédez aux méthodes de paiement via l'onglet Paramètres (image 8)
 **Paiements en ligne**
 
 ![Configuration des paiements en ligne](assets/fr/04.webp)
-1. Cliquez sur le bouton pour ajouter un nouveau moyen de paiement
-2. Choisissez votre devise
-3. Sélectionnez votre méthode de paiement préférée
+- Cliquez sur le bouton pour ajouter un nouveau moyen de paiement
+- Choisissez votre devise
+- Sélectionnez votre méthode de paiement préférée
 
-*Types de méthodes de paiement disponibles*
+*Types de méthodes de paiement disponibles :*
 
 ***Les virements bancaires disponibles :***
 - SEPA (standard ou instantané)
 - Remplissez vos coordonnées bancaires SEPA
 
 ***Les portefeuilles en ligne acceptés :***
-- Plusieurs options disponibles selon votre pays (Révolut, Paypal, Wise, Strike, etc)
+- Plusieurs options disponibles selon votre pays (Revolut, Paypal, Wise, Strike, etc)
 - Suivez les instructions pour ajouter vos identifiants
 
 ***La carte cadeaux utilisable :***
@@ -119,13 +116,11 @@ Systèmes de paiement spécifiques par pays :
 - Bizum (Espagne)
 - Faster Payments (Royaume-Uni)
 
-**Paiements en personne**
+***Les paiements en personne :***
 
 ![Configuration des paiements en personne](assets/fr/05.webp)
-1. Sélectionnez "Meetup"
-2. Puis sélectionner votre meetup parmi la liste
-
-
+- Sélectionnez "Meetup"
+- Puis sélectionner votre meetup parmi la liste
 
 ### Conseils d'utilisation
 
@@ -134,7 +129,7 @@ Systèmes de paiement spécifiques par pays :
 - Vérifiez bien l'exactitude de vos informations avant de les enregistrer
 - Vous pouvez modifier ou supprimer vos méthodes de paiement à tout moment
 
-> **Note de sécurité** : Vos informations de paiement sont chiffrées et ne sont partagées qu'avec votre partenaire d'échange lors d'une transaction.
+**Note de sécurité** : Vos informations de paiement sont chiffrées et ne sont partagées qu'avec votre partenaire d'échange lors d'une transaction.
 
 ### 4. Comment sécuriser son portefeuille
 
@@ -228,7 +223,7 @@ Il est recommandé de réaliser les deux types de sauvegardes pour une sécurit�
 - Vérifiez soigneusement les détails du paiement
 - N'hésitez pas à utiliser le service de médiation en cas de problème
 
-> **Note de sécurité** : Ne confirmez jamais la réception d'un paiement avant d'avoir vérifié qu'il a bien été reçu sur votre compte.
+**Note de sécurité** : Ne confirmez jamais la réception d'un paiement avant d'avoir vérifié qu'il a bien été reçu sur votre compte.
 
 ## Avantages et Inconvénients
 
@@ -242,10 +237,9 @@ Il est recommandé de réaliser les deux types de sauvegardes pour une sécurit�
 ### Inconvénients de Peach
 
 - **Liquidité limitée** : Moins de volume d'échange comparé à des plateformes plus établies.
-- **Risque réglementaire** : L'application est gérée par une entreprise suisse et est donc soumise à la réglementation suisse qui pourrait évoluer et potentiellement censurer l'application.
+- **Risque réglementaire** : L'application est gérée par une entreprise suisse. Elle est donc soumise à la réglementation suisse qui pourrait évoluer et potentiellement censurer l'application.
 
 ## Ressources Utiles
 
-- Vidéo explicative : [YouTube](https://youtu.be/ziwhv9KqVkM)
+- Vidéo explicative en français : [YouTube](https://youtu.be/ziwhv9KqVkM)
 - Guide de démarrage rapide : [Peach Bitcoin](https://peachbitcoin.com/fr/quick-start/)
-
