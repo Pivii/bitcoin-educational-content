@@ -66,7 +66,7 @@ Il primo tipo di algoritmi crittografici utilizzati su Bitcoin comprende le funz
 L'hashing è un processo che trasforma informazioni di lunghezza arbitraria in un'altra informazione di lunghezza fissa attraverso una funzione hash crittografica. In altre parole, una funzione hash prende un input di qualsiasi dimensione e lo converte in un'impronta digitale di dimensione fissa, chiamata "hash".
 L'hash può anche essere talvolta definito come "digest", "condensato", o "hashed".
 
-Ad esempio, la funzione hash SHA256 produce un hash di lunghezza fissa di 256 bit. Così, se usiamo l'input "_Plan ₿_", un messaggio di lunghezza arbitraria, l'hash generato sarà la seguente impronta digitale di 256 bit:
+Ad esempio, la funzione hash SHA256 produce un hash di lunghezza fissa di 256 bit. Così, se usiamo l'input "_PlanB_", un messaggio di lunghezza arbitraria, l'hash generato sarà la seguente impronta digitale di 256 bit:
 
 ```text
 24f1b93b68026bfc24f5c8265f287b4c940fb1664b0d75053589d7a4f821b688
@@ -78,16 +78,16 @@ Ad esempio, la funzione hash SHA256 produce un hash di lunghezza fissa di 256 bi
 
 Queste funzioni hash crittografiche hanno diverse caratteristiche essenziali che le rendono particolarmente utili nel contesto di Bitcoin e altri sistemi informatici:
 
-1. Irreversibilità (o resistenza alla preimmagine)
-2. Resistenza alla manomissione (effetto valanga)
-3. Resistenza alle collisioni
-4. Resistenza alla seconda preimmagine
+- Irreversibilità (o resistenza alla preimmagine)
+- Resistenza alla manomissione (effetto valanga)
+- Resistenza alle collisioni
+- Resistenza alla seconda preimmagine
 
 #### 1. Irreversibilità (resistenza alla preimmagine):
 
 L'irreversibilità significa che è facile calcolare l'hash dalle informazioni di input, ma il calcolo inverso, cioè trovare l'input dall'hash, è praticamente impossibile. Questa proprietà rende le funzioni hash perfette per creare impronte digitali uniche senza compromettere le informazioni originali. Questa caratteristica è spesso definita come una funzione unidirezionale o una "_funzione trappola_".
 
-Nell'esempio dato, ottenere l'hash `24f1b9…` conoscendo l'input "_Plan ₿_" è semplice e veloce. Tuttavia, trovare il messaggio "_Plan ₿_" conoscendo solo `24f1b9…` è impossibile.
+Nell'esempio dato, ottenere l'hash `24f1b9…` conoscendo l'input "_PlanB_" è semplice e veloce. Tuttavia, trovare il messaggio "_PlanB_" conoscendo solo `24f1b9…` è impossibile.
 
 ![CYP201](assets/fr/002.webp)
 
@@ -97,7 +97,7 @@ Pertanto, è impossibile trovare una preimmagine $m$ per un hash $h$ tale che $h
 
 La seconda caratteristica è la resistenza alla manomissione, nota anche come **effetto valanga**. Questa caratteristica si osserva in una funzione hash se un piccolo cambiamento nel messaggio di input comporta un radicale cambiamento nell'hash di output.
 
-Se torniamo al nostro esempio con l'input "_Plan ₿_" e la funzione SHA256, abbiamo visto che l'hash generato è il seguente:
+Se torniamo al nostro esempio con l'input "_PlanB_" e la funzione SHA256, abbiamo visto che l'hash generato è il seguente:
 
 ```text
 24f1b93b68026bfc24f5c8265f287b4c940fb1664b0d75053589d7a4f821b688
@@ -137,6 +137,8 @@ $$
 $$
 
 Pertanto, la resistenza alla seconda preimmagine è in qualche modo simile alla resistenza alle collisioni, eccetto che qui, l'attacco è più difficile perché l'attaccante non può scegliere liberamente $m_1$.
+
+![CYP201](assets/fr/005.webp)
 
 ### Applicazioni delle Funzioni Hash in Bitcoin
 
@@ -224,9 +226,9 @@ Se torniamo al nostro esempio con un messaggio iniziale di 950 bit, convertiamo 
 
 Questa dimensione di riempimento viene aggiunta seguendo il riempimento bit. Pertanto, il messaggio dopo la nostra pre-elaborazione consiste di tre parti:
 
-1. Il messaggio originale $M$;
-2. Un bit `1` seguito da diversi bit `0` per formare il riempimento bit;
-3. Una rappresentazione di 64 bit della lunghezza di $M$ per formare il riempimento con la dimensione.
+- Il messaggio originale $M$;
+- Un bit `1` seguito da diversi bit `0` per formare il riempimento bit;
+- Una rappresentazione di 64 bit della lunghezza di $M$ per formare il riempimento con la dimensione.
 
 ![CYP201](assets/fr/006.webp)
 
@@ -256,17 +258,16 @@ K[0 \ldots 63] = \begin{pmatrix}
 0x983e5152, & 0xa831c66d, & 0xb00327c8, & 0xbf597fc7, \\
 0xc6e00bf3, & 0xd5a79147, & 0x06ca6351, & 0x14292967, \\
 0x27b70a85, & 0x2e1b2138, & 0x4d2c6dfc, & 0x53380d13, \\
-\end{pmatrix}
-$$
-
-0x650a7354, & 0x766a0abb, & 0x81c2c92e, & 0x92722c85, \\0xa2bfe8a1, & 0xa81a664b, & 0xc24b8b70, & 0xc76c51a3, \\0xd192e819, & 0xd6990624, & 0xf40e3585, & 0x106aa070, \\
+0x650a7354, & 0x766a0abb, & 0x81c2c92e, & 0x92722c85, \\
+0xa2bfe8a1, & 0xa81a664b, & 0xc24b8b70, & 0xc76c51a3, \\
+0xd192e819, & 0xd6990624, & 0xf40e3585, & 0x106aa070, \\
 0x19a4c116, & 0x1e376c08, & 0x2748774c, & 0x34b0bcb5, \\
 0x391c0cb3, & 0x4ed8aa4a, & 0x5b9cca4f, & 0x682e6ff3, \\
 0x748f82ee, & 0x78a5636f, & 0x84c87814, & 0x8cc70208, \\
 0x90befffa, & 0xa4506ceb, & 0xbef9a3f7, & 0xc67178f2
 \end{pmatrix}
-
 $$
+
 
 ### Divisione dell'Input
 
@@ -297,7 +298,8 @@ Per AND ($\land$):
 | $p$ | $q$ | $p \land q$ |
 | --- | --- | ----------- |
 | 0   | 0   | 0           |
-| 0   | 1   | 0           || 1   | 0   | 0           |
+| 0   | 1   | 0           |
+| 1   | 0   | 0           |
 | 1   | 1   | 1           |
 
 Per NOT ($\lnot p$):
@@ -378,7 +380,7 @@ Le successive 48 parole ($W_{16}$ fino a $W_{63}$) sono generate utilizzando la 
 
 $$
 
-W*i = W*{i-16} + \sigma*0(W*{i-15}) + W*{i-7} + \sigma_1(W*{i-2}) \mod 2^{32}
+W_i = W_{i-16} + \sigma*0(W_{i-15}) + W_{i-7} + \sigma_1(W_{i-2}) \mod 2^{32}
 
 $$
 
@@ -390,6 +392,8 @@ In questo caso, $x$ è uguale a $W_{i-15}$ per $\sigma_0(x)$ e $W_{i-2}$ per $\s
 
 Una volta determinate tutte le parole $W_i$ per il nostro pezzo di 512 bit, possiamo passare alla funzione di compressione, che consiste nell'eseguire 64 round.
 
+![CYP201](assets/fr/009.webp)
+
 Per ogni round $i$ da 0 a 63, abbiamo tre diversi tipi di input. Primo, il $W_i$ che abbiamo appena determinato, in parte costituito dal nostro pezzo di messaggio $P_n$. Successivamente, le 64 costanti $K_i$. Infine, usiamo le variabili di stato $A$, $B$, $C$, $D$, $E$, $F$, $G$ e $H$, che evolveranno durante il processo di hashing e saranno modificate con ogni funzione di compressione. Tuttavia, per il primo pezzo $P_1$, usiamo le costanti iniziali date in precedenza.
 Eseguiamo quindi le seguenti operazioni sui nostri input:
 
@@ -398,7 +402,7 @@ Eseguiamo quindi le seguenti operazioni sui nostri input:
 
 $$
 
-\Sigma*0(A) = RotR_2(A) \oplus RotR*{13}(A) \oplus RotR\_{22}(A)
+\Sigma*0(A) = RotR_2(A) \oplus RotR_{13}(A) \oplus RotR\_{22}(A)
 
 $$
 
@@ -407,7 +411,7 @@ $$
 
 $$
 
-\Sigma*1(E) = RotR_6(E) \oplus RotR*{11}(E) \oplus RotR\_{25}(E)
+\Sigma*1(E) = RotR_6(E) \oplus RotR_{11}(E) \oplus RotR\_{25}(E)
 
 $$
 
@@ -451,19 +455,17 @@ $$
 
 Successivamente, aggiorniamo le variabili di stato come segue:
 
-
 $$
-
 \begin{cases}
 H = G \\
 G = F \\
 F = E \\
-E = D + temp1 mod 2^{32} \\D = C \\
+E = D + temp1 \mod 2^{32} \\
+D = C \\
 C = B \\
 B = A \\
-A = temp1 + temp2 mod 2^{32}
+A = temp1 + temp2 \mod 2^{32}
 \end{cases}
-
 $$
 
 Il seguente diagramma rappresenta un round della funzione di compressione SHA256 come appena descritto:
@@ -476,19 +478,18 @@ Il seguente diagramma rappresenta un round della funzione di compressione SHA256
 
 Possiamo già osservare che questo round produce nuove variabili di stato $A$, $B$, $C$, $D$, $E$, $F$, $G$ e $H$. Queste nuove variabili serviranno come input per il round successivo, che a sua volta produrrà nuove variabili $A$, $B$, $C$, $D$, $E$, $F$, $G$ e $H$, da utilizzare per il round seguente. Questo processo continua fino al 64° round.
 Dopo i 64 round, aggiorniamo i valori iniziali delle variabili di stato aggiungendoli ai valori finali alla fine del round 64:
+
 $$
-
 \begin{cases}
-A = A*{\text{iniziale}} + A mod 2^{32} \\
-B = B*{\text{iniziale}} + B mod 2^{32} \\
-C = C*{\text{iniziale}} + C mod 2^{32} \\
-D = D*{\text{iniziale}} + D mod 2^{32} \\
-E = E*{\text{iniziale}} + E mod 2^{32} \\
-F = F*{\text{iniziale}} + F mod 2^{32} \\
-G = G*{\text{iniziale}} + G mod 2^{32} \\
-H = H*{\text{iniziale}} + H mod 2^{32}
+A = A_{\text{initial}} + A \mod 2^{32} \\
+B = B_{\text{initial}} + B \mod 2^{32} \\
+C = C_{\text{initial}} + C \mod 2^{32} \\
+D = D_{\text{initial}} + D \mod 2^{32} \\
+E = E_{\text{initial}} + E \mod 2^{32} \\
+F = F_{\text{initial}} + F \mod 2^{32} \\
+G = G_{\text{initial}} + G \mod 2^{32} \\
+H = H_{\text{initial}} + H \mod 2^{32}
 \end{cases}
-
 $$
 
 Questi nuovi valori di $A$, $B$, $C$, $D$, $E$, $F$, $G$ e $H$ serviranno come valori iniziali per il blocco successivo, $P_2$. Per questo blocco $P_2$, replichiamo lo stesso processo di compressione con 64 round, poi aggiorniamo le variabili per il blocco $P_3$, e così via fino all'ultimo blocco del nostro input equalizzato.
@@ -551,8 +552,8 @@ In Bitcoin a livello applicativo, oltre alle funzioni hash, vengono utilizzati a
 
 Sui portafogli Bitcoin, principalmente vengono utilizzati 2 algoritmi di derivazione:
 
-1. **HMAC (_Hash-based Message Authentication Code_)**
-2. **PBKDF2 (_Password-Based Key Derivation Function 2_)**
+- **HMAC (_Hash-based Message Authentication Code_)**
+- **PBKDF2 (_Password-Based Key Derivation Function 2_)**
 
 Esploreremo insieme il funzionamento e il ruolo di ciascuno di essi.
 
@@ -589,12 +590,12 @@ $$
 
 Questa equazione si scompone nei seguenti passaggi:
 
-1. XOR della chiave aggiustata $K'$ con $\text{ipad}$ per ottenere $\text{iKpad}$;
-2. XOR della chiave aggiustata $K'$ con $\text{opad}$ per ottenere $\text{oKpad}$;
-3. Concatenazione di $\text{iKpad}$ con il messaggio $m$.
-4. Hash di questo risultato con SHA512 per ottenere un hash intermedio $H_1$.
-5. Concatenazione di $\text{oKpad}$ con $H_1$.
-6. Hash di questo risultato con SHA512 per ottenere il risultato finale $H_2$.
+- XOR della chiave aggiustata $K'$ con $\text{ipad}$ per ottenere $\text{iKpad}$;
+- XOR della chiave aggiustata $K'$ con $\text{opad}$ per ottenere $\text{oKpad}$;
+- Concatenazione di $\text{iKpad}$ con il messaggio $m$.
+- Hash di questo risultato con SHA512 per ottenere un hash intermedio $H_1$.
+- Concatenazione di $\text{oKpad}$ con $H_1$.
+- Hash di questo risultato con SHA512 per ottenere il risultato finale $H_2$.
 
 Questi passaggi possono essere riassunti schematicamente come segue:
 
@@ -674,6 +675,9 @@ y^2 = x^3 + 7
 $$
 
 La sua rappresentazione grafica sul campo dei numeri reali appare così:
+
+![CYP201](assets/fr/015.webp)
+
 Tuttavia, in crittografia, lavoriamo con insiemi finiti di numeri. Più specificamente, lavoriamo sul campo finito $\mathbb{F}_p$, che è il campo degli interi modulo un numero primo $p$.
 **Definizione**: Un numero primo è un intero naturale maggiore o uguale a 2 che ha solo due distinti divisori interi positivi: 1 e se stesso. Per esempio, il numero 7 è un numero primo poiché può essere diviso solo per 1 e 7. D'altra parte, il numero 8 non è primo perché può essere diviso per 1, 2, 4 e 8.
 In Bitcoin, il numero primo $p$ utilizzato per definire il campo finito è molto grande. È scelto in modo tale che l'ordine del campo (cioè, il numero di elementi in $\mathbb{F}_p$) sia sufficientemente grande da garantire la sicurezza crittografica.
@@ -752,6 +756,8 @@ Il fatto che questo punto $G$ sia comune a tutte le chiavi pubbliche su Bitcoin 
 
 La caratteristica principale di questa operazione è che si tratta di una funzione unidirezionale. È facile calcolare la chiave pubblica $K$ conoscendo la chiave privata $k$ e il punto generatore $G$, ma è praticamente impossibile calcolare la chiave privata $k$ conoscendo solo la chiave pubblica $K$ e il punto generatore $G$. Trovare $k$ a partire da $K$ e $G$ equivale a risolvere il problema del logaritmo discreto sulle curve ellittiche, un problema matematicamente difficile per il quale non è noto alcun algoritmo efficiente. Anche i calcolatori più potenti attuali non sono in grado di risolvere questo problema in un tempo ragionevole.
 
+![CYP201](assets/fr/018.webp)
+
 ### Addizione e Raddoppio dei Punti sulle Curve Ellittiche
 
 Il concetto di addizione sulle curve ellittiche è definito geometricamente. Se abbiamo due punti $P$ e $Q$ sulla curva, l'operazione $P + Q$ viene calcolata tracciando una linea che passa per $P$ e $Q$. Questa linea intersecherà necessariamente la curva in un terzo punto $R'$. Prendiamo poi l'immagine speculare di questo punto rispetto all'asse x per ottenere il punto $R$, che è il risultato dell'addizione:
@@ -803,12 +809,16 @@ $$
 
 Graficamente, ciò sarebbe rappresentato come segue:
 
+![CYP201](assets/fr/022.webp)
+
 ### Funzione Unidirezionale
 
 Grazie a queste operazioni, possiamo capire perché è facile derivare una chiave pubblica da una chiave privata, ma il contrario è praticamente impossibile.
 
 Ritorniamo al nostro esempio semplificato. Con una chiave privata $k = 4$. Per calcolare la chiave pubblica associata, eseguiamo:
-K = k \cdot G = 4G$$
+$$
+K = k \cdot G = 4G
+$$
 
 Siamo quindi stati in grado di calcolare facilmente la chiave pubblica $K$ conoscendo $k$ e $G$.
 
@@ -1200,11 +1210,22 @@ Il numero di parole nella frase mnemonica dipende dalla dimensione dell'entropia
 $$
 \begin{array}{|c|c|c|c|}
 \hline
+\text{ENT} & \text{CS} & \text{ENT} \Vert \text{CS} & w \\
+\hline
+128 & 4 & 132 & 12 \\
+160 & 5 & 165 & 15 \\
+192 & 6 & 198 & 18 \\
+224 & 7 & 231 & 21 \\
+256 & 8 & 264 & 24 \\
+\hline
+\end{array}
+$$
+
 Per esempio, per un'entropia di 256 bit, il risultato $\text{ENT} \Vert \text{CS}$ è di 264 bit e produce una frase mnemonica di 24 parole.
 
 ### Conversione della Sequenza Binaria in una Frase Mnemonica
 
-La sequenza di bit $\text{ENT} \Vert \text{CS}$ viene quindi divisa in segmenti di 11 bit. Ogni segmento di 11 bit, una volta convertito in decimale, corrisponde a un numero tra 0 e 2047, che designa la posizione di una parola [in una lista di 2048 parole standardizzata dal BIP39](https://github.com/Plan ₿-Network/bitcoin-educational-content/blob/dev/resources/bet/bip39-wordlist/assets/BIP39-WORDLIST.pdf).
+La sequenza di bit $\text{ENT} \Vert \text{CS}$ viene quindi divisa in segmenti di 11 bit. Ogni segmento di 11 bit, una volta convertito in decimale, corrisponde a un numero tra 0 e 2047, che designa la posizione di una parola [in una lista di 2048 parole standardizzata dal BIP39](https://github.com/Planb-Network/bitcoin-educational-content/blob/dev/resources/bet/bip39-wordlist/assets/BIP39-WORDLIST.pdf).
 
 ![CYP201](assets/fr/037.webp)
 Per esempio, per un'entropia di 128 bit, il checksum è di 4 bit, e quindi la sequenza totale misura 132 bit. È divisa in 12 segmenti di 11 bit (i bit arancioni designano il checksum):
@@ -1245,7 +1266,7 @@ Di conseguenza, scegliere una frase di 24 parole non fornisce una protezione agg
 Una frase di 12 parole, che offre quindi 128 bit di sicurezza, è attualmente sufficiente per proteggere i tuoi bitcoin da qualsiasi tentativo di furto. Finché l'algoritmo di firma digitale non cambia per utilizzare chiavi più grandi o per affidarsi a un problema matematico diverso dall'ECDLP, una frase di 24 parole rimane superflua. Inoltre, una frase più lunga aumenta il rischio di perdita durante il backup: un backup che è due volte più corto è sempre più facile da gestire.
 Per approfondire e imparare concretamente come generare manualmente una frase mnemonica di prova, ti consiglio di scoprire questo tutorial:
 
-https://planb.network/tutorials/wallet/generate-mnemonic-phrase
+https://planb.network/tutorials/wallet/backup/generate-mnemonic-phrase-47507d90-e6af-4cac-b01b-01a14d7a8228
 Prima di continuare con la derivazione del portafoglio da questa frase mnemonica, ti presenterò, nel capitolo seguente, la passphrase BIP39, poiché gioca un ruolo nel processo di derivazione, ed è allo stesso livello della frase mnemonica.
 ## La passphrase
 <chapterId>6a51b397-f3b5-5084-b151-cef94bc9b93f</chapterId>
@@ -1303,7 +1324,7 @@ La seguente equazione illustra la derivazione del seed dalla frase mnemonica e d
 
 $$
 
-s = \text{PBKDF2}\_{\text{HMAC-SHA512}}(m, p, 2048)
+s = \text{PBKDF2}_{\text{HMAC-SHA512}}(m, p, 2048)
 
 $$
 
@@ -1335,14 +1356,14 @@ L'output di questa funzione è quindi di 512 bit. Viene poi diviso in 2 parti:
 Matematicamente, questi due valori possono essere notati come segue con $k_M$ che rappresenta la chiave privata maestra e $C_M$ il codice catena maestro:
 $$
 
-k*M = \text{HMAC-SHA512}(\text{"Bitcoin Seed"}, s)*{[:256]}
+k_M = \text{HMAC-SHA512}(\text{"Bitcoin Seed"}, s)_{[:256]}
 
 $$
 
 
 $$
 
-C*M = \text{HMAC-SHA512}(\text{"Bitcoin Seed"}, s)*{[256:]}
+C_M = \text{HMAC-SHA512}(\text{"Bitcoin Seed"}, s)_{[256:]}
 
 $$
 
@@ -1414,21 +1435,21 @@ Se viene aggiunto un byte solo alla chiave privata, è perché la chiave pubblic
 Come abbiamo appena visto, le chiavi estese includono un prefisso che indica sia la versione della chiave estesa sia la sua natura. La notazione `pub` indica che si riferisce a una chiave pubblica estesa, e la notazione `prv` indica una chiave privata estesa. La lettera aggiuntiva alla base della chiave estesa aiuta ad indicare se lo standard seguito è Legacy, SegWit v0, SegWit v1, ecc.
 Ecco un riassunto dei prefissi utilizzati e dei loro significati:
 
-| Prefisso Base 58 | Prefisso Base 16 | Rete     | Scopo                | Script Associati         | Derivazione                | Tipo di Chiave |
-|------------------|------------------|----------|----------------------|--------------------------|----------------------------|----------------|
-| `xpub`           | `0488b21e`       | Mainnet  | Legacy e SegWit V1   | P2PK / P2PKH / P2TR      | `m/44'/0'`, `m/86'/0'`     | pubblica       |
-| `xprv`           | `0488ade4`       | Mainnet  | Legacy e SegWit V1   | P2PK / P2PKH / P2TR      | `m/44'/0'`, `m/86'/0'`     | privata        |
-| `tpub`           | `043587cf`       | Testnet  | Legacy e SegWit V1   | P2PK / P2PKH / P2TR      | `m/44'/1'`, `m/86'/1'`     | pubblica       |
-| `tprv`           | `04358394`       | Testnet  | Legacy e SegWit V1   | P2PK / P2PKH / P2TR      | `m/44'/1'`, `m/86'/1'`     | privata        |
-| `ypub`           | `049d7cb2`       | Mainnet  | Nested SegWit        | P2WPKH in P2SH           | `m/49'/0'`                 | pubblica       |
-Questa tabella fornisce una panoramica completa dei prefissi utilizzati nelle chiavi estese, dettagliando i loro prefissi in base 58 e base 16, la rete a cui sono associati (Mainnet o Testnet), il loro scopo, gli script a cui sono associati, il loro percorso di derivazione e se sono chiavi pubbliche o private.
-| `yprv`         | `049d7878`         | Mainnet  | Nested SegWit        | P2WPKH in P2SH           | `m/49'/0'`                 | privata     |
-| `upub`         | `049d7cb2`         | Testnet  | Nested SegWit        | P2WPKH in P2SH           | `m/49'/1'`                 | pubblica    |
-| `uprv`         | `044a4e28`         | Testnet  | Nested SegWit        | P2WPKH in P2SH           | `m/49'/1'`                 | privata     |
-| `zpub`         | `04b24746`         | Mainnet  | SegWit V0            | P2WPKH                   | `m/84'/0'`                 | pubblica    |
-| `zprv`          | `04b2430c`          | Mainnet  | SegWit V0            | P2WPKH                    | `m/84'/0'`                  | privata     |
-| `vpub`          | `045f1cf6`          | Testnet  | SegWit V0            | P2WPKH                    | `m/84'/1'`                  | pubblica    |
-| `vprv`          | `045f18bc`          | Testnet  | SegWit V0            | P2WPKH                    | `m/84'/1'`                  | privata     |
+| Base 58 Prefix  | Base 16 Prefix  | Network | Purpose             | Associated Scripts  | Derivation            | Key Type     |
+| --------------- | --------------- | ------- | ------------------- | ------------------- | --------------------- | ------------ |
+| `xpub`          | `0488b21e`      | Mainnet | Legacy and SegWit V1 | P2PK / P2PKH / P2TR | `m/44'/0'`, `m/86'/0'` | public       |
+| `xprv`          | `0488ade4`      | Mainnet | Legacy and SegWit V1 | P2PK / P2PKH / P2TR | `m/44'/0'`, `m/86'/0'` | private      |
+| `tpub`          | `043587cf`      | Testnet | Legacy and SegWit V1 | P2PK / P2PKH / P2TR | `m/44'/1'`, `m/86'/1'` | public       |
+| `tprv`          | `04358394`      | Testnet | Legacy and SegWit V1 | P2PK / P2PKH / P2TR | `m/44'/1'`, `m/86'/1'` | private      |
+| `ypub`          | `049d7cb2`      | Mainnet | Nested SegWit       | P2WPKH in P2SH      | `m/49'/0'`             | public       |
+| `yprv`          | `049d7878`      | Mainnet | Nested SegWit       | P2WPKH in P2SH      | `m/49'/0'`             | private      |
+| `upub`          | `049d7cb2`      | Testnet | Nested SegWit       | P2WPKH in P2SH      | `m/49'/1'`             | public       |
+| `uprv`          | `044a4e28`      | Testnet | Nested SegWit       | P2WPKH in P2SH      | `m/49'/1'`             | private      |
+| `zpub`          | `04b24746`      | Mainnet | SegWit V0           | P2WPKH              | `m/84'/0'`             | public       |
+| `zprv`          | `04b2430c`      | Mainnet | SegWit V0           | P2WPKH              | `m/84'/0'`             | private      |
+| `vpub`          | `045f1cf6`      | Testnet | SegWit V0           | P2WPKH              | `m/84'/1'`             | public       |
+| `vprv`          | `045f18bc`      | Testnet | SegWit V0           | P2WPKH              | `m/84'/1'`             | private      |
+
 
 ### Dettagli degli Elementi di una Chiave Estesa
 
@@ -1448,23 +1469,23 @@ xpub6CTNzMUkzpurBWaT4HQoYzLP4uBbGJuWY358Rj7rauiw4rMHCyq3Rfy9w4kyJXJzeFfyrKLUar2r
 
 Questa chiave estesa si suddivide in diversi elementi distinti:
 
-1. **Versione**: `0488B21E`
+- **Versione**: `0488B21E`
 
 I primi 4 byte sono la versione. Qui, corrisponde a una chiave pubblica estesa sul Mainnet con uno scopo di derivazione *Legacy* o *SegWit v1*.
 
-2. **Profondità**: `03`
+- **Profondità**: `03`
 
 Questo campo indica il livello gerarchico della chiave all'interno del portafoglio HD. In questo caso, una profondità di `03` significa che questa chiave è tre livelli di derivazione sotto la chiave principale.
 
-3. **Impronta del genitore**: `6D5601AD`
+- **Impronta del genitore**: `6D5601AD`
 Questi sono i primi 4 byte dell'hash HASH160 della chiave pubblica genitore che è stata utilizzata per derivare questo `xpub`.
-4. **Numero di indice**: `80000000`
+- **Numero di indice**: `80000000`
 
 Questo indice indica la posizione della chiave tra i figli del suo genitore. Il prefisso `0x80` indica che la chiave è derivata in modo protetto (hardened), e poiché il resto è riempito con zeri, indica che questa chiave è la prima tra i suoi possibili fratelli.
 
-5. **Codice catena**: `C605DF9FBD77FD6965BD02B77831EC5C78646AD3ACA14DC3984186F72633A893`
-6. **Chiave Pubblica**: `03772CCB99F4EF346078D167065404EED8A58787DED31BFA479244824DF5065805`
-7. **Checksum**: `1F067C3A`
+- **Codice catena**: `C605DF9FBD77FD6965BD02B77831EC5C78646AD3ACA14DC3984186F72633A893`
+- **Chiave Pubblica**: `03772CCB99F4EF346078D167065404EED8A58787DED31BFA479244824DF5065805`
+- **Checksum**: `1F067C3A`
 
 Il checksum corrisponde ai primi 4 byte dell'hash (doppio SHA256) di tutto il resto.
 
@@ -1484,8 +1505,8 @@ Esploriamo come funziona questa derivazione deterministica.
 ### I Diversi Tipi di Derivazioni di Chiavi Figlie
 
 Come abbiamo brevemente accennato nel capitolo precedente: le chiavi figlie sono divise in due tipi principali:
-1. **Chiavi figlie normali** ($k_{\text{CHD}}^n, K_{\text{CHD}}^n$): Queste sono derivate dalla chiave pubblica estesa ($K_{\text{PAR}}$), o dalla chiave privata estesa ($k_{\text{PAR}}$), derivando prima la chiave pubblica.
-2. **Chiavi figlie protette** ($k_{\text{CHD}}^h, K_{\text{CHD}}^h$): Queste possono essere derivate solo dalla chiave privata estesa ($k_{\text{PAR}}$) e sono quindi invisibili agli osservatori che hanno solo la chiave pubblica estesa.
+- **Chiavi figlie normali** ($k_{\text{CHD}}^n, K_{\text{CHD}}^n$): Queste sono derivate dalla chiave pubblica estesa ($K_{\text{PAR}}$), o dalla chiave privata estesa ($k_{\text{PAR}}$), derivando prima la chiave pubblica.
+- **Chiavi figlie protette** ($k_{\text{CHD}}^h, K_{\text{CHD}}^h$): Queste possono essere derivate solo dalla chiave privata estesa ($k_{\text{PAR}}$) e sono quindi invisibili agli osservatori che hanno solo la chiave pubblica estesa.
 Ogni coppia di chiavi figlio è identificata da un **indice** a 32 bit (denominato $i$ nei nostri calcoli). Gli indici per le chiavi normali variano da $0$ a $2^{31}-1$, mentre quelli per le chiavi potenziate (hardened) variano da $2^{31}$ a $2^{32}-1$. Questi numeri sono utilizzati per distinguere le coppie di chiavi fratello durante la derivazione. Infatti, ogni coppia di chiavi genitore deve essere in grado di derivare più coppie di chiavi figlio. Se applicassimo lo stesso calcolo sistematicamente dalle chiavi genitore, tutte le chiavi fratello ottenute sarebbero identiche, il che non è desiderabile. L'indice introduce quindi una variabile che modifica il calcolo di derivazione, permettendo di differenziare ogni coppia di chiavi fratello. Eccetto per l'uso specifico in certi protocolli e standard di derivazione, generalmente iniziamo derivando la prima chiave figlio con l'indice `0`, la seconda con l'indice `1`, e così via.
 ### Processo di Derivazione con HMAC-SHA512
 
@@ -1506,7 +1527,7 @@ Per una **chiave figlio normale** ($i < 2^{31}$), il calcolo di $\text{hash}$ è
 
 $$
 
-\text{hash} = \text{HMAC-SHA512}(C*{\text{PAR}}, G \cdot k*{\text{PAR}} \Vert i)
+\text{hash} = \text{HMAC-SHA512}(C_{\text{PAR}}, G \cdot k_{\text{PAR}} \Vert i)
 
 $$
 In questo calcolo, osserviamo che la nostra funzione HMAC prende due input: prima, il codice catena genitore, e poi la concatenazione dell'indice con la chiave pubblica associata alla chiave privata genitore. La chiave pubblica genitore è utilizzata qui perché stiamo cercando di derivare una chiave figlio normale, non una potenziata.
@@ -1522,7 +1543,7 @@ $$
 
 $$
 
-h*1 = \text{hash}*{[:32]} \quad, \quad h*2 = \text{hash}*{[32:]}
+h*1 = \text{hash}_{[:32]} \quad, \quad h*2 = \text{hash}_{[32:]}
 
 $$
 
@@ -1531,7 +1552,7 @@ La chiave privata figlio $k_{\text{CHD}}^n$ è quindi calcolata come segue:
 
 $$
 
-k*{\text{CHD}}^n = \text{parse256}(h_1) + k*{\text{PAR}} \mod n
+k_{\text{CHD}}^n = \text{parse256}(h_1) + k_{\text{PAR}} \mod n
 
 $$
 In questa calcolazione, l'operazione $\text{parse256}(h_1)$ consiste nell'interpretare i primi 32 byte dell'$\text{hash}$ come un intero a 256 bit. Questo numero viene poi sommato alla chiave privata genitore, il tutto preso modulo $n$ per rimanere nell'ordine della curva ellittica, come abbiamo visto nella sezione 3 sulle firme digitali. Pertanto, per derivare una chiave privata figlio normale, sebbene la chiave pubblica genitore sia utilizzata come base per il calcolo negli input della funzione HMAC-SHA512, è sempre necessario avere la chiave privata genitore per finalizzare il calcolo.
@@ -1555,7 +1576,7 @@ Per una **chiave figlio rinforzata** ($i \geq 2^{31}$), il calcolo dell'$\text{h
 
 $$
 
-hash = \text{HMAC-SHA512}(C*{\text{PAR}}, 0x00 \Vert k*{\text{PAR}} \Vert i)
+hash = \text{HMAC-SHA512}(C_{\text{PAR}}, 0x00 \Vert k_{\text{PAR}} \Vert i)
 
 $$
 
@@ -1579,7 +1600,7 @@ La chiave privata figlio $k_{\text{CHD}}^h$ viene quindi calcolata come segue:
 
 $$
 
-k*{\text{CHD}}^h = \text{parse256}(h_1) + k*{\text{PAR}} \mod n
+k_{\text{CHD}}^h = \text{parse256}(h_1) + k_{\text{PAR}} \mod n
 
 $$
 
@@ -1605,7 +1626,7 @@ Per eseguire questo calcolo, calcoleremo l'$\text{hash}$ con un indice $i < 2^{3
 
 $$
 
-\text{hash} = \text{HMAC-SHA512}(C*{\text{PAR}}, K*{\text{PAR}} \Vert i)
+\text{hash} = \text{HMAC-SHA512}(C_{\text{PAR}}, K_{\text{PAR}} \Vert i)
 
 $$
 
@@ -1632,7 +1653,7 @@ La chiave pubblica figlio $K_{\text{CHD}}^n$ viene quindi calcolata come segue:
 
 $$
 
-K*{\text{CHD}}^n = G \cdot \text{parse256}(h_1) + K*{\text{PAR}}
+K_{\text{CHD}}^n = G \cdot \text{parse256}(h_1) + K_{\text{PAR}}
 
 $$
 Se $\text{parse256}(h_1) \geq n$ (ordine della curva ellittica) o se $K_{\text{CHD}}^n$ è il punto all'infinito, la derivazione è invalida e deve essere scelto un altro indice.
@@ -1662,25 +1683,17 @@ Grazie alle operazioni di addizione e raddoppio sulla curva ellittica, entrambi 
 
 Per riassumere, ecco i diversi possibili tipi di derivazioni:
 
-
 $$
-
 \begin{array}{|c|c|c|c|}
 \hline
 \rightarrow & \text{PAR} & \text{CHD} & \text{n/h} \\
 \hline
-k*{\text{PAR}} \rightarrow k*{\text{CHD}} & k*{\text{PAR}} & \{ k*{\text{CHD}}^n, k\_{\text{CHD}}^h \} & \{ n, h \} \\
-\end{array}
-
-$$
-$$
-
-k*{\text{PAR}} \rightarrow K*{\text{CHD}} & k*{\text{PAR}} & \{ K*{\text{CHD}}^n, K*{\text{CHD}}^h \} & \{ n, h \} \\
-K*{\text{PAR}} \rightarrow k*{\text{CHD}} & K*{\text{PAR}} & \times & \times \\
-K*{\text{PAR}} \rightarrow K*{\text{CHD}} & K*{\text{PAR}} & K*{\text{CHD}}^n & n \\
+k_{\text{PAR}} \rightarrow k_{\text{CHD}} & k_{\text{PAR}} & \{ k_{\text{CHD}}^n, k_{\text{CHD}}^h \} & \{ n, h \} \\
+k_{\text{PAR}} \rightarrow K_{\text{CHD}} & k_{\text{PAR}} & \{ K_{\text{CHD}}^n, K_{\text{CHD}}^h \} & \{ n, h \} \\
+K_{\text{PAR}} \rightarrow k_{\text{CHD}} & K_{\text{PAR}} & \times & \times \\
+K_{\text{PAR}} \rightarrow K_{\text{CHD}} & K_{\text{PAR}} & K_{\text{CHD}}^n & n \\
 \hline
 \end{array}
-
 $$
 
 Per riassumere, finora hai imparato a creare gli elementi base del portafoglio HD: la frase mnemonica, il seme e poi la chiave principale e il codice catena principale. Hai anche scoperto come derivare coppie di chiavi figlie in questo capitolo. Nel prossimo capitolo, esploreremo come queste derivazioni sono organizzate nei portafogli Bitcoin e quale struttura seguire per ottenere concretamente gli indirizzi di ricezione così come le coppie di chiavi utilizzate nello *scriptPubKey* e nello *scriptSig*.
@@ -1918,6 +1931,8 @@ Tecnicamente, uno script P2TR blocca i bitcoin su una unica chiave pubblica Schn
 - Soddisfacendo uno degli script contenuti nell'albero di Merkle (*script path*).
 P2TR offre quindi grande flessibilità, poiché consente di bloccare bitcoin sia con una chiave pubblica unica, sia con diversi script a scelta, o entrambi simultaneamente. Il vantaggio di questa struttura ad albero di Merkle è che solo lo script di spesa utilizzato viene rivelato durante la transazione, ma tutti gli altri script alternativi rimangono segreti.
 
+![CYP201](assets/fr/063.webp)
+
 P2TR corrisponde agli output di versione 1 di SegWit, il che significa che le firme per gli input P2TR sono memorizzate nella sezione *Witness* della transazione, e non nello *scriptSig*. Gli indirizzi P2TR utilizzano la codifica *bech32m* e iniziano con `bc1p`, ma sono piuttosto unici perché non utilizzano una funzione hash per la loro costruzione. Infatti, rappresentano direttamente la chiave pubblica $Q$ che è semplicemente formattata con metadati. È, quindi, un modello di script vicino a P2PK.
 
 Ora che abbiamo coperto la teoria, passiamo alla pratica! Nel capitolo seguente, propongo di derivare sia un indirizzo SegWit v0 che un indirizzo SegWit v1 da una coppia di chiavi.
@@ -1936,6 +1951,9 @@ Dopo aver eseguito tutti i passaggi di derivazione dalla chiave maestra alla pro
 Il primo passo è comprimere la chiave pubblica $K$. Per comprendere bene questo processo, ricordiamo prima alcuni fondamenti trattati nella parte 3.
 Una chiave pubblica su Bitcoin è un punto $K$ situato su una curva ellittica. È rappresentata nella forma $(x, y)$, dove $x$ e $y$ sono le coordinate del punto. Nella sua forma non compressa, questa chiave pubblica misura 520 bit: 8 bit per un prefisso (valore iniziale di `0x04`), 256 bit per la coordinata $x$ e 256 bit per la coordinata $y$.
 Tuttavia, le curve ellittiche hanno una proprietà di simmetria rispetto all'asse x: per una data coordinata $x$, ci sono solo due valori possibili per $y$: $y$ e $-y$. Questi due punti si trovano su entrambi i lati dell'asse x. In altre parole, se conosciamo $x$, è sufficiente specificare se $y$ è pari o dispari per identificare il punto esatto sulla curva.
+
+![CYP201](assets/fr/064.webp)
+
 Per comprimere una chiave pubblica, viene codificato solo $x$, che occupa 256 bit, e viene aggiunto un prefisso per specificare la parità di $y$. Questo metodo riduce la dimensione della chiave pubblica a 264 bit invece dei 520 iniziali. Il prefisso `0x02` indica che $y$ è pari, e il prefisso `0x03` indica che $y$ è dispari.
 Prendiamo un esempio per capire bene, con una chiave pubblica grezza in rappresentazione non compressa:
 
@@ -1983,12 +2001,10 @@ RIPEMD160(SHA256(K)) = 9F81322CC88622CA4CCB2A52A21E2888727AA535
 Abbiamo ottenuto un hash a 160 bit della chiave pubblica, che costituisce quello che viene chiamato il payload dell'indirizzo. Questo payload rappresenta la parte centrale e più importante dell'indirizzo. È utilizzato anche nello *scriptPubKey* per bloccare gli UTXO.
 Tuttavia, per rendere questo payload più facilmente utilizzabile dagli esseri umani, ad esso vengono aggiunti dei metadati. Il passo successivo prevede la codifica di questo hash in gruppi di 5 bit in decimale. Questa trasformazione decimale sarà utile per la conversione in *bech32*, utilizzato dagli indirizzi post-SegWit. L'hash binario a 160 bit è quindi diviso in 32 gruppi di 5 bit:
 
-
 $$
-
 \begin{array}{|c|c|}
 \hline
-\text{Gruppi di 5 bit} & \text{Valore Decimale} \\
+\text{5 bits} & \text{Decimal} \\
 \hline
 10011 & 19 \\
 11110 & 30 \\
@@ -2013,8 +2029,17 @@ $$
 00100 & 4 \\
 00111 & 7 \\
 10001 & 17 \\
+01000 & 8 \\
+10001 & 17 \\
+00001 & 1 \\
+11001 & 25 \\
+00111 & 7 \\
+10101 & 21 \\
+00101 & 5 \\
+00101 & 5 \\
+10101 & 21 \\
+\hline
 \end{array}
-
 $$
 Quindi, abbiamo:
 
@@ -2083,6 +2108,20 @@ Questo ci dà in decimale:
 Quindi, ogni valore decimale deve essere mappato al suo carattere *bech32* utilizzando la seguente tabella di conversione:
 
 
+$$
+\begin{array}{|c|c|c|c|c|c|c|c|c|}
+\hline
+ & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+\hline
++0 & q & p & z & r & y & 9 & x & 8 \\
+\hline
++8 & g & f & 2 & t & v & d & w & 0 \\
+\hline
++16 & s & 3 & j & n & 5 & 4 & k & h \\
+\hline
++24 & c & e & 6 & m & u & a & 7 & l \\
+\hline
+\end{array}
 $$
 
 Per convertire un valore in un carattere _bech32_ utilizzando questa tabella, è sufficiente localizzare i valori nella prima colonna e nella prima riga che, sommati insieme, danno il risultato desiderato. Quindi, recuperare il carattere corrispondente. Ad esempio, il numero decimale `19` verrà convertito nella lettera `n`, perché $19 = 16 + 3$.
@@ -2167,28 +2206,32 @@ $$
 Con:
 
 - $v$: il numero di versione dello script (default `0xC0` per Taproot);
-- $sz$: la dimensione dello script codificato in formato _CompactSize_; - $S$: lo script.
+- $sz$: la dimensione dello script codificato in formato _CompactSize_; 
+- $S$: lo script.
 
 I diversi hash dello script ($\text{h}_{\text{leaf}}$) vengono prima ordinati in ordine lessicografico. Poi, vengono concatenati a coppie e passati attraverso una funzione hash etichettata `TapBranch`. Questo processo viene ripetuto iterativamente per costruire, passo dopo passo, l'albero di Merkle:
-L'hash del ramo \(\text{h}_{\text{branch}}\) viene calcolato come la funzione hash etichettata `TapBranch` applicata alla concatenazione degli hash delle foglie \(\text{h}_{\text{leaf1}} \Vert \text{h}\_{\text{leaf2}}\):
+$$
+\text{h}_{\text{branch}} = \text{H}_{\text{TapBranch}}(\text{h}_{\text{leaf1}} \Vert \text{h}_{\text{leaf2}})
+$$
 
 Proseguiamo quindi concatenando i risultati due a due, passandoli ad ogni passo attraverso la funzione hash etichettata `TapBranch`, fino ad ottenere la radice dell'albero di Merkle:
 
 ![CYP201](assets/fr/066.webp)
 
-Una volta calcolata la radice di Merkle \(h*{\text{root}}\), possiamo calcolare il tweak. Per questo, concateniamo la chiave pubblica interna del portafoglio \(P\) con la radice \(h*{\text{root}}\), e poi passiamo il tutto attraverso la funzione hash etichettata `TapTweak`:
+Una volta calcolata la radice di Merkle $h_{\text{root}}$, possiamo calcolare il tweak. Per farlo, la chiave pubblica interna del portafoglio $P$ viene concatenata con la radice $h_{\text{root}}$ e il risultato viene passato attraverso la funzione di hash taggata `TapTweak`:
 
-\[
+$$
 t = \text{H}_{\text{TapTweak}}(P \Vert h_{\text{root}})
-\]
+$$
 
-Infine, come prima, la chiave pubblica Taproot \(Q\) si ottiene aggiungendo la chiave pubblica interna \(P\) al prodotto del tweak \(t\) per il punto generatore \(G\):
+Infine, come in precedenza, la chiave pubblica Taproot $Q$ viene ottenuta aggiungendo la chiave pubblica interna $P$ al prodotto del tweak $t$ e del punto generatore $G$:
 
-\[
+$$
 Q = P + t \cdot G
-\]
+$$
 
-Quindi, la generazione dell'indirizzo segue lo stesso processo, utilizzando la chiave pubblica grezza \(Q\) come payload, accompagnata da alcuni metadati aggiuntivi.
+La generazione dell'indirizzo segue quindi lo stesso processo, utilizzando la chiave pubblica grezza $Q$ come payload, insieme ad alcuni metadati aggiuntivi.
+
 
 Ed eccoci! Abbiamo raggiunto la fine di questo corso CYP201. Se hai trovato questo corso utile, ti sarei molto grato se potessi dedicare qualche momento per dare una buona valutazione nel capitolo di valutazione seguente. Sentiti libero di condividerlo anche con i tuoi cari o sui tuoi social network. Infine, se desideri ottenere il tuo diploma per questo corso, puoi sostenere l'esame finale subito dopo il capitolo di valutazione.
 
@@ -2196,7 +2239,7 @@ Ed eccoci! Abbiamo raggiunto la fine di questo corso CYP201. Se hai trovato ques
 
 <partId>58111408-b734-54db-9ea7-0d5b67f99f99</partId>
 
-## Valuta questo corso
+## Recensioni & Valutazioni
 
 <chapterId>0cd71541-a7fd-53db-b66a-8611b6a28b04</chapterId>
 <isCourseReview>true</isCourseReview>
@@ -2209,35 +2252,4 @@ Ed eccoci! Abbiamo raggiunto la fine di questo corso CYP201. Se hai trovato ques
 ## Conclusione
 
 <chapterId>d291428b-3cfa-5394-930e-4b514be82d5a</chapterId>
-
-Siamo giunti alla fine della formazione CYP201. Spero che sia stata utile nel vostro percorso di apprendimento di Bitcoin e vi abbia aiutato a comprendere meglio il funzionamento dei portafogli HD che utilizzate quotidianamente. Grazie per aver seguito questo corso fino alla fine!
-
-A mio parere, questa conoscenza sui portafogli è fondamentale, poiché collega un aspetto teorico di Bitcoin al suo uso pratico. Infatti, se utilizzate Bitcoin, gestite necessariamente software di portafoglio. Comprendere il loro funzionamento interno vi permette di implementare strategie di sicurezza efficaci padroneggiando al contempo i meccanismi sottostanti, i rischi e le potenziali debolezze. Così, potete utilizzare Bitcoin in modo più sicuro e con fiducia.
-
-Se non l'avete ancora fatto, vi invito a valutare e commentare questa formazione. Mi aiuterebbe enormemente. Potete anche condividere questa formazione sui vostri social network per diffondere questa conoscenza al maggior numero possibile di persone.
-
-Per continuare il vostro viaggio nella tana del coniglio, vi raccomando vivamente la formazione **BTC204**, che ho anche prodotto su Plan ₿ Network. È dedicata alla privacy di Bitcoin ed esplora temi chiave: Qual è il modello di privacy? Come funziona l'analisi della catena? Come utilizzare Bitcoin in modo ottimale per massimizzare la vostra privacy? Un logico passo successivo per approfondire le vostre competenze!
-
-https://planb.network/courses/btc204
-
-Inoltre, per continuare ad approfondire le vostre conoscenze nell'universo Bitcoin, vi invitiamo a esplorare altri corsi disponibili su Plan ₿ Network come:
-
-#### Impara a creare la tua comunità Bitcoin con
-
-https://planb.network/courses/btc302
-
-#### Scopri il Lightning Network con
-
-https://planb.network/courses/lnp201
-
-#### Scopri il pensiero economico della Scuola Austriaca con
-
-https://planb.network/courses/eco201
-
-#### Scopri la storia delle origini di Bitcoin con
-
-https://planb.network/courses/his201
-
-#### Scopri l'evoluzione della libertà attraverso le epoche con
-
-https://planb.network/courses/phi201
+<isCourseConclusion>true</isCourseConclusion>

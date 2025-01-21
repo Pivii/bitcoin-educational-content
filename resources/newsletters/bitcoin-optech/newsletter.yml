@@ -3,7 +3,8 @@ title: Bitcoin Optech
 author: Adam Jonas, David A. Harding, Gloria Zhao, and al.
 publication_date: 2018-06-08
 level: expert
-website: https://bitcoinops.org/en/newsletters/
+link:
+  - website: https://bitcoinops.org/en/newsletters/
 language:
   - en
 description: |

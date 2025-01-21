@@ -3,7 +3,8 @@ title: Linux Advisory Watch
 author: Brittany Day
 publication_date: 1996-01-01
 level: wizard
-website: https://linuxsecurity.com/newsletters/linux-advisory-watch
+link:
+  - website: https://linuxsecurity.com/newsletters/linux-advisory-watch
 language:
   - en
 description: |

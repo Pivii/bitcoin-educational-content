@@ -67,7 +67,7 @@ Den første typen kryptografiske algoritmer brukt på Bitcoin omfatter hashfunks
 Hashing er en prosess som transformerer informasjon av vilkårlig lengde til et annet stykke informasjon av fast lengde gjennom en kryptografisk hashfunksjon. Med andre ord tar en hashfunksjon en inndata av hvilken som helst størrelse og konverterer den til et fingeravtrykk av fast størrelse, kalt en "hash".
 Hashen kan også noen ganger refereres til som "digest", "condensate", "condensed", eller "hashed".
 
-For eksempel produserer SHA256-hashfunksjonen en hash av en fast lengde på 256 bits. Så, hvis vi bruker inndataen "_Plan ₿_", en melding av vilkårlig lengde, vil den genererte hashen være følgende 256-bits fingeravtrykk:
+For eksempel produserer SHA256-hashfunksjonen en hash av en fast lengde på 256 bits. Så, hvis vi bruker inndataen "_PlanB_", en melding av vilkårlig lengde, vil den genererte hashen være følgende 256-bits fingeravtrykk:
 
 ```text
 24f1b93b68026bfc24f5c8265f287b4c940fb1664b0d75053589d7a4f821b688
@@ -79,16 +79,16 @@ For eksempel produserer SHA256-hashfunksjonen en hash av en fast lengde på 256 
 
 Disse kryptografiske hashfunksjonene har flere essensielle egenskaper som gjør dem spesielt nyttige i konteksten av Bitcoin og andre datasystemer:
 
-1. Irreversibilitet (eller preimage-motstand)
-2. Manipulasjonsmotstand (snøskredseffekt)
-3. Kollisjonsmotstand
-4. Sekundær preimage-motstand
+- Irreversibilitet (eller preimage-motstand)
+- Manipulasjonsmotstand (snøskredseffekt)
+- Kollisjonsmotstand
+- Sekundær preimage-motstand
 
 #### 1. Irreversibilitet (preimage-motstand):
 
 Irreversibilitet betyr at det er enkelt å beregne hashen fra inndatainformasjonen, men den inverse beregningen, det vil si å finne inndataen fra hashen, er praktisk talt umulig. Denne egenskapen gjør hashfunksjoner perfekte for å skape unike digitale fingeravtrykk uten å kompromittere den opprinnelige informasjonen. Denne karakteristikken omtales ofte som en enveisfunksjon eller en "_felle dør-funksjon_".
 
-I det gitte eksemplet er det enkelt og raskt å oppnå hashen `24f1b9…` ved å kjenne inndataen "_Plan ₿_". Imidlertid er det umulig å finne meldingen "_Plan ₿_" ved kun å kjenne `24f1b9…`.
+I det gitte eksemplet er det enkelt og raskt å oppnå hashen `24f1b9…` ved å kjenne inndataen "_PlanB_". Imidlertid er det umulig å finne meldingen "_PlanB_" ved kun å kjenne `24f1b9…`.
 
 ![CYP201](assets/fr/002.webp)
 
@@ -97,7 +97,7 @@ Derfor er det umulig å finne et preimage $m$ for en hash $h$ slik at $h = \text
 #### 2. Manipulasjonsmotstand (snøskredseffekt)
 
 Det andre kjennetegnet er motstandsdyktighet mot manipulering, også kjent som **snøballeffekten**. Dette kjennetegnet observeres i en hash-funksjon hvis en liten endring i inngangsmeldingen resulterer i en radikal endring i utgangshashen.
-Hvis vi går tilbake til eksemplet vårt med inngangen "_Plan ₿_" og SHA256-funksjonen, har vi sett at den genererte hashen er som følger:
+Hvis vi går tilbake til eksemplet vårt med inngangen "_PlanB_" og SHA256-funksjonen, har vi sett at den genererte hashen er som følger:
 
 ```text
 24f1b93b68026bfc24f5c8265f287b4c940fb1664b0d75053589d7a4f821b688
@@ -137,6 +137,8 @@ $$
 $$
 
 Derfor er motstand mot sekundært prebilde noe lik kollisjonsresistens, bortsett fra at her er angrepet vanskeligere fordi angriperen ikke fritt kan velge $m_1$.
+
+![CYP201](assets/fr/005.webp)
 
 ### Bruk av Hashfunksjoner i Bitcoin
 
@@ -224,9 +226,9 @@ Hvis vi går tilbake til eksemplet vårt med en opprinnelig melding på 950 bits
 
 Denne padding-størrelsen legges til etter bit-paddingen. Derfor består meldingen etter vår forbehandling av tre deler:
 
-1. Den opprinnelige meldingen $M$;
-2. En bit `1` etterfulgt av flere bits `0` for å danne bit-paddingen;
-3. En 64-bits representasjon av lengden på $M$ for å danne paddingen med størrelsen.
+- Den opprinnelige meldingen $M$;
+- En bit `1` etterfulgt av flere bits `0` for å danne bit-paddingen;
+- En 64-bits representasjon av lengden på $M$ for å danne paddingen med størrelsen.
 
 ![CYP201](assets/fr/006.webp)
 
@@ -256,21 +258,16 @@ K[0 \ldots 63] = \begin{pmatrix}
 0x983e5152, & 0xa831c66d, & 0xb00327c8, & 0xbf597fc7, \\
 0xc6e00bf3, & 0xd5a79147, & 0x06ca6351, & 0x14292967, \\
 0x27b70a85, & 0x2e1b2138, & 0x4d2c6dfc, & 0x53380d13, \\
-
-
-$$
-
-\begin{pmatrix}
-
-$$
-\begin{pmatrix}
-0x650a7354, & 0x766a0abb, & 0x81c2c92e, & 0x92722c85, \\0xa2bfe8a1, & 0xa81a664b, & 0xc24b8b70, & 0xc76c51a3, \\0xd192e819, & 0xd6990624, & 0xf40e3585, & 0x106aa070, \\
+0x650a7354, & 0x766a0abb, & 0x81c2c92e, & 0x92722c85, \\
+0xa2bfe8a1, & 0xa81a664b, & 0xc24b8b70, & 0xc76c51a3, \\
+0xd192e819, & 0xd6990624, & 0xf40e3585, & 0x106aa070, \\
 0x19a4c116, & 0x1e376c08, & 0x2748774c, & 0x34b0bcb5, \\
 0x391c0cb3, & 0x4ed8aa4a, & 0x5b9cca4f, & 0x682e6ff3, \\
 0x748f82ee, & 0x78a5636f, & 0x84c87814, & 0x8cc70208, \\
 0x90befffa, & 0xa4506ceb, & 0xbef9a3f7, & 0xc67178f2
 \end{pmatrix}
 $$
+
 
 ### Inndeling av inndata
 
@@ -300,9 +297,10 @@ For XOR ($\oplus$):
 For OG ($\land$):
 
 | $p$ | $q$ | $p \land q$ |
-| --- | --- | ----------- | --- | --- | --- | --- |
+| --- | --- | ----------- |
 | 0   | 0   | 0           |
-| 0   | 1   | 0           |     | 1   | 0   | 0   |
+| 0   | 1   | 0           |
+| 1   | 0   | 0           |
 | 1   | 1   | 1           |
 
 For NOT ($\lnot p$):
@@ -434,14 +432,12 @@ $$
 H = G \\
 G = F \\
 F = E \\
-$$
-
-E = D + \text{temp1} \mod 2^{32} \\D = C \\
+E = D + temp1 \mod 2^{32} \\
+D = C \\
 C = B \\
 B = A \\
-A = \text{temp1} + \text{temp2} \mod 2^{32}
+A = temp1 + temp2 \mod 2^{32}
 \end{cases}
-
 $$
 
 Følgende diagram representerer en runde av SHA256-komprimeringsfunksjonen slik vi nettopp har beskrevet:
@@ -454,17 +450,17 @@ Følgende diagram representerer en runde av SHA256-komprimeringsfunksjonen slik 
 
 Vi kan allerede observere at denne runden produserer nye tilstandsvariabler $A$, $B$, $C$, $D$, $E$, $F$, $G$, og $H$. Disse nye variablene vil tjene som input for neste runde, som igjen vil produsere nye variabler $A$, $B$, $C$, $D$, $E$, $F$, $G$, og $H$, for å brukes i den følgende runden. Denne prosessen fortsetter opp til den 64. runden.
 Etter de 64 rundene, oppdaterer vi de opprinnelige verdiene av tilstandsvariablene ved å legge dem til de endelige verdiene ved slutten av runde 64:
-$$
 
+$$
 \begin{cases}
-A = A*{\text{initial}} + A \mod 2^{32} \\
-B = B*{\text{initial}} + B \mod 2^{32} \\
-C = C*{\text{initial}} + C \mod 2^{32} \\
-D = D*{\text{initial}} + D \mod 2^{32} \\
-E = E*{\text{initial}} + E \mod 2^{32} \\
-F = F*{\text{initial}} + F \mod 2^{32} \\
-G = G*{\text{initial}} + G \mod 2^{32} \\
-H = H*{\text{initial}} + H \mod 2^{32}
+A = A_{\text{initial}} + A \mod 2^{32} \\
+B = B_{\text{initial}} + B \mod 2^{32} \\
+C = C_{\text{initial}} + C \mod 2^{32} \\
+D = D_{\text{initial}} + D \mod 2^{32} \\
+E = E_{\text{initial}} + E \mod 2^{32} \\
+F = F_{\text{initial}} + F \mod 2^{32} \\
+G = G_{\text{initial}} + G \mod 2^{32} \\
+H = H_{\text{initial}} + H \mod 2^{32}
 \end{cases}
 
 $$
@@ -529,8 +525,8 @@ I Bitcoin på applikasjonsnivå, i tillegg til hash-funksjoner, brukes kryptogra
 
 På Bitcoin-lommebøker brukes hovedsakelig 2 derivasjonsalgoritmer:
 
-1. **HMAC (_Hash-basert meldingsautentiseringskode_)**
-2. **PBKDF2 (_Password-Based Key Derivation Function 2_)**
+- **HMAC (_Hash-basert meldingsautentiseringskode_)**
+- **PBKDF2 (_Password-Based Key Derivation Function 2_)**
 
 Vi vil utforske funksjonen og rollen til hver av dem.
 
@@ -567,12 +563,12 @@ $$
 
 Denne ligningen brytes ned i følgende trinn:
 
-1. XOR den justerte nøkkelen $K'$ med $\text{ipad}$ for å oppnå $\text{iKpad}$;
-2. XOR den justerte nøkkelen $K'$ med $\text{opad}$ for å oppnå $\text{oKpad}$;
-3. Sammenkjed $\text{iKpad}$ med meldingen $m$.
-4. Hash dette resultatet med SHA512 for å oppnå en mellomliggende hash $H_1$.
-5. Sammenkjed $\text{oKpad}$ med $H_1$.
-6. Hash dette resultatet med SHA512 for å oppnå det endelige resultatet $H_2$.
+- XOR den justerte nøkkelen $K'$ med $\text{ipad}$ for å oppnå $\text{iKpad}$;
+- XOR den justerte nøkkelen $K'$ med $\text{opad}$ for å oppnå $\text{oKpad}$;
+- Sammenkjed $\text{iKpad}$ med meldingen $m$.
+- Hash dette resultatet med SHA512 for å oppnå en mellomliggende hash $H_1$.
+- Sammenkjed $\text{oKpad}$ med $H_1$.
+- Hash dette resultatet med SHA512 for å oppnå det endelige resultatet $H_2$.
 
 Disse trinnene kan oppsummeres skjematisk som følger:
 
@@ -731,6 +727,8 @@ Det faktum at dette punktet $G$ er felles for alle offentlige nøkler på Bitcoi
 
 Hovedkarakteristikken til denne operasjonen er at det er en enveisfunksjon. Det er enkelt å beregne den offentlige nøkkelen $K$ ved å kjenne den private nøkkelen $k$ og generatorelementet $G$, men det er praktisk talt umulig å beregne den private nøkkelen $k$ ved å kun kjenne den offentlige nøkkelen $K$ og generatorelementet $G$. Å finne $k$ fra $K$ og $G$ tilsvarer å løse det diskrete logaritmeproblemet på elliptiske kurver, et matematisk vanskelig problem for hvilket det ikke er kjent noen effektiv algoritme. Selv de kraftigste nåværende kalkulatorene er ute av stand til å løse dette problemet på en rimelig tid.
 
+![CYP201](assets/fr/018.webp)
+
 ### Addisjon og Dobling av Punkter på Elliptiske Kurver
 
 Konseptet med addisjon på elliptiske kurver er definert geometrisk. Hvis vi har to punkter $P$ og $Q$ på kurven, blir operasjonen $P + Q$ beregnet ved å tegne en linje som passerer gjennom $P$ og $Q$. Denne linjen vil nødvendigvis krysse kurven ved et tredje punkt $R'$. Vi tar deretter speilbildet av dette punktet med hensyn til x-aksen for å få punktet $R$, som er resultatet av addisjonen:
@@ -788,7 +786,10 @@ Grafisk ville dette bli representert som følger:
 Takket være disse operasjonene, kan vi forstå hvorfor det er enkelt å utlede en offentlig nøkkel fra en privat nøkkel, men det motsatte er praktisk talt umulig.
 
 La oss gå tilbake til vårt forenklede eksempel. Med en privat nøkkel $k = 4$. For å beregne den tilknyttede offentlige nøkkelen, utfører vi:
-K = k \cdot G = 4G$$
+
+$$
+K = k \cdot G = 4G
+$$
 
 Vi har dermed kunnet enkelt beregne den offentlige nøkkelen $K$ ved å kjenne $k$ og $G$.
 
@@ -1179,11 +1180,22 @@ Antall ord i den mnemoniske frasen avhenger av størrelsen på den opprinnelige 
 $$
 \begin{array}{|c|c|c|c|}
 \hline
+\text{ENT} & \text{CS} & \text{ENT} \Vert \text{CS} & w \\
+\hline
+128 & 4 & 132 & 12 \\
+160 & 5 & 165 & 15 \\
+192 & 6 & 198 & 18 \\
+224 & 7 & 231 & 21 \\
+256 & 8 & 264 & 24 \\
+\hline
+\end{array}
+$$
+
 For eksempel, for en entropi på 256 bits, er resultatet $\text{ENT} \Vert \text{CS}$ 264 bits og gir en mnemonisk frase på 24 ord.
 
 ### Konvertering av den Binære Sekvensen til en Mnemonisk Frase
 
-Bitsekvensen $\text{ENT} \Vert \text{CS}$ deles deretter inn i segmenter på 11 bits. Hvert 11-bits segment, når det er konvertert til desimal, tilsvarer et tall mellom 0 og 2047, som angir posisjonen til et ord [i en liste over 2048 ord standardisert av BIP39](https://github.com/Plan ₿-Network/bitcoin-educational-content/blob/dev/resources/bet/bip39-wordlist/assets/BIP39-WORDLIST.pdf).
+Bitsekvensen $\text{ENT} \Vert \text{CS}$ deles deretter inn i segmenter på 11 bits. Hvert 11-bits segment, når det er konvertert til desimal, tilsvarer et tall mellom 0 og 2047, som angir posisjonen til et ord [i en liste over 2048 ord standardisert av BIP39](https://github.com/Planb-Network/bitcoin-educational-content/blob/dev/resources/bet/bip39-wordlist/assets/BIP39-WORDLIST.pdf).
 
 ![CYP201](assets/fr/037.webp)
 For eksempel, for en 128-bit entropi, er kontrollsummen 4 bit, og dermed måler den totale sekvensen 132 bit. Den er delt inn i 12 segmenter på 11 bit (de oransje bitene betegner kontrollsummen):
@@ -1223,7 +1235,7 @@ Som et resultat gir ikke å velge en 24-ords frase ekstra beskyttelse for lommeb
 En 12-ords frase, som også tilbyr 128 bits sikkerhet, er derfor for øyeblikket tilstrekkelig for å beskytte dine bitcoins mot ethvert tyveriforsøk. Så lenge den digitale signaturalgoritmen ikke endres for å bruke større nøkler eller for å stole på et matematisk problem annet enn ECDLP, forblir en 24-ords frase overflødig. Dessuten øker en lengre frase risikoen for tap under sikkerhetskopiering: en sikkerhetskopi som er halvparten så kort er alltid enklere å håndtere.
 For å gå videre og lære konkret hvordan man manuelt genererer en test mnemonisk frase, anbefaler jeg deg å oppdage denne opplæringen:
 
-https://planb.network/tutorials/wallet/generate-mnemonic-phrase
+https://planb.network/tutorials/wallet/backup/generate-mnemonic-phrase-47507d90-e6af-4cac-b01b-01a14d7a8228
 Før vi fortsetter med derivasjonen av lommeboken fra denne mnemoniske frasen, vil jeg introdusere deg, i det følgende kapittelet, til BIP39-passfrasen, ettersom den spiller en rolle i derivasjonsprosessen, og den er på samme nivå som den mnemoniske frasen.
 ## Passfrasen
 <chapterId>6a51b397-f3b5-5084-b151-cef94bc9b93f</chapterId>
@@ -1281,7 +1293,7 @@ Følgende ligning illustrerer utledningen av seedet fra den mnemoniske frasen og
 
 $$
 
-s = \text{PBKDF2}\_{\text{HMAC-SHA512}}(m, p, 2048)
+s = \text{PBKDF2}_{\text{HMAC-SHA512}}(m, p, 2048)
 
 $$
 
@@ -1313,14 +1325,14 @@ Utgangen av denne funksjonen er derfor 512 bits. Den deles deretter inn i 2 dele
 Matematisk kan disse to verdiene noteres som følger med $k_M$ som den mesterlige private nøkkelen og $C_M$ som den mesterlige kjedekoden:
 $$
 
-k*M = \text{HMAC-SHA512}(\text{"Bitcoin Seed"}, s)*{[:256]}
+k_M = \text{HMAC-SHA512}(\text{"Bitcoin Seed"}, s)_{[:256]}
 
 $$
 
 
 $$
 
-C*M = \text{HMAC-SHA512}(\text{"Bitcoin Seed"}, s)*{[256:]}
+C_M = \text{HMAC-SHA512}(\text{"Bitcoin Seed"}, s)_{[256:]}
 
 $$
 
@@ -1392,22 +1404,21 @@ Hvis det legges til ett byte til den private nøkkelen alene, er det fordi den k
 Som vi nettopp har sett, inkluderer utvidede nøkler et prefiks som indikerer både versjonen av den utvidede nøkkelen og dens natur. Notasjonen `pub` indikerer at det refererer til en utvidet offentlig nøkkel, og notasjonen `prv` indikerer en utvidet privat nøkkel. Den ekstra bokstaven ved basen av den utvidede nøkkelen hjelper til med å indikere om standarden som følges er Legacy, SegWit v0, SegWit v1, osv.
 Her er en oppsummering av de brukte prefiksene og deres betydninger:
 
-| Base 58 Prefiks | Base 16 Prefiks     | Nettverk | Formål               | Assosierte Skripter        | Avledning                  | Nøkkeltype  |
-|-----------------|---------------------|----------|----------------------|----------------------------|----------------------------|-------------|
-| `xpub`          | `0488b21e`          | Mainnet  | Legacy og SegWit V1  | P2PK / P2PKH / P2TR        | `m/44'/0'`, `m/86'/0'`     | offentlig   |
-| `xprv`          | `0488ade4`          | Mainnet  | Legacy og SegWit V1  | P2PK / P2PKH / P2TR        | `m/44'/0'`, `m/86'/0'`     | privat      |
-| `tpub`          | `043587cf`          | Testnet  | Legacy og SegWit V1  | P2PK / P2PKH / P2TR        | `m/44'/1'`, `m/86'/1'`     | offentlig   |
-| `tprv`          | `04358394`          | Testnet  | Legacy og SegWit V1  | P2PK / P2PKH / P2TR        | `m/44'/1'`, `m/86'/1'`     | privat      |
-| `ypub`          | `049d7cb2`          | Mainnet  | Nested SegWit        | P2WPKH i P2SH              | `m/49'/0'`                 | offentlig   |
-| `yprv`         | `049d7878`         | Hovednett  | Nested SegWit        | P2WPKH i P2SH           | `m/49'/0'`                 | privat     |
-| `upub`         | `049d7cb2`         | Testnett  | Nested SegWit        | P2WPKH i P2SH           | `m/49'/1'`                 | offentlig      |
-| `uprv`         | `044a4e28`         | Testnett  | Nested SegWit        | P2WPKH i P2SH           | `m/49'/1'`                 | privat     |
-| `zpub`         | `04b24746`         | Hovednett  | SegWit V0            | P2WPKH                   | `m/84'/0'`                 | offentlig      |
+| Base 58 Prefix  | Base 16 Prefix  | Network | Purpose             | Associated Scripts  | Derivation            | Key Type     |
+| --------------- | --------------- | ------- | ------------------- | ------------------- | --------------------- | ------------ |
+| `xpub`          | `0488b21e`      | Mainnet | Legacy and SegWit V1 | P2PK / P2PKH / P2TR | `m/44'/0'`, `m/86'/0'` | public       |
+| `xprv`          | `0488ade4`      | Mainnet | Legacy and SegWit V1 | P2PK / P2PKH / P2TR | `m/44'/0'`, `m/86'/0'` | private      |
+| `tpub`          | `043587cf`      | Testnet | Legacy and SegWit V1 | P2PK / P2PKH / P2TR | `m/44'/1'`, `m/86'/1'` | public       |
+| `tprv`          | `04358394`      | Testnet | Legacy and SegWit V1 | P2PK / P2PKH / P2TR | `m/44'/1'`, `m/86'/1'` | private      |
+| `ypub`          | `049d7cb2`      | Mainnet | Nested SegWit       | P2WPKH in P2SH      | `m/49'/0'`             | public       |
+| `yprv`          | `049d7878`      | Mainnet | Nested SegWit       | P2WPKH in P2SH      | `m/49'/0'`             | private      |
+| `upub`          | `049d7cb2`      | Testnet | Nested SegWit       | P2WPKH in P2SH      | `m/49'/1'`             | public       |
+| `uprv`          | `044a4e28`      | Testnet | Nested SegWit       | P2WPKH in P2SH      | `m/49'/1'`             | private      |
+| `zpub`          | `04b24746`      | Mainnet | SegWit V0           | P2WPKH              | `m/84'/0'`             | public       |
+| `zprv`          | `04b2430c`      | Mainnet | SegWit V0           | P2WPKH              | `m/84'/0'`             | private      |
+| `vpub`          | `045f1cf6`      | Testnet | SegWit V0           | P2WPKH              | `m/84'/1'`             | public       |
+| `vprv`          | `045f18bc`      | Testnet | SegWit V0           | P2WPKH              | `m/84'/1'`             | private      |
 
-Denne tabellen gir en omfattende oversikt over prefiksene som brukes i utvidede nøkler, og detaljerer deres base 58 og base 16 prefikser, nettverket de er assosiert med (Hovednett eller Testnett), deres formål, skriptene de er assosiert med, deres avledningssti, og om de er offentlige eller private nøkler.
-| `zprv`          | `04b2430c`          | Hovednett  | SegWit V0            | P2WPKH                    | `m/84'/0'`                  | privat     |
-| `vpub`          | `045f1cf6`          | Testnett  | SegWit V0            | P2WPKH                    | `m/84'/1'`                  | offentlig      |
-| `vprv`          | `045f18bc`          | Testnett  | SegWit V0            | P2WPKH                    | `m/84'/1'`                  | privat     |
 
 ### Detaljer om en utvidet nøkkels elementer
 
@@ -1427,23 +1438,23 @@ xpub6CTNzMUkzpurBWaT4HQoYzLP4uBbGJuWY358Rj7rauiw4rMHCyq3Rfy9w4kyJXJzeFfyrKLUar2r
 
 Denne utvidede nøkkelen brytes ned i flere distinkte elementer:
 
-1. **Versjon**: `0488B21E`
+- **Versjon**: `0488B21E`
 
 De første 4 bytene er versjonen. Her tilsvarer det en utvidet offentlig nøkkel på Hovednett med et avledningsformål av enten *Legacy* eller *SegWit v1*.
 
-2. **Dybde**: `03`
+- **Dybde**: `03`
 
 Dette feltet indikerer det hierarkiske nivået til nøkkelen innenfor HD-lommeboken. I dette tilfellet betyr en dybde på `03` at denne nøkkelen er tre nivåer av avledning under hovednøkkelen.
 
-3. **Foreldres fingeravtrykk**: `6D5601AD`
+- **Foreldres fingeravtrykk**: `6D5601AD`
 Disse er de første 4 bytene av HASH160-hashen av den overordnede offentlige nøkkelen som ble brukt til å utlede denne `xpub`.
-4. **Indeksnummer**: `80000000`
+- **Indeksnummer**: `80000000`
 
 Dette indeksnummeret indikerer nøkkelens posisjon blant forelderens barn. `0x80`-prefikset indikerer at nøkkelen er utledet på en hardnet måte, og siden resten er fylt med nuller, indikerer det at denne nøkkelen er den første blant sine mulige søsken.
 
-5. **Kjedekode**: `C605DF9FBD77FD6965BD02B77831EC5C78646AD3ACA14DC3984186F72633A893`
-6. **Offentlig Nøkkel**: `03772CCB99F4EF346078D167065404EED8A58787DED31BFA479244824DF5065805`
-7. **Kontrollsum**: `1F067C3A`
+- **Kjedekode**: `C605DF9FBD77FD6965BD02B77831EC5C78646AD3ACA14DC3984186F72633A893`
+- **Offentlig Nøkkel**: `03772CCB99F4EF346078D167065404EED8A58787DED31BFA479244824DF5065805`
+- **Kontrollsum**: `1F067C3A`
 
 Kontrollsummen tilsvarer de første 4 bytene av hashen (dobbel SHA256) av alt annet.
 
@@ -1463,8 +1474,8 @@ La oss utforske hvordan denne deterministiske utledningen fungerer.
 ### De Forskjellige Typene av Barne-Nøkkelutledninger
 
 Som vi kort berørte i forrige kapittel: barne-nøkler er delt inn i to hovedtyper:
-1. **Normale barne-nøkler** ($k_{\text{CHD}}^n, K_{\text{CHD}}^n$): Disse er utledet fra den utvidede offentlige nøkkelen ($K_{\text{PAR}}$), eller den utvidede private nøkkelen ($k_{\text{PAR}}$), ved først å utlede den offentlige nøkkelen.
-2. **Hardnede barne-nøkler** ($k_{\text{CHD}}^h, K_{\text{CHD}}^h$): Disse kan kun utledes fra den utvidede private nøkkelen ($k_{\text{PAR}}$) og er derfor usynlige for observatører som kun har den utvidede offentlige nøkkelen.
+- **Normale barne-nøkler** ($k_{\text{CHD}}^n, K_{\text{CHD}}^n$): Disse er utledet fra den utvidede offentlige nøkkelen ($K_{\text{PAR}}$), eller den utvidede private nøkkelen ($k_{\text{PAR}}$), ved først å utlede den offentlige nøkkelen.
+- **Hardnede barne-nøkler** ($k_{\text{CHD}}^h, K_{\text{CHD}}^h$): Disse kan kun utledes fra den utvidede private nøkkelen ($k_{\text{PAR}}$) og er derfor usynlige for observatører som kun har den utvidede offentlige nøkkelen.
 Hvert barnenøkkelpar er identifisert av en 32-biters **indeks** (kalt $i$ i våre beregninger). Indeksene for normale nøkler varierer fra $0$ til $2^{31}-1$, mens de for herdede nøkler varierer fra $2^{31}$ til $2^{32}-1$. Disse tallene brukes til å skille søsken nøkkelpar under derivasjon. Faktisk må hvert foreldrenøkkelpar være i stand til å derivere flere barnenøkkelpar. Hvis vi skulle anvende den samme beregningen systematisk fra foreldrenøklene, ville alle de oppnådde søskennøklene være identiske, noe som ikke er ønskelig. Indeksen introduserer dermed en variabel som endrer derivasjonsberegningen, slik at hvert søskenpar kan differensieres. Bortsett fra spesifikk bruk i visse protokoller og derivasjonsstandarder, starter vi generelt med å derivere det første barnenøkkelen med indeksen `0`, den andre med indeksen `1`, og så videre.
 ### Derivasjonsprosess med HMAC-SHA512
 
@@ -1485,7 +1496,7 @@ For en **normal barnenøkkel** ($i < 2^{31}$), er beregningen av $\text{hash}$ s
 
 $$
 
-\text{hash} = \text{HMAC-SHA512}(C*{\text{PAR}}, G \cdot k*{\text{PAR}} \Vert i)
+\text{hash} = \text{HMAC-SHA512}(C_{\text{PAR}}, G \cdot k_{\text{PAR}} \Vert i)
 
 $$
 I denne beregningen observerer vi at vår HMAC-funksjon tar to inndata: først, foreldrenes kjedekode, og deretter sammenkjedningen av indeksen med den offentlige nøkkelen assosiert med den private foreldrenøkkelen. Den offentlige foreldrenøkkelen brukes her fordi vi ser etter å derivere en normal barnenøkkel, ikke en herdet en.
@@ -1501,7 +1512,7 @@ $$
 
 $$
 
-h*1 = \text{hash}*{[:32]} \quad, \quad h*2 = \text{hash}*{[32:]}
+h*1 = \text{hash}_{[:32]} \quad, \quad h*2 = \text{hash}_{[32:]}
 
 $$
 
@@ -1510,7 +1521,7 @@ Den barn private nøkkelen $k_{\text{CHD}}^n$ beregnes deretter som følger:
 
 $$
 
-k*{\text{CHD}}^n = \text{parse256}(h_1) + k*{\text{PAR}} \mod n
+k_{\text{CHD}}^n = \text{parse256}(h_1) + k_{\text{PAR}} \mod n
 
 $$
 I denne beregningen består operasjonen $\text{parse256}(h_1)$ av å tolke de første 32 bytene av $\text{hash}$ som et 256-bits heltall. Dette tallet legges deretter til den overordnede private nøkkelen, alt tatt modulo $n$ for å holde seg innenfor elliptisk kurves orden, som vi så i seksjon 3 om digitale signaturer. Dermed, for å utlede en normal barnenøkkel, selv om den overordnede offentlige nøkkelen brukes som grunnlag for beregning i inndataene til HMAC-SHA512-funksjonen, er det alltid nødvendig å ha den overordnede private nøkkelen for å fullføre beregningen.
@@ -1534,7 +1545,7 @@ For en **hardened barnenøkkel** ($i \geq 2^{31}$), er beregningen av $\text{has
 
 $$
 
-hash = \text{HMAC-SHA512}(C*{\text{PAR}}, 0x00 \Vert k*{\text{PAR}} \Vert i)
+hash = \text{HMAC-SHA512}(C_{\text{PAR}}, 0x00 \Vert k_{\text{PAR}} \Vert i)
 
 $$
 
@@ -1558,7 +1569,7 @@ Barnets private nøkkel $k_{\text{CHD}}^h$ beregnes deretter som følger:
 
 $$
 
-k*{\text{CHD}}^h = \text{parse256}(h_1) + k*{\text{PAR}} \mod n
+k_{\text{CHD}}^h = \text{parse256}(h_1) + k_{\text{PAR}} \mod n
 
 $$
 
@@ -1584,7 +1595,7 @@ For å utføre denne beregningen, vil vi beregne $\text{hash}$ med et indeks $i 
 
 $$
 
-\text{hash} = \text{HMAC-SHA512}(C*{\text{PAR}}, K*{\text{PAR}} \Vert i)
+\text{hash} = \text{HMAC-SHA512}(C_{\text{PAR}}, K_{\text{PAR}} \Vert i)
 
 $$
 
@@ -1611,7 +1622,7 @@ Den offentlige nøkkelen til barnet $K_{\text{CHD}}^n$ beregnes deretter som fø
 
 $$
 
-K*{\text{CHD}}^n = G \cdot \text{parse256}(h_1) + K*{\text{PAR}}
+K_{\text{CHD}}^n = G \cdot \text{parse256}(h_1) + K_{\text{PAR}}
 
 $$
 Hvis $\text{parse256}(h_1) \geq n$ (ordenen til den elliptiske kurven) eller hvis $K_{\text{CHD}}^n$ er punktet i uendelighet, er utledningen ugyldig, og et annet indeks må velges.
@@ -1640,25 +1651,17 @@ Takket være addisjons- og doblingsoperasjonene på den elliptiske kurven, produ
 
 For å oppsummere, her er de forskjellige mulige typene av avledninger:
 
-
 $$
-
 \begin{array}{|c|c|c|c|}
 \hline
 \rightarrow & \text{PAR} & \text{CHD} & \text{n/h} \\
 \hline
-k*{\text{PAR}} \rightarrow k*{\text{CHD}} & k*{\text{PAR}} & \{ k*{\text{CHD}}^n, k\_{\text{CHD}}^h \} & \{ n, h \} \\
-\end{array}
-
-$$
-$$
-
-k*{\text{PAR}} \rightarrow K*{\text{CHD}} & k*{\text{PAR}} & \{ K*{\text{CHD}}^n, K*{\text{CHD}}^h \} & \{ n, h \} \\
-K*{\text{PAR}} \rightarrow k*{\text{CHD}} & K*{\text{PAR}} & \times & \times \\
-K*{\text{PAR}} \rightarrow K*{\text{CHD}} & K*{\text{PAR}} & K*{\text{CHD}}^n & n \\
+k_{\text{PAR}} \rightarrow k_{\text{CHD}} & k_{\text{PAR}} & \{ k_{\text{CHD}}^n, k_{\text{CHD}}^h \} & \{ n, h \} \\
+k_{\text{PAR}} \rightarrow K_{\text{CHD}} & k_{\text{PAR}} & \{ K_{\text{CHD}}^n, K_{\text{CHD}}^h \} & \{ n, h \} \\
+K_{\text{PAR}} \rightarrow k_{\text{CHD}} & K_{\text{PAR}} & \times & \times \\
+K_{\text{PAR}} \rightarrow K_{\text{CHD}} & K_{\text{PAR}} & K_{\text{CHD}}^n & n \\
 \hline
 \end{array}
-
 $$
 
 For å oppsummere, så langt har du lært å skape de grunnleggende elementene av HD-lommeboken: den mnemoniske frasen, frøet, og deretter hovednøkkelen og hovedkjedekoden. Du har også oppdaget hvordan man avleder barne-nøkkelpar i dette kapittelet. I neste kapittel vil vi utforske hvordan disse avledningene er organisert i Bitcoin-lommebøker og hvilken struktur man skal følge for å konkret oppnå mottaksadressene samt nøkkelparene som brukes i *scriptPubKey* og *scriptSig*.
@@ -1961,12 +1964,10 @@ RIPEMD160(SHA256(K)) = 9F81322CC88622CA4CCB2A52A21E2888727AA535
 Vi har oppnådd en 160-bits hash av den offentlige nøkkelen, som utgjør det som kalles nyttelasten til adressen. Denne nyttelasten representerer den sentrale og viktigste delen av adressen. Den brukes også i *scriptPubKey* for å låse UTXOene.
 Men, for å gjøre denne nyttelasten lettere brukbar for mennesker, legges metadata til den. Neste steg involverer koding av denne hashen til grupper av 5 bits i desimal. Denne desimalomformingen vil være nyttig for konvertering til *bech32*, som brukes av post-SegWit-adresser. Den 160-bits binære hashen deles dermed inn i 32 grupper av 5 bits:
 
-
 $$
-
 \begin{array}{|c|c|}
 \hline
-\text{5-bits Grupper} & \text{Desimalverdi} \\
+\text{5 bits} & \text{Decimal} \\
 \hline
 10011 & 19 \\
 11110 & 30 \\
@@ -1991,8 +1992,17 @@ $$
 00100 & 4 \\
 00111 & 7 \\
 10001 & 17 \\
+01000 & 8 \\
+10001 & 17 \\
+00001 & 1 \\
+11001 & 25 \\
+00111 & 7 \\
+10101 & 21 \\
+00101 & 5 \\
+00101 & 5 \\
+10101 & 21 \\
+\hline
 \end{array}
-
 $$
 Så, vi har:
 
@@ -2061,6 +2071,20 @@ Dette gir oss i desimal:
 Deretter må hver desimalverdi kartlegges til sin *bech32*-karakter ved hjelp av følgende konverteringstabell:
 
 
+$$
+\begin{array}{|c|c|c|c|c|c|c|c|c|}
+\hline
+ & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+\hline
++0 & q & p & z & r & y & 9 & x & 8 \\
+\hline
++8 & g & f & 2 & t & v & d & w & 0 \\
+\hline
++16 & s & 3 & j & n & 5 & 4 & k & h \\
+\hline
++24 & c & e & 6 & m & u & a & 7 & l \\
+\hline
+\end{array}
 $$
 
 For å konvertere en verdi til et _bech32_-tegn ved hjelp av denne tabellen, finn ganske enkelt verdiene i den første kolonnen og den første raden som, når de legges sammen, gir det ønskede resultatet. Deretter henter du det tilsvarende tegnet. For eksempel vil det desimale tallet `19` bli konvertert til bokstaven `n`, fordi $19 = 16 + 3$.
@@ -2145,28 +2169,32 @@ $$
 Med:
 
 - $v$: versjonsnummeret til skriptet (standard `0xC0` for Taproot);
-- $sz$: størrelsen på skriptet kodet i _CompactSize_-formatet; - $S$: skriptet.
+- $sz$: størrelsen på skriptet kodet i _CompactSize_-formatet; 
+- $S$: skriptet.
 
 De forskjellige skript-hashene ($\text{h}_{\text{leaf}}$) sorteres først i leksikografisk rekkefølge. Deretter blir de konkatenert i par og sendt gjennom den merkede hash-funksjonen `TapBranch`. Denne prosessen gjentas iterativt for å bygge, steg for steg, Merkle-treet:
-Gren-hashen \(\text{h}_{\text{branch}}\) beregnes som den merkede hash-funksjonen `TapBranch` anvendt på konkatenasjonen av blad-hashene \(\text{h}_{\text{leaf1}} \Vert \text{h}\_{\text{leaf2}}\):
+$$
+\text{h}_{\text{branch}} = \text{H}_{\text{TapBranch}}(\text{h}_{\text{leaf1}} \Vert \text{h}_{\text{leaf2}})
+$$
 
 Vi fortsetter deretter med å konkatenere resultatene to og to, og sender dem gjennom den merkede hash-funksjonen `TapBranch` ved hvert steg, til vi oppnår Merkle-treets rot:
 
 ![CYP201](assets/fr/066.webp)
 
-Når Merkle-roten \(h*{\text{root}}\) er beregnet, kan vi beregne justeringen. For dette konkatenrer vi lommebokens interne offentlige nøkkel \(P\) med roten \(h*{\text{root}}\), og deretter sender vi hele gjennom den merkede hash-funksjonen `TapTweak`:
+Når Merkle-roten $h_{\text{root}}$ er beregnet, kan vi beregne tweaken. For å gjøre dette, kobles den interne offentlige nøkkelen til lommeboken $P$ med roten $h_{\text{root}}$, og resultatet kjøres gjennom den merkede hash-funksjonen `TapTweak`:
 
-\[
+$$
 t = \text{H}_{\text{TapTweak}}(P \Vert h_{\text{root}})
-\]
+$$
 
-Til slutt, som før, oppnås Taproot-offentlig nøkkel \(Q\) ved å legge til den interne offentlige nøkkelen \(P\) til produktet av justeringen \(t\) med generatorpunktet \(G\):
+Til slutt, som tidligere, oppnås Taproot offentlig nøkkel $Q$ ved å legge til den interne offentlige nøkkelen $P$ til produktet av tweaken $t$ og generatorpunktet $G$:
 
-\[
+$$
 Q = P + t \cdot G
-\]
+$$
 
-Deretter følger genereringen av adressen samme prosess, ved å bruke den rå offentlige nøkkelen \(Q\) som nyttelast, ledsaget av noe tilleggs metadata.
+Genereringen av adressen følger deretter samme prosess, hvor den rå offentlige nøkkelen $Q$ brukes som nyttelast, sammen med noen ekstra metadata.
+
 
 Og der har du det! Vi har nådd slutten av dette CYP201-kurset. Hvis du fant dette kurset nyttig, ville jeg være veldig takknemlig hvis du kunne ta deg noen øyeblikk til å gi det en god vurdering i det følgende evalueringskapittelet. Føl deg også fri til å dele det med dine kjære eller på dine sosiale nettverk. Til slutt, hvis du ønsker å oppnå ditt diplom for dette kurset, kan du ta den endelige eksamenen rett etter evalueringskapittelet.
 
@@ -2174,7 +2202,7 @@ Og der har du det! Vi har nådd slutten av dette CYP201-kurset. Hvis du fant det
 
 <partId>58111408-b734-54db-9ea7-0d5b67f99f99</partId>
 
-## Evaluer dette kurset
+## Vurderinger & Karakterer
 
 <chapterId>0cd71541-a7fd-53db-b66a-8611b6a28b04</chapterId>
 <isCourseReview>true</isCourseReview>
@@ -2187,35 +2215,4 @@ Og der har du det! Vi har nådd slutten av dette CYP201-kurset. Hvis du fant det
 ## Konklusjon
 
 <chapterId>d291428b-3cfa-5394-930e-4b514be82d5a</chapterId>
-
-Vi har nådd slutten av CYP201-opplæringen. Jeg håper den har vært nyttig i din Bitcoin-læring og har hjulpet deg å bedre forstå hvordan HD-lommebøkene du bruker daglig fungerer. Takk for at du fulgte dette kurset til slutten!
-
-Etter min mening er denne kunnskapen om lommebøker fundamental, da den knytter et teoretisk aspekt av Bitcoin til dens praktiske bruk. Hvis du bruker Bitcoin, håndterer du nødvendigvis lommebokprogramvare. Å forstå deres indre virkemåte gjør det mulig å implementere effektive sikkerhetsstrategier mens du behersker de underliggende mekanismene, risikoene og potensielle svakhetene. Dermed kan du bruke Bitcoin sikrere og med tillit.
-
-Hvis du ikke allerede har gjort det, inviterer jeg deg til å vurdere og kommentere denne opplæringen. Det ville hjulpe meg enormt. Du kan også dele denne opplæringen på dine sosiale nettverk for å spre denne kunnskapen til så mange som mulig.
-
-For å fortsette reisen din ned i kaninhullet, anbefaler jeg sterkt **BTC204**-opplæringen, som jeg også har produsert på Plan ₿ Network. Den er dedikert til Bitcoin-personvern og utforsker nøkkeltemaer: Hva er personvernmodellen? Hvordan fungerer kjedeanalyse? Hvordan bruke Bitcoin optimalt for å maksimere personvernet ditt? Et logisk neste steg for å fordype ferdighetene dine!
-
-https://planb.network/courses/btc204
-
-For å fortsette å fordype din kunnskap i Bitcoin-universet, inviterer vi deg til å utforske andre kurs tilgjengelige på Plan ₿ Network som:
-
-#### Lær å skape ditt Bitcoin-fellesskap med
-
-https://planb.network/courses/btc302
-
-#### Oppdag Lightning Network med
-
-https://planb.network/courses/lnp201
-
-#### Oppdag den økonomiske tankegangen til den østerrikske skolen med
-
-https://planb.network/courses/eco201
-
-#### Oppdag historien om Bitcoins opprinnelse med
-
-https://planb.network/courses/his201
-
-#### Oppdag frihetens utvikling gjennom tidene med
-
-https://planb.network/courses/phi201
+<isCourseConclusion>true</isCourseConclusion>

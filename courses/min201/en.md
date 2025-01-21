@@ -38,7 +38,7 @@ In the second section, we will embark on a fascinating practical case, learning 
 
 This learning journey will show you that the mining industry is more complex than it appears, offering a balanced perspective on the ecological debate associated with it. Ongoing assistance will be available through a dedicated Telegram group for students, and all the necessary components will be easily accessible on our e-commerce platform.
 
-### Curriculum:
+### Curriculum
 
 Theoretical Section:
 
@@ -90,7 +90,7 @@ Nowadays, miners exclusively use ASICs dedicated to this operation, optimized to
 
 To illustrate the intensity of this process, consider a typical miner capable of achieving 14 TeraHash per second, or 14 trillion attempts every second to find the correct hash. At the scale of the Bitcoin network, we now reach approximately 300 HexaHash per second, highlighting the collective power mobilized in Bitcoin mining.
 
-### Difficulty adjustment:
+### Difficulty adjustment
 
 Difficulty adjustment is a crucial mechanism in the operation of the Bitcoin network, ensuring that blocks are mined on average every 10 minutes. This duration is an average because the mining process is actually a game of probabilities, similar to rolling dice in the hope of getting a number lower than the number defined by the difficulty. Every 2016 blocks, the network adjusts the mining difficulty based on the average time required to mine the previous blocks. If the average time is greater than 10 minutes, the difficulty is reduced, and conversely, if the average time is lower, the difficulty is increased. This adjustment mechanism ensures that the mining time for new blocks remains constant over time, regardless of the number of miners or the overall computing power of the network. This is why the Bitcoin Blockchain is also called the Timechain.
 
@@ -784,7 +784,7 @@ The end result is a higher hash rate per watt of electricity, which means larger
 
 <partId>fa42ec0b-b1fd-47f6-8268-6eab684c1d2b</partId>
 
-## Evaluate this course
+## Reviews & Ratings
 
 <chapterId>6af13742-df68-5cf4-b7aa-93dc0c2eaae9</chapterId>
 <isCourseReview>true</isCourseReview>
@@ -797,30 +797,4 @@ The end result is a higher hash rate per watt of electricity, which means larger
 ## Conclusion
 
 <chapterId>2941f29a-d6ce-4a3c-b61b-6e399f5395b1</chapterId>
-Congratulations on completing this course!
-
-We are delighted that you have reached this important milestone in your learning journey.
-
-Through your dedication and commitment, you have gained valuable knowledge and skills that will serve you in your professional development.
-
-To continue exploring the Bitcoin universe in depth, we invite you to discover all other courses available on Plan ₿ Network:
-
-#### Discover Bitcoin and its fundamentals with
-
-https://planb.network/courses/btc101
-
-#### Discover the Lightning Network with
-
-https://planb.network/courses/lnp201
-
-#### Master the principles of privacy on Bitcoin
-
-https://planb.network/courses/btc204
-
-#### Discover the history of Bitcoin's origins with
-
-https://planb.network/courses/his201
-
-#### Understand how the Bitcoin wallet works with
-
-https://planb.network/courses/cyp201
+<isCourseConclusion>true</isCourseConclusion>

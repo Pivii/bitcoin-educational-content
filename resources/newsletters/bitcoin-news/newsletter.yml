@@ -3,7 +3,8 @@ title: Bitcoin News
 author: Josh Friedeman, Luis Lopez, Conor Chepenik, Bam Garcia
 publication_date: 2023-11-06
 level: beginner
-website: https://bitcoinnews.com/
+link:
+  - website: https://bitcoinnews.com/
 language:
   - en
 description: |

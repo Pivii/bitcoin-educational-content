@@ -129,7 +129,6 @@ objectives:
 
 したがって、ビットコインは長期にわたるプロトコルであり、私たちにエネルギー、時間、お金との関係を問いかけるよう促しています。しかし、ビットコインは「本物の」お金なのでしょうか？お金とは何でしょうか？複数の形態で存在するのでしょうか？次の章でこれらの問いについて探求していきます。
 
-![ビットコインの先史時代](assets/posters/fr/1_prehistoiredubitcoin.webp)
 
 Bitcoinの歴史を詳しく探りたい方には、HIS 201コースを強くお勧めします。Bitcoinの起源とそのゆっくりとした発展、そしてその歴史とコミュニティの始まりについて学べます。このコースは完全に文書化され、もちろん多くの逸話が含まれています :
 
@@ -517,17 +516,17 @@ https://planb.network/courses/cyp201
 
 例えば、Sparrow Walletをホットウォレットとして使用できます：
 
-https://planb.network/tutorials/wallet/sparrow
+https://planb.network/tutorials/wallet/desktop/sparrow-7e9a77c0-013d-4f8e-a811-408b71dc7607
 
 - **レベル2**:物理的なウォレットを使用し、12または24の単語のリストを保護します。トランザクションを行うためには常にデバイスで署名する必要があります。これにより、日常的に資金にアクセスすることが難しくなります。これはインターネットに接続されていないデバイスに秘密鍵が保存されているため、「コールド・ウォレット」と呼ばれることが多いです。
 
 例えば、Ledger、Satochip、またはTapsignerを使用できます：
 
-https://planb.network/tutorials/wallet/ledger-nano-s-plus
+https://planb.network/tutorials/wallet/hardware/ledger-nano-s-plus-75043cb3-2e8e-43e8-862d-ca243b8215a4
 
-https://planb.network/tutorials/wallet/satochip
+https://planb.network/tutorials/wallet/hardware/satochip-e9bc81d9-d59b-420d-9672-3360212237ba
 
-https://planb.network/tutorials/wallet/tapsigner
+https://planb.network/tutorials/wallet/hardware/tapsigner-ab2bcdf9-9509-4908-9a4a-2f2be1e7d5d2
 
 ![画像](assets/Concept/chapitre6/4.webp)
 
@@ -535,7 +534,7 @@ https://planb.network/tutorials/wallet/tapsigner
 
 BIP39パスフレーズの使用方法と機能について詳しく知るために：
 
-https://planb.network/tutorials/wallet/passphrase
+https://planb.network/tutorials/wallet/backup/passphrase-a26a0220-806c-44b4-af14-bafdeb1adce7
 
 ![画像](assets/Concept/chapitre6/5.webp)
 
@@ -750,9 +749,7 @@ Bobはその受金アドレスを使用してトランザクションを開始�
 
 > 注意:Aliceが自分のアドレスの1つでビットコインを受け取ったのを見たとしても、その取引が6回確認されたときのみ不変とみなすことを推奨します。つまり、Bobのトランザクションを含むブロックの上に6つの他のブロックがマイニングされたことを意味します。言い換えると、ブロックチェーン内でトランザクションが古いほど、より変更不可能になります。
 
-### ポスターでの簡単なまとめ！
 
-![トランザクションの説明](assets/posters/fr/11_explication_d_une_transaction_crop.webp)
 
 ### つまりどういうことだろう？
 
@@ -815,9 +812,7 @@ Bobはトランザクションをビットコイン・ネットワークに送�
 
 この勝利を受けて、ノードはSegWitと呼ばれるアップデートをアクティブ化し、ビットコイン・ブロックチェーンを使用した瞬時のビットコイン支払いネットワークであるライトニング・ネットワークの実装への道を開きました。この状況は、ユーザーがノードを通じてビットコイン内で実際の力を持ち、大手機関に立ち向かうことができることを示しています。
 
-### ポスターでのまとめ！
 
-![Bitcoin nodes](assets/posters/fr/12_explication_des_nodes_crop.webp)
 
 ## マイナー
 
@@ -891,7 +886,6 @@ Bobはトランザクションをビットコイン・ネットワークに送�
 
 ビットコインに適用されるゲーム理論は、不正を働くマイナーを排除します。マイナーはASICマシンを使用してマイニングを行い、成功した場合に報酬を受け取ります。さらに、彼らはしばしばマイニングプールに参加して、計算能力を共有し、小さいながらも定期的により多くの報酬を受け取ります。ビットコインのマイニングはエネルギー・コストが高いプロセスですが、ビットコイン・ネットワークの機能とセキュリティには不可欠です。プルーフオブワークとブロックチェーンは二重支払いの問題を解決し、信頼できる第三者なしで情報の真実性を保証します。情報の検証にはわずかなコストしかかかりませんが、情報を生成するためにはエネルギーの消費が必要です。この非対称性がネットワークのセキュリティを保証します。したがって、コンセンサス・ルールに従うことは、破るよりも経済合理性に優れています。
 
-![マイナー](assets/posters/fr/13_explication_des_mineurs_crop.webp)
 
 ビットコインのマイニングについてさらに詳しく知りたい場合は、MIN 201コースをご覧ください。Proof-of-Workの仕組みと役割、そしてマイニング業界の仕組みを学ぶことができます。また、ASICを暖房に変える方法を説明しますので、最初のサトシを採掘しながらお住まいを暖めることができます！
 
@@ -945,7 +939,6 @@ https://planb.network/courses/min201
 
 > ビットコインの格言の1つに従いましょう:Don't trust, verify for yourself!（信頼せず、自分自身で検証しよう！）
 
-![ビットコインと生態学](assets/posters/fr/14_minage_et_ecologie_crop.webp)
 
 ### ビットコインの技術的な側面の簡単な要約
 
@@ -1051,11 +1044,11 @@ BTC/ドルのペアは短期的に変動する一方で、ビットコインは2
 
 - 簡単なオンラインソリューション: OpenNode
 
-https://planb.network/tutorials/merchant/open-node
+https://planb.network/tutorials/merchant/merchant/open-node-e69a0c1c-47f7-4932-8494-e6f26c3c9784
 
 - アマチュア商人向けのソリューション: Swiss Bitcoin Pay
 
-https://planb.network/tutorials/merchant/swiss-bitcoin-pay-2
+https://planb.network/tutorials/merchant/merchant/swiss-bitcoin-pay-2-a78b057e-ed11-47ac-860c-71019fcb451a
 
 - 大規模な構造または情熱的なビットコイナー向けのソリューション: BTCpayサーバー
 
@@ -1271,7 +1264,6 @@ https://planb.network/courses/lnp201
 
 映画『マトリックス』でモーフィアスがネオに言ったように、「青い錠剤を飲めば、物語は終わり、ベッドで目を覚ます。信じたいことだけを信じることができる。赤い錠剤を飲めば、ワンダーランドに留まり、ラビットホールがどれだけ深いかを見せてあげよう」。ビットコインのラビットホールを探索する準備はできていますか？よく聞いてください。あなたは経済的自由を再発見することでしょう！
 
-![赤い錠剤](assets/posters/fr/2_pilluleorange.webp)
 
 ### 技術の未来とその影響
 
@@ -1338,7 +1330,7 @@ AIを例にしてみましょう。これらの技術は、ビデオゲーム、
 
 <partId>9ed4b454-2950-40b4-a56b-68d109689a82</partId>
 
-## コース評価
+## レビュー & 評価
 
 <chapterId>585729e2-b0ab-51b5-89ec-593e3ea22c57</chapterId>
 <isCourseReview>true</isCourseReview>
@@ -1351,25 +1343,4 @@ AIを例にしてみましょう。これらの技術は、ビデオゲーム、
 ## 結論
 
 <chapterId>dfc534be-44a9-5e8c-9c98-e51ef0554e91</chapterId>
-
-BTC 101トレーニングを修了おめでとうございます！このコースがあなたの心に響き、新しい扉を開くきっかけとなったことを心から願っています。ビットコインの探求はまだ始まったばかりです。Plan ₿ Networkで利用可能な他のすべてのコースもぜひご覧ください：
-
-#### 初めてのビットコインの取得と安全な保管について学ぶ
-
-https://planb.network/courses/btc102
-
-#### ライトニングネットワークについて学ぶ
-
-https://planb.network/courses/lnp201
-
-#### オーストリア学派の経済思想について学ぶ
-
-https://planb.network/courses/eco201
-
-#### オンラインセキュリティを更新する
-
-https://planb.network/courses/scu101
-
-#### ビットコインの基礎を理解し、家庭用暖房システムを構築する
-
-https://planb.network/courses/min201
+<isCourseConclusion>true</isCourseConclusion>

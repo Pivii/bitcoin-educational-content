@@ -567,6 +567,8 @@ Ngày 11 tháng 2, Satoshi đã công bố một [thông điệp giới thiệu]
 > "Vấn đề cơ bản với tiền tệ thông thường là tất cả sự tin tưởng cần thiết để làm cho nó hoạt động. Chúng ta phải tin tưởng rằng ngân hàng trung ương không làm giảm giá trị tiền tệ, nhưng lịch sử của các loại tiền tệ fiat đầy rẫy những vi phạm niềm tin đó. Chúng ta phải tin tưởng các ngân hàng giữ tiền của chúng ta và chuyển nó điện tử, nhưng họ cho vay nó ra trong những đợt bong bóng tín dụng với chỉ một phần nhỏ dự trữ. Chúng ta phải tin họ bảo vệ sự riêng tư của chúng ta, không để kẻ trộm danh tính rút cạn tài khoản của chúng ta. Chi phí hoạt động đáng kể của họ làm cho việc thanh toán micropayments trở nên không thể."
 Trên [hồ sơ](https://p2pfoundation.ning.com/profile/SatoshiNakamoto) của mình, ông ta tự nhận là một người đàn ông Nhật Bản, nhưng không chỉ có vậy. Một bản cập nhật giao diện vào năm 2011 đã tiết lộ tuổi của ông: 35 tuổi, điều này có nghĩa là ông ấy 32 hoặc 33 tuổi vào năm 2009. Sau đó, vào năm 2014, người ta [phát hiện](https://www.reddit.com/r/Bitcoin/comments/229qvr/happy_birthday_satoshi_nakamoto/) rằng ông ấy đã chỉ định một ngày sinh cụ thể: 5 tháng 4, 1975. Ngày này, dường như vô hại, có lẽ là một tham chiếu ghép từ lệnh cấm công dân Mỹ sở hữu vàng từ năm 1933 đến 1975 tại Hoa Kỳ. Ngày 5 tháng 4 liên quan đến ngày lệnh cấm này được thiết lập bởi [Lệnh Hành Pháp 6102](https://www.presidency.ucsb.edu/documents/executive-order-6102-forbidding-the-hoarding-gold-coin-gold-bullion-and-gold-certificates) ký bởi Tổng thống Franklin Delano Roosevelt vào ngày 5 tháng 4, 1933, và năm 1975 tương ứng với việc bãi bỏ lệnh cấm này thông qua việc ban hành [Luật Công Cộng 93-373](https://www.govtrack.us/congress/bills/93/s2665/text). Chi tiết này rất quan trọng vì lệnh cấm này đã kết thúc tiêu chuẩn vàng cổ điển (nơi người ta có thể đổi vàng lấy một tờ tiền đại diện), cho phép giảm giá trị đồng đô la (thông qua Đạo luật Dự trữ Vàng vào năm 1934), và tạo điều kiện cho việc thiết lập chế độ tiền tệ tỷ giá hối đoái nổi sau Sự kiện Nixon vào năm 1971.
 
+![Hồ sơ của Satoshi Nakamoto trên diễn đàn P2P Foundation vào ngày 17 tháng 3, 2011](assets/en/26.webp)
+
 Hồ sơ của Satoshi Nakamoto trên diễn đàn P2P Foundation vào ngày 17 tháng 3, 2011 (nguồn: [bản chụp diễn đàn](https://web.archive.org/web/20110317060514/http://p2pfoundation.ning.com:80/profile/SatoshiNakamoto))
 
 Đây không phải là tham chiếu duy nhất về kim loại quý được tìm thấy trong các giao tiếp của Satoshi. Người tạo ra Bitcoin [viết](https://p2pfoundation.ning.com/forum/topics/bitcoin-open-source?commentId=2003008:Comment:9562) trong các bình luận vào ngày 18 tháng 2:
@@ -1240,7 +1242,7 @@ Khía cạnh bí ẩn xung quanh người tạo ra Bitcoin đã được Hal Fin
 >
 > Chữ S đại diện cho cái gì?"
 
-## Đánh giá khóa học
+## Nhận xét & Đánh giá
 <chapterId>73825805-29e2-54bf-a8c3-62614b52fbef</chapterId>
 <isCourseReview>true</isCourseReview>
 
@@ -1366,7 +1368,7 @@ Thứ tư, Bitcoin là một sáng tạo vị tha. Satoshi Nakamoto đã cung c�
 Vào năm 2011, Satoshi biến mất, nhưng Bitcoin vẫn tồn tại. Đồng tiền mã hóa thậm chí đã chính thức cất cánh, từ cả quan điểm truyền thông và kinh tế. Cỗ máy đã được khởi động và không ai có thể ngăn cản nó.
 # Kết luận
 <partId>89532d9b-af1f-49f3-b87a-b11987e303d5</partId>
-## Đánh giá khóa học này
+## Nhận xét & Đánh giá
 <chapterId>8f27cc89-8759-4a4f-aff2-c1d3d9ecf14e</chapterId>
 <isCourseReview>true</isCourseReview>
 ## Kỳ thi cuối khóa
@@ -1374,28 +1376,4 @@ Vào năm 2011, Satoshi biến mất, nhưng Bitcoin vẫn tồn tại. Đồng 
 <isCourseExam>true</isCourseExam>
 ## Kết luận
 <chapterId>9c501c44-0f1a-449e-8ab3-a5873abe4db6</chapterId>
-Chúc mừng bạn đã hoàn thành khóa học này!
-
-Chúng tôi rất vui mừng khi bạn đã đạt được cột mốc quan trọng này trong hành trình học tập của mình.
-
-Nhờ sự tận tâm và cam kết của bạn, bạn đã thu được những kiến thức và kỹ năng quý giá sẽ phục vụ bạn trong sự phát triển nghề nghiệp.
-
-Để tiếp tục khám phá sâu hơn về vũ trụ Bitcoin, chúng tôi mời bạn khám phá tất cả các khóa học khác có sẵn trên Plan ₿ Network:
-
-#### Khám phá Bitcoin và các nguyên lý cơ bản của nó với
-https://planb.network/courses/btc101
-
-#### Khám phá Trường phái Kinh tế học Áo với
-https://planb.network/courses/eco201
-
-#### Nhận và bảo mật bitcoin đầu tiên của bạn với
-https://planb.network/courses/btc102
-
-#### Cập nhật bảo mật trực tuyến của bạn với
-https://planb.network/courses/scu101
-
-#### Khám phá sự tiến hóa của tự do qua các thời đại với
-https://planb.network/courses/phi201
-
-#### Hiểu các nguyên tắc cơ bản về khai thác với
-https://planb.network/courses/min201
+<isCourseConclusion>true</isCourseConclusion>

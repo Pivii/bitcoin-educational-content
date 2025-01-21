@@ -13,7 +13,7 @@ _This tutorial is provided for educational and informational purposes only. We d
 
 ---
 
-> _"Force blockchain spies to rethink everything they think they know."_
+> *Force blockchain spies to rethink everything they think they know.*
 
 Payjoin is a specific Bitcoin transaction structure that enhances user privacy during spending by collaborating with the payment recipient. There are several implementations that facilitate the setup and automation of PayJoin. Among these implementations, the most well-known is Stowaway developed by the Samourai Wallet team. This tutorial aims to guide you through the process of making a Stowaway Payjoin transaction using the Sparrow Wallet software.
 
@@ -27,7 +27,7 @@ Cahoots transactions involve exchanging partially signed transactions between us
 
 When done remotely, this process becomes too complex. To address this issue, Samourai has developed an encrypted communication protocol based on Tor, called "Soroban." With Soroban, the necessary exchanges for a Payjoin are automated behind a user-friendly interface. This is the second method we will explore in this article.
 
-These encrypted exchanges require establishing a connection and authentication between Cahoots participants. Soroban communications rely on the users' Paynyms. If you are not familiar with Paynyms, I invite you to refer to this article for more details: [BIP47 - PAYNYM](https://planb.network/tutorials/privacy/paynym-bip47)
+These encrypted exchanges require establishing a connection and authentication between Cahoots participants. Soroban communications rely on the users' Paynyms. If you are not familiar with Paynyms, I invite you to refer to this article for more details: [BIP47 - PAYNYM](https://planb.network/tutorials/privacy/on-chain/paynym-bip47-a492a70b-50eb-4f95-a766-bae2c5535093)
 To put it simply, a Paynym is a unique identifier linked to your wallet that allows for various functionalities, including encrypted messaging. The Paynym is presented in the form of an identifier and an illustration representing a robot. Here is an example of mine on the Testnet: ![Paynym Sparrow](assets/en/1.webp)
 
 **In summary:**
@@ -39,7 +39,7 @@ To put it simply, a Paynym is a unique identifier linked to your wallet that all
 - _Paynym_ = Unique identifier of a wallet allowing communication with another user on Soroban, in order to
   carry out a Cahoots transaction.
 
-[**-> Learn more about Payjoin transactions and their utility**](https://planb.network/tutorials/privacy/payjoin)
+[**-> Learn more about Payjoin transactions and their utility**](https://planb.network/tutorials/privacy/on-chain/payjoin-848b6a23-deb2-4c5f-a27e-93e2f842140f)
 
 ## How to establish a connection between Paynyms?
 

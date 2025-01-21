@@ -67,7 +67,7 @@ Jenis algoritma kriptografi pertama yang digunakan pada Bitcoin mencakup fungsi 
 Hashing adalah proses yang mengubah informasi dengan panjang sembarang menjadi potongan informasi dengan panjang tetap melalui fungsi hash kriptografi. Dengan kata lain, fungsi hash mengambil input dengan ukuran berapa pun dan mengubahnya menjadi sidik jari berukuran tetap, yang disebut "hash".
 Hash juga terkadang dapat disebut sebagai "digest", "condensate", "condensed", atau "hashed".
 
-Sebagai contoh, fungsi hash SHA256 menghasilkan hash dengan panjang tetap 256 bit. Jadi, jika kita menggunakan input "_Plan ₿_", sebuah pesan dengan panjang sembarang, hash yang dihasilkan akan menjadi sidik jari 256-bit berikut:
+Sebagai contoh, fungsi hash SHA256 menghasilkan hash dengan panjang tetap 256 bit. Jadi, jika kita menggunakan input "_PlanB_", sebuah pesan dengan panjang sembarang, hash yang dihasilkan akan menjadi sidik jari 256-bit berikut:
 
 ```text
 24f1b93b68026bfc24f5c8265f287b4c940fb1664b0d75053589d7a4f821b688
@@ -79,16 +79,16 @@ Sebagai contoh, fungsi hash SHA256 menghasilkan hash dengan panjang tetap 256 bi
 
 Fungsi hash kriptografi ini memiliki beberapa karakteristik esensial yang membuatnya sangat berguna dalam konteks Bitcoin dan sistem komputer lainnya:
 
-1. Irreversibilitas (atau resistensi terhadap pencarian gambar asli)
-2. Resistensi terhadap perubahan (efek salju)
-3. Resistensi terhadap tabrakan
-4. Resistensi terhadap pencarian gambar asli kedua
+- Irreversibilitas (atau resistensi terhadap pencarian gambar asli)
+- Resistensi terhadap perubahan (efek salju)
+- Resistensi terhadap tabrakan
+- Resistensi terhadap pencarian gambar asli kedua
 
 #### 1. Irreversibilitas (resistensi terhadap pencarian gambar asli):
 
 Irreversibilitas berarti mudah untuk menghitung hash dari informasi input, tetapi perhitungan terbalik, yaitu, menemukan input dari hash, praktis tidak mungkin. Sifat ini membuat fungsi hash sempurna untuk menciptakan sidik jari digital unik tanpa mengompromikan informasi asli. Karakteristik ini sering disebut sebagai fungsi satu arah atau "_fungsi pintu perangkap_".
 
-Dalam contoh yang diberikan, mendapatkan hash `24f1b9…` dengan mengetahui input "_Plan ₿_" adalah hal yang sederhana dan cepat. Namun, menemukan pesan "_Plan ₿_" hanya dengan mengetahui `24f1b9…` adalah hal yang mustahil.
+Dalam contoh yang diberikan, mendapatkan hash `24f1b9…` dengan mengetahui input "_PlanB_" adalah hal yang sederhana dan cepat. Namun, menemukan pesan "_PlanB_" hanya dengan mengetahui `24f1b9…` adalah hal yang mustahil.
 
 ![CYP201](assets/fr/002.webp)
 
@@ -98,7 +98,7 @@ Oleh karena itu, tidak mungkin menemukan preimage $m$ untuk hash $h$ sedemikian 
 
 Karakteristik kedua adalah ketahanan terhadap perubahan, juga dikenal sebagai **efek longsoran**. Karakteristik ini diamati pada fungsi hash jika perubahan kecil pada pesan masukan menghasilkan perubahan radikal pada hash keluaran.
 
-Jika kita kembali ke contoh kita dengan masukan "_Plan ₿_" dan fungsi SHA256, kita telah melihat bahwa hash yang dihasilkan adalah sebagai berikut:
+Jika kita kembali ke contoh kita dengan masukan "_PlanB_" dan fungsi SHA256, kita telah melihat bahwa hash yang dihasilkan adalah sebagai berikut:
 
 ```text
 24f1b93b68026bfc24f5c8265f287b4c940fb1664b0d75053589d7a4f821b688
@@ -138,6 +138,8 @@ $$
 $$
 
 Oleh karena itu, ketahanan terhadap preimage kedua agak mirip dengan ketahanan terhadap tabrakan, kecuali di sini, serangannya lebih sulit karena penyerang tidak dapat bebas memilih $m_1$.
+
+![CYP201](assets/fr/005.webp)
 
 ### Aplikasi Fungsi Hash dalam Bitcoin
 
@@ -225,9 +227,9 @@ Jika kita kembali ke contoh kita dengan pesan awal sebesar 950 bit, kita menguba
 
 Ukuran padding ini ditambahkan mengikuti padding bit. Oleh karena itu, pesan setelah pra-pemrosesan kita terdiri dari tiga bagian:
 
-1. Pesan asli $M$;
-2. Sebuah bit `1` diikuti oleh beberapa bit `0` untuk membentuk padding bit;
-3. Representasi 64-bit dari panjang $M$ untuk membentuk padding dengan ukuran.
+- Pesan asli $M$;
+- Sebuah bit `1` diikuti oleh beberapa bit `0` untuk membentuk padding bit;
+- Representasi 64-bit dari panjang $M$ untuk membentuk padding dengan ukuran.
 
 ![CYP201](assets/fr/006.webp)
 
@@ -257,8 +259,9 @@ K[0 \ldots 63] = \begin{pmatrix}
 0x983e5152, & 0xa831c66d, & 0xb00327c8, & 0xbf597fc7, \\
 0xc6e00bf3, & 0xd5a79147, & 0x06ca6351, & 0x14292967, \\
 0x27b70a85, & 0x2e1b2138, & 0x4d2c6dfc, & 0x53380d13, \\
-\end{pmatrix}
-0x650a7354, & 0x766a0abb, & 0x81c2c92e, & 0x92722c85, \\0xa2bfe8a1, & 0xa81a664b, & 0xc24b8b70, & 0xc76c51a3, \\0xd192e819, & 0xd6990624, & 0xf40e3585, & 0x106aa070, \\
+0x650a7354, & 0x766a0abb, & 0x81c2c92e, & 0x92722c85, \\
+0xa2bfe8a1, & 0xa81a664b, & 0xc24b8b70, & 0xc76c51a3, \\
+0xd192e819, & 0xd6990624, & 0xf40e3585, & 0x106aa070, \\
 0x19a4c116, & 0x1e376c08, & 0x2748774c, & 0x34b0bcb5, \\
 0x391c0cb3, & 0x4ed8aa4a, & 0x5b9cca4f, & 0x682e6ff3, \\
 0x748f82ee, & 0x78a5636f, & 0x84c87814, & 0x8cc70208, \\
@@ -294,9 +297,10 @@ Untuk XOR ($\oplus$):
 Untuk AND ($\land$):
 
 | $p$ | $q$ | $p \land q$ |
-| --- | --- | ----------- | --- | --- | --- | --- |
+| --- | --- | ----------- |
 | 0   | 0   | 0           |
-| 0   | 1   | 0           |     | 1   | 0   | 0   |
+| 0   | 1   | 0           |
+| 1   | 0   | 0           |
 | 1   | 1   | 1           |
 
 Untuk NOT ($\lnot p$):
@@ -429,19 +433,12 @@ $$
 H = G \\
 G = F \\
 F = E \\
-Berikut adalah teks yang telah diterjemahkan:
-
-
-$$
-
-\begin{cases}
-E = D + \text{temp1} \mod 2^{32} \\
+E = D + temp1 \mod 2^{32} \\
 D = C \\
 C = B \\
 B = A \\
-A = \text{temp1} + \text{temp2} \mod 2^{32}
+A = temp1 + temp2 \mod 2^{32}
 \end{cases}
-
 $$
 
 Diagram berikut mewakili satu putaran dari fungsi kompresi SHA256 seperti yang baru saja kita jelaskan:
@@ -454,17 +451,17 @@ Diagram berikut mewakili satu putaran dari fungsi kompresi SHA256 seperti yang b
 
 Kita dapat mengamati bahwa putaran ini menghasilkan variabel-variabel keadaan baru $A$, $B$, $C$, $D$, $E$, $F$, $G$, dan $H$. Variabel-variabel baru ini akan berfungsi sebagai input untuk putaran berikutnya, yang pada gilirannya akan menghasilkan variabel-variabel baru $A$, $B$, $C$, $D$, $E$, $F$, $G$, dan $H$, untuk digunakan pada putaran berikutnya. Proses ini berlanjut hingga putaran ke-64.
 Setelah 64 putaran, kita memperbarui nilai-nilai awal dari variabel-variabel keadaan dengan menambahkannya ke nilai-nilai akhir di akhir putaran ke-64:
-$$
 
+$$
 \begin{cases}
-A = A*{\text{awal}} + A \mod 2^{32} \\
-B = B*{\text{awal}} + B \mod 2^{32} \\
-C = C*{\text{awal}} + C \mod 2^{32} \\
-D = D*{\text{awal}} + D \mod 2^{32} \\
-E = E*{\text{awal}} + E \mod 2^{32} \\
-F = F*{\text{awal}} + F \mod 2^{32} \\
-G = G*{\text{awal}} + G \mod 2^{32} \\
-H = H*{\text{awal}} + H \mod 2^{32}
+A = A_{\text{initial}} + A \mod 2^{32} \\
+B = B_{\text{initial}} + B \mod 2^{32} \\
+C = C_{\text{initial}} + C \mod 2^{32} \\
+D = D_{\text{initial}} + D \mod 2^{32} \\
+E = E_{\text{initial}} + E \mod 2^{32} \\
+F = F_{\text{initial}} + F \mod 2^{32} \\
+G = G_{\text{initial}} + G \mod 2^{32} \\
+H = H_{\text{initial}} + H \mod 2^{32}
 \end{cases}
 
 $$
@@ -529,8 +526,8 @@ Di Bitcoin pada level aplikasi, selain fungsi hash, algoritma derivasi kriptogra
 
 Pada dompet Bitcoin, terutama 2 algoritma derivasi digunakan:
 
-1. **HMAC (_Hash-based Message Authentication Code_)**
-2. **PBKDF2 (_Password-Based Key Derivation Function 2_)**
+- **HMAC (_Hash-based Message Authentication Code_)**
+- **PBKDF2 (_Password-Based Key Derivation Function 2_)**
 
 Kita akan menjelajahi bersama fungsi dan peran masing-masing dari mereka.
 
@@ -567,12 +564,12 @@ $$
 
 Persamaan ini dipecah menjadi langkah-langkah berikut:
 
-1. XOR kunci yang disesuaikan $K'$ dengan $\text{ipad}$ untuk mendapatkan $\text{iKpad}$;
-2. XOR kunci yang disesuaikan $K'$ dengan $\text{opad}$ untuk mendapatkan $\text{oKpad}$;
-3. Menggabungkan $\text{iKpad}$ dengan pesan $m$.
-4. Hash hasil ini dengan SHA512 untuk mendapatkan hash sementara $H_1$.
-5. Menggabungkan $\text{oKpad}$ dengan $H_1$.
-6. Hash hasil ini dengan SHA512 untuk mendapatkan hasil akhir $H_2$.
+- XOR kunci yang disesuaikan $K'$ dengan $\text{ipad}$ untuk mendapatkan $\text{iKpad}$;
+- XOR kunci yang disesuaikan $K'$ dengan $\text{opad}$ untuk mendapatkan $\text{oKpad}$;
+- Menggabungkan $\text{iKpad}$ dengan pesan $m$.
+- Hash hasil ini dengan SHA512 untuk mendapatkan hash sementara $H_1$.
+- Menggabungkan $\text{oKpad}$ dengan $H_1$.
+- Hash hasil ini dengan SHA512 untuk mendapatkan hasil akhir $H_2$.
 
 Langkah-langkah ini dapat diringkas secara skematis sebagai berikut:
 
@@ -731,6 +728,8 @@ Fakta bahwa titik $G$ ini umum untuk semua kunci publik di Bitcoin memungkinkan 
 
 Karakteristik utama dari operasi ini adalah bahwa itu adalah fungsi satu arah. Mudah untuk menghitung kunci publik $K$ dengan mengetahui kunci privat $k$ dan titik generator $G$, tetapi praktis tidak mungkin untuk menghitung kunci privat $k$ dengan hanya mengetahui kunci publik $K$ dan titik generator $G$. Menemukan $k$ dari $K$ dan $G$ berarti menyelesaikan masalah logaritma diskrit pada kurva eliptik, sebuah masalah matematika yang sulit untuk mana tidak ada algoritma efisien yang diketahui. Bahkan kalkulator paling kuat saat ini tidak mampu menyelesaikan masalah ini dalam waktu yang wajar.
 
+![CYP201](assets/fr/018.webp)
+
 ### Penambahan dan Penggandaan Titik pada Kurva Eliptik
 
 Konsep penambahan pada kurva eliptik didefinisikan secara geometris. Jika kita memiliki dua titik $P$ dan $Q$ pada kurva, operasi $P + Q$ dihitung dengan menggambar garis yang melewati $P$ dan $Q$. Garis ini akan selalu berpotongan dengan kurva di titik ketiga $R'$. Kemudian kita mengambil citra cermin dari titik ini terhadap sumbu-x untuk mendapatkan titik $R$, yang merupakan hasil dari penambahan:
@@ -782,12 +781,17 @@ $$
 
 Secara grafis, ini akan diwakili sebagai berikut:
 
+![CYP201](assets/fr/022.webp)
+
 ### Fungsi Satu Arah
 
 Berkat operasi-operasi ini, kita dapat memahami mengapa mudah untuk menurunkan kunci publik dari kunci privat, tetapi sebaliknya hampir mustahil.
 
 Mari kita kembali ke contoh sederhana kita. Dengan kunci privat $k = 4$. Untuk menghitung kunci publik yang terkait, kita melakukan:
-K = k \cdot G = 4G$$
+
+$$
+K = k \cdot G = 4G
+$$
 
 Dengan demikian, kita dapat dengan mudah menghitung kunci publik $K$ dengan mengetahui $k$ dan $G$.
 
@@ -1182,11 +1186,22 @@ Jumlah kata dalam frasa mnemonik tergantung pada ukuran entropi awal, seperti ya
 $$
 \begin{array}{|c|c|c|c|}
 \hline
+\text{ENT} & \text{CS} & \text{ENT} \Vert \text{CS} & w \\
+\hline
+128 & 4 & 132 & 12 \\
+160 & 5 & 165 & 15 \\
+192 & 6 & 198 & 18 \\
+224 & 7 & 231 & 21 \\
+256 & 8 & 264 & 24 \\
+\hline
+\end{array}
+$$
+
 Misalnya, untuk entropi 256-bit, hasil $\text{ENT} \Vert \text{CS}$ adalah 264 bit dan menghasilkan frasa mnemonik dari 24 kata.
 
 ### Konversi Urutan Biner menjadi Frasa Mnemonik
 
-Urutan bit $\text{ENT} \Vert \text{CS}$ kemudian dibagi menjadi segmen-segmen 11 bit. Setiap segmen 11-bit, setelah dikonversi ke desimal, sesuai dengan nomor antara 0 dan 2047, yang menunjukkan posisi kata [dalam daftar 2048 kata yang distandarisasi oleh BIP39](https://github.com/Plan ₿-Network/bitcoin-educational-content/blob/dev/resources/bet/bip39-wordlist/assets/BIP39-WORDLIST.pdf).
+Urutan bit $\text{ENT} \Vert \text{CS}$ kemudian dibagi menjadi segmen-segmen 11 bit. Setiap segmen 11-bit, setelah dikonversi ke desimal, sesuai dengan nomor antara 0 dan 2047, yang menunjukkan posisi kata [dalam daftar 2048 kata yang distandarisasi oleh BIP39](https://github.com/Planb-Network/bitcoin-educational-content/blob/dev/resources/bet/bip39-wordlist/assets/BIP39-WORDLIST.pdf).
 
 ![CYP201](assets/fr/037.webp)
 Misalnya, untuk entropi 128-bit, checksum adalah 4 bit, sehingga total urutan berukuran 132 bit. Ini dibagi menjadi 12 segmen dari 11 bit (bit oranye menunjukkan checksum):
@@ -1226,7 +1241,7 @@ Sebagai hasilnya, memilih frasa 24 kata tidak memberikan perlindungan tambahan u
 Frasa 12 kata, yang juga menawarkan keamanan 128 bit, saat ini sudah cukup untuk melindungi bitcoin Anda dari setiap upaya pencurian. Selama algoritma tanda tangan digital tidak berubah untuk menggunakan kunci yang lebih besar atau bergantung pada masalah matematika lain selain ECDLP, frasa 24 kata tetap berlebihan. Selain itu, frasa yang lebih panjang meningkatkan risiko kehilangan saat pencadangan: pencadangan yang dua kali lebih singkat selalu lebih mudah dikelola.
 Untuk lebih lanjut dan belajar secara konkret bagaimana menghasilkan frasa mnemonik tes secara manual, saya menyarankan Anda untuk menemukan tutorial ini:
 
-https://planb.network/tutorials/wallet/generate-mnemonic-phrase
+https://planb.network/tutorials/wallet/backup/generate-mnemonic-phrase-47507d90-e6af-4cac-b01b-01a14d7a8228
 Sebelum melanjutkan dengan derivasi dompet dari frasa mnemonik ini, saya akan memperkenalkan Anda, dalam bab berikutnya, ke frasa sandi BIP39, karena ini berperan dalam proses derivasi, dan berada pada level yang sama dengan frasa mnemonik.
 ## Frasa Sandi
 <chapterId>6a51b397-f3b5-5084-b151-cef94bc9b93f</chapterId>
@@ -1284,7 +1299,7 @@ Persamaan berikut mengilustrasikan penurunan seed dari frase mnemonik dan passph
 
 $$
 
-s = \text{PBKDF2}\_{\text{HMAC-SHA512}}(m, p, 2048)
+s = \text{PBKDF2}_{\text{HMAC-SHA512}}(m, p, 2048)
 
 $$
 
@@ -1313,19 +1328,18 @@ $$
 Output dari fungsi ini adalah 512 bit. Kemudian dibagi menjadi 2 bagian:
 - 256 bit kiri membentuk **kunci privat utama**;
 - 256 bit kanan membentuk **kode rantai utama**.
+
 Secara matematis, kedua nilai ini dapat dicatat sebagai berikut dengan $k_M$ sebagai kunci privat utama dan $C_M$ sebagai kode rantai utama:
-$$
-
-k*M = \text{HMAC-SHA512}(\text{"Bitcoin Seed"}, s)*{[:256]}
-
-$$
 
 
 $$
-
-C*M = \text{HMAC-SHA512}(\text{"Bitcoin Seed"}, s)*{[256:]}
+k_M = \text{HMAC-SHA512}(\text{"Bitcoin Seed"}, s)_{[:256]}
+$$
 
 $$
+C_M = \text{HMAC-SHA512}(\text{"Bitcoin Seed"}, s)_{[256:]}
+$$
+
 
 ![CYP201](assets/fr/045.webp)
 
@@ -1396,22 +1410,21 @@ Jika satu byte ditambahkan ke kunci privat saja, itu karena kunci publik yang di
 Seperti yang baru saja kita lihat, kunci ekstensi mencakup awalan yang menunjukkan baik versi dari kunci ekstensi tersebut maupun sifatnya. Notasi `pub` menunjukkan bahwa itu merujuk pada kunci publik ekstensi, dan notasi `prv` menunjukkan kunci privat ekstensi. Huruf tambahan di dasar kunci ekstensi membantu menunjukkan apakah standar yang diikuti adalah Legacy, SegWit v0, SegWit v1, dll.
 Berikut adalah ringkasan dari awalan yang digunakan dan artinya:
 
-| Awalan Base 58 | Awalan Base 16     | Jaringan | Tujuan               | Skrip Terkait              | Turunan                    | Tipe Kunci  |
-|----------------|--------------------|----------|----------------------|----------------------------|----------------------------|-------------|
-| `xpub`         | `0488b21e`         | Mainnet  | Legacy dan SegWit V1 | P2PK / P2PKH / P2TR        | `m/44'/0'`, `m/86'/0'`     | publik      |
-| `xprv`         | `0488ade4`         | Mainnet  | Legacy dan SegWit V1 | P2PK / P2PKH / P2TR        | `m/44'/0'`, `m/86'/0'`     | privat      |
-| `tpub`         | `043587cf`         | Testnet  | Legacy dan SegWit V1 | P2PK / P2PKH / P2TR        | `m/44'/1'`, `m/86'/1'`     | publik      |
-| `tprv`         | `04358394`         | Testnet  | Legacy dan SegWit V1 | P2PK / P2PKH / P2TR        | `m/44'/1'`, `m/86'/1'`     | privat      |
-| `ypub`         | `049d7cb2`         | Mainnet  | Nested SegWit        | P2WPKH dalam P2SH          | `m/49'/0'`                 | publik      |
-| `yprv`         | `049d7878`         | Mainnet  | Nested SegWit        | P2WPKH dalam P2SH           | `m/49'/0'`                 | privat     |
-| `upub`         | `049d7cb2`         | Testnet  | Nested SegWit        | P2WPKH dalam P2SH           | `m/49'/1'`                 | publik      |
-| `uprv`         | `044a4e28`         | Testnet  | Nested SegWit        | P2WPKH dalam P2SH           | `m/49'/1'`                 | privat     |
-| `zpub`         | `04b24746`         | Mainnet  | SegWit V0            | P2WPKH                   | `m/84'/0'`                 | publik      |
+| Base 58 Prefix  | Base 16 Prefix  | Network | Purpose             | Associated Scripts  | Derivation            | Key Type     |
+| --------------- | --------------- | ------- | ------------------- | ------------------- | --------------------- | ------------ |
+| `xpub`          | `0488b21e`      | Mainnet | Legacy and SegWit V1 | P2PK / P2PKH / P2TR | `m/44'/0'`, `m/86'/0'` | public       |
+| `xprv`          | `0488ade4`      | Mainnet | Legacy and SegWit V1 | P2PK / P2PKH / P2TR | `m/44'/0'`, `m/86'/0'` | private      |
+| `tpub`          | `043587cf`      | Testnet | Legacy and SegWit V1 | P2PK / P2PKH / P2TR | `m/44'/1'`, `m/86'/1'` | public       |
+| `tprv`          | `04358394`      | Testnet | Legacy and SegWit V1 | P2PK / P2PKH / P2TR | `m/44'/1'`, `m/86'/1'` | private      |
+| `ypub`          | `049d7cb2`      | Mainnet | Nested SegWit       | P2WPKH in P2SH      | `m/49'/0'`             | public       |
+| `yprv`          | `049d7878`      | Mainnet | Nested SegWit       | P2WPKH in P2SH      | `m/49'/0'`             | private      |
+| `upub`          | `049d7cb2`      | Testnet | Nested SegWit       | P2WPKH in P2SH      | `m/49'/1'`             | public       |
+| `uprv`          | `044a4e28`      | Testnet | Nested SegWit       | P2WPKH in P2SH      | `m/49'/1'`             | private      |
+| `zpub`          | `04b24746`      | Mainnet | SegWit V0           | P2WPKH              | `m/84'/0'`             | public       |
+| `zprv`          | `04b2430c`      | Mainnet | SegWit V0           | P2WPKH              | `m/84'/0'`             | private      |
+| `vpub`          | `045f1cf6`      | Testnet | SegWit V0           | P2WPKH              | `m/84'/1'`             | public       |
+| `vprv`          | `045f18bc`      | Testnet | SegWit V0           | P2WPKH              | `m/84'/1'`             | private      |
 
-Tabel ini memberikan gambaran menyeluruh tentang prefiks yang digunakan dalam kunci ekstensi, merinci prefiks basis 58 dan basis 16 mereka, jaringan yang terkait dengan mereka (Mainnet atau Testnet), tujuan mereka, skrip yang terkait dengan mereka, jalur derivasi mereka, dan apakah mereka adalah kunci publik atau privat.
-| `zprv`          | `04b2430c`          | Mainnet  | SegWit V0            | P2WPKH                    | `m/84'/0'`                  | privat     |
-| `vpub`          | `045f1cf6`          | Testnet  | SegWit V0            | P2WPKH                    | `m/84'/1'`                  | publik      |
-| `vprv`          | `045f18bc`          | Testnet  | SegWit V0            | P2WPKH                    | `m/84'/1'`                  | privat     |
 
 ### Detail Elemen Kunci Ekstensi
 
@@ -1431,23 +1444,23 @@ xpub6CTNzMUkzpurBWaT4HQoYzLP4uBbGJuWY358Rj7rauiw4rMHCyq3Rfy9w4kyJXJzeFfyrKLUar2r
 
 Kunci ekstensi ini terpecah menjadi beberapa elemen berbeda:
 
-1. **Versi**: `0488B21E`
+- **Versi**: `0488B21E`
 
 4 byte pertama adalah versi. Di sini, ini sesuai dengan kunci publik ekstensi pada Mainnet dengan tujuan derivasi baik *Legacy* atau *SegWit v1*.
 
-2. **Kedalaman**: `03`
+- **Kedalaman**: `03`
 
 Bidang ini menunjukkan tingkat hierarkis kunci dalam dompet HD. Dalam kasus ini, kedalaman `03` berarti bahwa kunci ini adalah tiga tingkat derivasi di bawah kunci induk.
 
-3. **Sidik jari induk**: `6D5601AD`
+- **Sidik jari induk**: `6D5601AD`
 Ini adalah 4 byte pertama dari hash HASH160 dari kunci publik induk yang digunakan untuk menurunkan `xpub` ini.
-4. **Nomor Indeks**: `80000000`
+- **Nomor Indeks**: `80000000`
 
 Indeks ini menunjukkan posisi kunci di antara anak-anak induknya. Prefiks `0x80` menunjukkan bahwa kunci diturunkan dengan cara yang diperketat, dan karena sisanya diisi dengan nol, ini menunjukkan bahwa kunci ini adalah yang pertama di antara saudara kandungnya yang mungkin.
 
-5. **Kode Rantai**: `C605DF9FBD77FD6965BD02B77831EC5C78646AD3ACA14DC3984186F72633A893`
-6. **Kunci Publik**: `03772CCB99F4EF346078D167065404EED8A58787DED31BFA479244824DF5065805`
-7. **Checksum**: `1F067C3A`
+- **Kode Rantai**: `C605DF9FBD77FD6965BD02B77831EC5C78646AD3ACA14DC3984186F72633A893`
+- **Kunci Publik**: `03772CCB99F4EF346078D167065404EED8A58787DED31BFA479244824DF5065805`
+- **Checksum**: `1F067C3A`
 
 Checksum ini sesuai dengan 4 byte pertama dari hash (SHA256 ganda) dari semua yang lain.
 
@@ -1467,8 +1480,8 @@ Mari kita jelajahi bagaimana derivasi deterministik ini bekerja.
 ### Berbagai Jenis Derivasi Kunci Anak
 
 Seperti yang kita singgung secara singkat di bab sebelumnya: kunci anak dibagi menjadi dua jenis utama:
-1. **Kunci anak normal** ($k_{\text{CHD}}^n, K_{\text{CHD}}^n$): Ini diturunkan dari kunci publik terluas ($K_{\text{PAR}}$), atau kunci privat terluas ($k_{\text{PAR}}$), dengan pertama-tama menurunkan kunci publik.
-2. **Kunci anak diperketat** ($k_{\text{CHD}}^h, K_{\text{CHD}}^h$): Ini hanya dapat diturunkan dari kunci privat terluas ($k_{\text{PAR}}$) dan oleh karena itu tidak terlihat oleh pengamat yang hanya memiliki kunci publik terluas.
+- **Kunci anak normal** ($k_{\text{CHD}}^n, K_{\text{CHD}}^n$): Ini diturunkan dari kunci publik terluas ($K_{\text{PAR}}$), atau kunci privat terluas ($k_{\text{PAR}}$), dengan pertama-tama menurunkan kunci publik.
+- **Kunci anak diperketat** ($k_{\text{CHD}}^h, K_{\text{CHD}}^h$): Ini hanya dapat diturunkan dari kunci privat terluas ($k_{\text{PAR}}$) dan oleh karena itu tidak terlihat oleh pengamat yang hanya memiliki kunci publik terluas.
 Setiap pasangan kunci anak diidentifikasi oleh sebuah **indeks** 32-bit (dinamakan $i$ dalam perhitungan kami). Indeks untuk kunci normal berkisar dari $0$ sampai $2^{31}-1$, sementara itu untuk kunci yang diperkuat berkisar dari $2^{31}$ sampai $2^{32}-1$. Angka-angka ini digunakan untuk membedakan pasangan kunci saudara selama derivasi. Memang, setiap pasangan kunci induk harus mampu menghasilkan beberapa pasangan kunci anak. Jika kita menerapkan perhitungan yang sama secara sistematis dari kunci induk, semua kunci saudara yang diperoleh akan identik, yang tidak diinginkan. Indeks dengan demikian memperkenalkan variabel yang memodifikasi perhitungan derivasi, memungkinkan setiap pasangan saudara dapat dibedakan. Kecuali untuk penggunaan spesifik dalam protokol tertentu dan standar derivasi, umumnya kita mulai dengan menghasilkan kunci anak pertama dengan indeks `0`, yang kedua dengan indeks `1`, dan seterusnya.
 ### Proses Derivasi dengan HMAC-SHA512
 
@@ -1489,9 +1502,10 @@ Untuk **kunci anak normal** ($i < 2^{31}$), perhitungan $\text{hash}$ adalah seb
 
 $$
 
-\text{hash} = \text{HMAC-SHA512}(C*{\text{PAR}}, G \cdot k*{\text{PAR}} \Vert i)
+\text{hash} = \text{HMAC-SHA512}(C_{\text{PAR}}, G \cdot k_{\text{PAR}} \Vert i)
 
 $$
+
 Dalam perhitungan ini, kita melihat bahwa fungsi HMAC kita mengambil dua input: pertama, kode rantai induk, dan kemudian penggabungan indeks dengan kunci publik yang terkait dengan kunci privat induk. Kunci publik induk digunakan di sini karena kita mencari untuk menghasilkan kunci anak normal, bukan yang diperkuat.
 Sekarang kita memiliki $\text{hash}$ 64-byte yang akan kita bagi menjadi 2 bagian masing-masing 32 byte: $h_1$ dan $h_2$:
 
@@ -1505,7 +1519,7 @@ $$
 
 $$
 
-h*1 = \text{hash}*{[:32]} \quad, \quad h*2 = \text{hash}*{[32:]}
+h*1 = \text{hash}_{[:32]} \quad, \quad h*2 = \text{hash}_{[32:]}
 
 $$
 
@@ -1514,7 +1528,7 @@ Kunci privat anak $k_{\text{CHD}}^n$ kemudian dihitung sebagai berikut:
 
 $$
 
-k*{\text{CHD}}^n = \text{parse256}(h_1) + k*{\text{PAR}} \mod n
+k_{\text{CHD}}^n = \text{parse256}(h_1) + k_{\text{PAR}} \mod n
 
 $$
 Dalam perhitungan ini, operasi $\text{parse256}(h_1)$ terdiri dari interpretasi 32 byte pertama dari $\text{hash}$ sebagai bilangan bulat 256-bit. Angka ini kemudian ditambahkan ke kunci privat induk, semuanya diambil modulo $n$ untuk tetap dalam urutan kurva eliptik, seperti yang kita lihat di bagian 3 tentang tanda tangan digital. Jadi, untuk menurunkan kunci privat anak yang normal, meskipun kunci publik induk digunakan sebagai dasar perhitungan dalam input fungsi HMAC-SHA512, selalu diperlukan kunci privat induk untuk menyelesaikan perhitungan.
@@ -1538,7 +1552,7 @@ Untuk **kunci anak yang diperkuat** ($i \geq 2^{31}$), perhitungan $\text{hash}$
 
 $$
 
-hash = \text{HMAC-SHA512}(C*{\text{PAR}}, 0x00 \Vert k*{\text{PAR}} \Vert i)
+hash = \text{HMAC-SHA512}(C_{\text{PAR}}, 0x00 \Vert k_{\text{PAR}} \Vert i)
 
 $$
 
@@ -1562,7 +1576,7 @@ Kunci privat anak $k_{\text{CHD}}^h$ kemudian dihitung sebagai berikut:
 
 $$
 
-k*{\text{CHD}}^h = \text{parse256}(h_1) + k*{\text{PAR}} \mod n
+k_{\text{CHD}}^h = \text{parse256}(h_1) + k_{\text{PAR}} \mod n
 
 $$
 
@@ -1588,7 +1602,7 @@ Untuk melakukan perhitungan ini, kita akan menghitung $\text{hash}$ dengan indek
 
 $$
 
-\text{hash} = \text{HMAC-SHA512}(C*{\text{PAR}}, K*{\text{PAR}} \Vert i)
+\text{hash} = \text{HMAC-SHA512}(C_{\text{PAR}}, K_{\text{PAR}} \Vert i)
 
 $$
 
@@ -1615,7 +1629,7 @@ Kunci publik anak $K_{\text{CHD}}^n$ kemudian dihitung sebagai berikut:
 
 $$
 
-K*{\text{CHD}}^n = G \cdot \text{parse256}(h_1) + K*{\text{PAR}}
+K_{\text{CHD}}^n = G \cdot \text{parse256}(h_1) + K_{\text{PAR}}
 
 $$
 Jika $\text{parse256}(h_1) \geq n$ (urutan kurva eliptik) atau jika $K_{\text{CHD}}^n$ adalah titik di tak hingga, turunan tersebut tidak valid, dan indeks lain harus dipilih.
@@ -1645,25 +1659,17 @@ Terima kasih kepada operasi penambahan dan penggandaan pada kurva eliptik, kedua
 
 Untuk merangkum, berikut adalah berbagai jenis turunan yang mungkin:
 
-
 $$
-
 \begin{array}{|c|c|c|c|}
 \hline
 \rightarrow & \text{PAR} & \text{CHD} & \text{n/h} \\
 \hline
-k*{\text{PAR}} \rightarrow k*{\text{CHD}} & k*{\text{PAR}} & \{ k*{\text{CHD}}^n, k\_{\text{CHD}}^h \} & \{ n, h \} \\
-\end{array}
-
-$$
-$$
-
-k*{\text{PAR}} \rightarrow K*{\text{CHD}} & k*{\text{PAR}} & \{ K*{\text{CHD}}^n, K*{\text{CHD}}^h \} & \{ n, h \} \\
-K*{\text{PAR}} \rightarrow k*{\text{CHD}} & K*{\text{PAR}} & \times & \times \\
-K*{\text{PAR}} \rightarrow K*{\text{CHD}} & K*{\text{PAR}} & K*{\text{CHD}}^n & n \\
+k_{\text{PAR}} \rightarrow k_{\text{CHD}} & k_{\text{PAR}} & \{ k_{\text{CHD}}^n, k_{\text{CHD}}^h \} & \{ n, h \} \\
+k_{\text{PAR}} \rightarrow K_{\text{CHD}} & k_{\text{PAR}} & \{ K_{\text{CHD}}^n, K_{\text{CHD}}^h \} & \{ n, h \} \\
+K_{\text{PAR}} \rightarrow k_{\text{CHD}} & K_{\text{PAR}} & \times & \times \\
+K_{\text{PAR}} \rightarrow K_{\text{CHD}} & K_{\text{PAR}} & K_{\text{CHD}}^n & n \\
 \hline
 \end{array}
-
 $$
 
 Untuk merangkum, sejauh ini Anda telah belajar untuk menciptakan elemen dasar dari dompet HD: frasa mnemonik, benih, dan kemudian kunci utama serta kode rantai utama. Anda juga telah menemukan cara untuk menurunkan pasangan kunci anak dalam bab ini. Dalam bab berikutnya, kita akan menjelajahi bagaimana turunan-turunan ini disusun dalam dompet Bitcoin dan struktur apa yang harus diikuti untuk secara konkret mendapatkan alamat penerima serta pasangan kunci yang digunakan dalam *scriptPubKey* dan *scriptSig*.
@@ -1901,6 +1907,8 @@ Secara teknis, skrip P2TR mengunci bitcoin pada kunci publik Schnorr unik, yang 
 - Dengan memenuhi salah satu skrip yang terkandung dalam pohon Merkle (*script path*).
 P2TR menawarkan fleksibilitas yang besar, karena memungkinkan penguncian bitcoin baik dengan kunci publik unik, dengan beberapa skrip pilihan, atau keduanya secara bersamaan. Keuntungan dari struktur pohon Merkle ini adalah hanya skrip pengeluaran yang digunakan yang diungkapkan selama transaksi, tetapi semua skrip alternatif lainnya tetap rahasia.
 
+![CYP201](assets/fr/063.webp)
+
 P2TR sesuai dengan output SegWit versi 1, yang berarti bahwa tanda tangan untuk input P2TR disimpan di bagian *Witness* transaksi, dan tidak di *scriptSig*. Alamat P2TR menggunakan pengkodean *bech32m* dan dimulai dengan `bc1p`, tetapi mereka cukup unik karena tidak menggunakan fungsi hash untuk konstruksinya. Memang, mereka secara langsung mewakili kunci publik $Q$ yang hanya diformat dengan metadata. Oleh karena itu, ini adalah model skrip yang dekat dengan P2PK.
 
 Sekarang setelah kita telah membahas teorinya, mari kita lanjutkan ke praktik! Dalam bab berikut, saya mengusulkan untuk menurunkan baik alamat SegWit v0 maupun alamat SegWit v1 dari sepasang kunci.
@@ -1917,6 +1925,9 @@ Karena proses penghasilan alamat bergantung pada model skrip yang diadopsi, mari
 Setelah melakukan semua langkah turunan dari kunci induk ke kedalaman 5 menggunakan indeks yang sesuai, kita memperoleh sepasang kunci ($k$, $K$) dengan $K = k \cdot G$. Meskipun mungkin untuk menggunakan kunci publik ini apa adanya untuk mengunci dana dengan standar P2PK, itu bukan tujuan kita di sini. Sebaliknya, kita bertujuan untuk membuat alamat dalam P2WPKH dalam contoh pertama, dan kemudian dalam P2TR untuk contoh lainnya.
 
 Langkah pertama adalah mengompres kunci publik $K$. Untuk memahami proses ini dengan baik, mari kita ingat kembali beberapa dasar yang dibahas di bagian 3. Kunci publik pada Bitcoin adalah titik $K$ yang terletak pada kurva eliptik. Ini diwakili dalam bentuk $(x, y)$, di mana $x$ dan $y$ adalah koordinat titik. Dalam bentuknya yang tidak dikompres, kunci publik ini berukuran 520 bit: 8 bit untuk awalan (nilai awal `0x04`), 256 bit untuk koordinat $x$, dan 256 bit untuk koordinat $y$. Namun, kurva eliptik memiliki properti simetri terhadap sumbu x: untuk koordinat $x$ yang diberikan, hanya ada dua nilai yang mungkin untuk $y$: $y$ dan $-y$. Kedua titik ini terletak di kedua sisi sumbu x. Dengan kata lain, jika kita tahu $x$, cukup untuk menentukan apakah $y$ genap atau ganjil untuk mengidentifikasi titik yang tepat pada kurva.
+
+![CYP201](assets/fr/064.webp)
+
 Untuk mengompres kunci publik, hanya $x$ yang dikodekan, yang menempati 256 bit, dan sebuah prefiks ditambahkan untuk menentukan paritas dari $y$. Metode ini mengurangi ukuran kunci publik menjadi 264 bit daripada awalnya 520. Prefiks `0x02` menunjukkan bahwa $y$ genap, dan prefiks `0x03` menunjukkan bahwa $y$ ganjil.
 Mari kita ambil contoh untuk memahami dengan baik, dengan kunci publik mentah dalam representasi tidak terkompresi:
 
@@ -1963,12 +1974,10 @@ RIPEMD160(SHA256(K)) = 9F81322CC88622CA4CCB2A52A21E2888727AA535
 ```
 Kami telah memperoleh hash 160-bit dari kunci publik, yang merupakan apa yang disebut sebagai payload dari alamat. Payload ini merupakan bagian pusat dan paling penting dari alamat. Ini juga digunakan dalam *scriptPubKey* untuk mengunci UTXOs. Namun, untuk membuat payload ini lebih mudah digunakan oleh manusia, metadata ditambahkan ke dalamnya. Langkah selanjutnya melibatkan pengkodean hash ini ke dalam kelompok-kelompok 5 bit dalam desimal. Transformasi desimal ini akan berguna untuk konversi ke *bech32*, yang digunakan oleh alamat pasca-SegWit. Hash biner 160-bit ini kemudian dibagi menjadi 32 kelompok dari 5 bit:
 
-
 $$
-
 \begin{array}{|c|c|}
 \hline
-\text{Kelompok 5-bit} & \text{Nilai Desimal} \\
+\text{5 bits} & \text{Decimal} \\
 \hline
 10011 & 19 \\
 11110 & 30 \\
@@ -1993,8 +2002,17 @@ $$
 00100 & 4 \\
 00111 & 7 \\
 10001 & 17 \\
+01000 & 8 \\
+10001 & 17 \\
+00001 & 1 \\
+11001 & 25 \\
+00111 & 7 \\
+10101 & 21 \\
+00101 & 5 \\
+00101 & 5 \\
+10101 & 21 \\
+\hline
 \end{array}
-
 $$
 Jadi, kita memiliki:
 
@@ -2063,6 +2081,20 @@ Ini memberi kita dalam desimal:
 Kemudian, setiap nilai desimal harus dipetakan ke karakter *bech32* nya menggunakan tabel konversi berikut:
 
 
+$$
+\begin{array}{|c|c|c|c|c|c|c|c|c|}
+\hline
+ & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+\hline
++0 & q & p & z & r & y & 9 & x & 8 \\
+\hline
++8 & g & f & 2 & t & v & d & w & 0 \\
+\hline
++16 & s & 3 & j & n & 5 & 4 & k & h \\
+\hline
++24 & c & e & 6 & m & u & a & 7 & l \\
+\hline
+\end{array}
 $$
 
 Untuk mengonversi nilai menjadi karakter _bech32_ menggunakan tabel ini, cukup temukan nilai-nilai pada kolom pertama dan baris pertama yang, ketika ditambahkan bersama, menghasilkan hasil yang diinginkan. Kemudian, ambil karakter yang sesuai. Sebagai contoh, angka desimal `19` akan dikonversi menjadi huruf `n`, karena $19 = 16 + 3$.
@@ -2147,28 +2179,33 @@ $$
 Dengan:
 
 - $v$: nomor versi skrip (default `0xC0` untuk Taproot);
-- $sz$: ukuran skrip yang dikodekan dalam format _CompactSize_; - $S$: skripnya.
+- $sz$: ukuran skrip yang dikodekan dalam format _CompactSize_; 
+- $S$: skripnya.
 
 Berbagai hash skrip ($\text{h}_{\text{leaf}}$) pertama-tama diurutkan dalam urutan leksikografis. Kemudian, mereka digabungkan secara berpasangan dan dilewati melalui fungsi hash bertag `TapBranch`. Proses ini diulang secara iteratif untuk membangun, langkah demi langkah, pohon Merkle:
-Hash cabang \(\text{h}_{\text{branch}}\) dihitung sebagai fungsi hash bertag `TapBranch` yang diterapkan pada penggabungan hash daun \(\text{h}_{\text{leaf1}} \Vert \text{h}\_{\text{leaf2}}\):
+
+$$
+\text{h}_{\text{branch}} = \text{H}_{\text{TapBranch}}(\text{h}_{\text{leaf1}} \Vert \text{h}_{\text{leaf2}})
+$$
 
 Kemudian kita melanjutkan dengan menggabungkan hasilnya dua demi dua, melewatinya pada setiap langkah melalui fungsi hash bertag `TapBranch`, sampai kita mendapatkan akar pohon Merkle:
 
 ![CYP201](assets/fr/066.webp)
 
-Setelah akar Merkle \(h*{\text{root}}\) dihitung, kita dapat menghitung tweak. Untuk ini, kita menggabungkan kunci publik internal dompet \(P\) dengan akar \(h*{\text{root}}\), dan kemudian melewati keseluruhan melalui fungsi hash bertag `TapTweak`:
+Setelah akar Merkle $h_{\text{root}}$ dihitung, kita dapat menghitung tweak. Untuk itu, kunci publik internal dompet $P$ digabungkan dengan akar $h_{\text{root}}$, dan hasilnya dimasukkan ke dalam fungsi hash bertanda `TapTweak`:
 
-\[
+$$
 t = \text{H}_{\text{TapTweak}}(P \Vert h_{\text{root}})
-\]
+$$
 
-Akhirnya, seperti sebelumnya, kunci publik Taproot \(Q\) diperoleh dengan menambahkan kunci publik internal \(P\) ke produk tweak \(t\) dengan titik generator \(G\):
+Akhirnya, seperti sebelumnya, kunci publik Taproot $Q$ diperoleh dengan menambahkan kunci publik internal $P$ ke hasil perkalian tweak $t$ dan titik generator $G$:
 
-\[
+$$
 Q = P + t \cdot G
-\]
+$$
 
-Kemudian, generasi alamat mengikuti proses yang sama, menggunakan kunci publik mentah \(Q\) sebagai muatan, disertai dengan beberapa metadata tambahan.
+Kemudian, pembuatan alamat mengikuti proses yang sama, menggunakan kunci publik mentah $Q$ sebagai payload, bersama dengan beberapa metadata tambahan.
+
 
 Dan itulah! Kita telah mencapai akhir kursus CYP201 ini. Jika Anda merasa kursus ini bermanfaat, saya akan sangat berterima kasih jika Anda bisa meluangkan waktu sejenak untuk memberikannya penilaian yang baik di bab evaluasi berikutnya. Jangan ragu untuk juga membagikannya dengan orang-orang terkasih atau di jejaring sosial Anda. Akhirnya, jika Anda ingin mendapatkan diploma untuk kursus ini, Anda dapat mengikuti ujian akhir tepat setelah bab evaluasi.
 
@@ -2176,7 +2213,7 @@ Dan itulah! Kita telah mencapai akhir kursus CYP201 ini. Jika Anda merasa kursus
 
 <partId>58111408-b734-54db-9ea7-0d5b67f99f99</partId>
 
-## Evaluasi kursus ini
+## Ulasan & Penilaian
 
 <chapterId>0cd71541-a7fd-53db-b66a-8611b6a28b04</chapterId>
 <isCourseReview>true</isCourseReview>
@@ -2189,35 +2226,4 @@ Dan itulah! Kita telah mencapai akhir kursus CYP201 ini. Jika Anda merasa kursus
 ## Kesimpulan
 
 <chapterId>d291428b-3cfa-5394-930e-4b514be82d5a</chapterId>
-
-Kita telah mencapai akhir dari pelatihan CYP201. Saya harap ini telah bermanfaat dalam perjalanan pembelajaran Bitcoin Anda dan membantu Anda lebih memahami cara kerja dompet HD yang Anda gunakan sehari-hari. Terima kasih telah mengikuti kursus ini hingga selesai!
-
-Menurut saya, pengetahuan tentang dompet ini sangat fundamental, karena menghubungkan aspek teoritis Bitcoin dengan penggunaan praktisnya. Memang, jika Anda menggunakan Bitcoin, Anda pasti menangani perangkat lunak dompet. Memahami cara kerjanya memungkinkan Anda menerapkan strategi keamanan yang efektif sambil menguasai mekanisme yang mendasarinya, risiko, dan potensi kelemahannya. Dengan demikian, Anda dapat menggunakan Bitcoin dengan lebih aman dan percaya diri.
-
-Jika Anda belum melakukannya, saya mengundang Anda untuk menilai dan mengomentari pelatihan ini. Ini akan sangat membantu saya. Anda juga dapat membagikan pelatihan ini di jejaring sosial Anda untuk menyebarkan pengetahuan ini kepada sebanyak mungkin orang.
-
-Untuk melanjutkan perjalanan Anda lebih dalam, saya sangat merekomendasikan pelatihan **BTC204**, yang juga saya produksi di Plan ₿ Network. Ini didedikasikan untuk privasi Bitcoin dan mengeksplorasi tema-tema kunci: Apa model privasinya? Bagaimana analisis rantai bekerja? Bagaimana menggunakan Bitcoin secara optimal untuk memaksimalkan privasi Anda? Langkah logis berikutnya untuk memperdalam keterampilan Anda!
-
-https://planb.network/courses/btc204
-
-Selain itu, untuk terus memperdalam pengetahuan Anda di alam semesta Bitcoin, kami mengundang Anda untuk mengeksplorasi kursus lain yang tersedia di Plan ₿ Network seperti:
-
-#### Pelajari cara membuat komunitas Bitcoin Anda dengan
-
-https://planb.network/courses/btc302
-
-#### Temukan Lightning Network dengan
-
-https://planb.network/courses/lnp201
-
-#### Temukan pemikiran ekonomi Sekolah Austria dengan
-
-https://planb.network/courses/eco201
-
-#### Temukan sejarah asal-usul Bitcoin dengan
-
-https://planb.network/courses/his201
-
-#### Temukan evolusi kebebasan sepanjang masa dengan
-
-https://planb.network/courses/phi201
+<isCourseConclusion>true</isCourseConclusion>

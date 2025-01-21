@@ -72,7 +72,7 @@ Le hachage est un procédé qui permet de transformer une information de longueu
 
 Le hash peut également parfois être désigné par les termes "digest", "condensat", "condensé" ou "haché".
 
-Par exemple, la fonction de hachage SHA256 produit un hash d'une longueur fixe de 256 bits. Ainsi, si l’on utilise l’entrée "_Plan ₿_", un message de longueur arbitraire, le hash généré sera l'empreinte de 256 bits suivante :
+Par exemple, la fonction de hachage SHA256 produit un hash d'une longueur fixe de 256 bits. Ainsi, si l’on utilise l’entrée "_PlanB_", un message de longueur arbitraire, le hash généré sera l'empreinte de 256 bits suivante :
 
 ```txt
 24f1b93b68026bfc24f5c8265f287b4c940fb1664b0d75053589d7a4f821b688
@@ -84,16 +84,16 @@ Par exemple, la fonction de hachage SHA256 produit un hash d'une longueur fixe d
 
 Ces fonctions de hachage cryptographiques possèdent plusieurs caractéristiques essentielles qui les rendent particulièrement utiles dans le contexte de Bitcoin et d'autres systèmes informatiques :
 
-1. L'irréversibilité (ou résistance à la préimage)
-2. La résistance à la falsification (effet avalanche)
-3. La résistance aux collisions
-4. La résistance à la seconde préimage
+- L'irréversibilité (ou résistance à la préimage)
+- La résistance à la falsification (effet avalanche)
+- La résistance aux collisions
+- La résistance à la seconde préimage
 
 #### 1. L'irréversibilité (résistance à la préimage) :
 
 L'irréversibilité signifie qu'il est facile de calculer le hash à partir de l'information en entrée, mais que le calcul inverse, c'est-à-dire retrouver l'entrée à partir du hash, est pratiquement impossible. Cette propriété rend les fonctions de hachage parfaites pour créer des empreintes numériques uniques sans compromettre les informations d'origine. On parle souvent de fonction à sens unique ou de "_trap door function_" pour décrire cette caractéristique.
 
-Dans l'exemple donné, obtenir le hash `24f1b9…` en connaissant l'entrée "_Plan ₿_" est simple et rapide. Toutefois, retrouver le message "_Plan ₿_" en connaissant uniquement `24f1b9…` est impossible.
+Dans l'exemple donné, obtenir le hash `24f1b9…` en connaissant l'entrée "_PlanB_" est simple et rapide. Toutefois, retrouver le message "_PlanB_" en connaissant uniquement `24f1b9…` est impossible.
 
 ![CYP201](assets/fr/002.webp)
 
@@ -103,7 +103,7 @@ Il est donc impossible de trouver une préimage $m$ pour un hash $h$ tel que $h 
 
 La deuxième caractéristique est la résistance à la falsification, également connue sous le nom d'**effet avalanche**. Cette caractéristique s'observe sur une fonction de hachage si une petite modification du message d'entrée entraîne une modification radicale du hash de sortie.
 
-Si l'on reprend notre exemple avec l’entrée "_Plan ₿_" et la fonction SHA256, nous avons vu que le hash généré est le suivant :
+Si l'on reprend notre exemple avec l’entrée "_PlanB_" et la fonction SHA256, nous avons vu que le hash généré est le suivant :
 
 ```txt
 24f1b93b68026bfc24f5c8265f287b4c940fb1664b0d75053589d7a4f821b688
@@ -240,9 +240,9 @@ Si l'on reprend notre exemple avec un message initial de 950 bits, on va convert
 
 Ce rembourrage de la taille est ajouté à la suite du rembourrage des bits. Le message après notre pré-traitement se compose donc de trois parties :
 
-1. Le message original $M$ ;
-2. Un bit `1` suivi de plusieurs bits `0` pour former le rembourrage des bits ;
-3. Une représentation de 64 bits de la longueur de $M$ pour former le rembourrage avec la taille.
+- Le message original $M$ ;
+- Un bit `1` suivi de plusieurs bits `0` pour former le rembourrage des bits ;
+- Une représentation de 64 bits de la longueur de $M$ pour former le rembourrage avec la taille.
 
 ![CYP201](assets/fr/006.webp)
 
@@ -550,8 +550,8 @@ Sur Bitcoin au niveau applicatif, en complément des fonctions de hachage, on ut
 
 Sur les portefeuilles Bitcoin, on utilise principalement 2 algorithmes de dérivation :
 
-1. **HMAC (_Hash-based Message Authentication Code_)**
-2. **PBKDF2 (_Password-Based Key Derivation Function 2_)**
+- **HMAC (_Hash-based Message Authentication Code_)**
+- **PBKDF2 (_Password-Based Key Derivation Function 2_)**
 
 Nous allons explorer ensemble le fonctionnement et le rôle de chacun d'eux.
 
@@ -590,12 +590,12 @@ $$
 
 Cette équation se décompose avec les étapes suivantes :
 
-1. On XOR la clé ajustée $K'$ avec $\text{ipad}$ pour obtenir $\text{iKpad}$ ;
-2. On XOR la clé ajustée $K'$ avec $\text{opad}$ pour obtenir $\text{oKpad}$ ;
-3. On concatène $\text{iKpad}$ avec le message $m$.
-4. On hache ce résultat avec SHA512 pour obtenir un hash intermédiaire $H_1$.
-5. On concatène $\text{oKpad}$ avec $H_1$.
-6. On hache ce résultat avec SHA512 pour obtenir le résultat final $H_2$.
+- On XOR la clé ajustée $K'$ avec $\text{ipad}$ pour obtenir $\text{iKpad}$ ;
+- On XOR la clé ajustée $K'$ avec $\text{opad}$ pour obtenir $\text{oKpad}$ ;
+- On concatène $\text{iKpad}$ avec le message $m$.
+- On hache ce résultat avec SHA512 pour obtenir un hash intermédiaire $H_1$.
+- On concatène $\text{oKpad}$ avec $H_1$.
+- On hache ce résultat avec SHA512 pour obtenir le résultat final $H_2$.
 
 Ces étapes peuvent être résumées schématiquement comme suit :
 
@@ -1265,7 +1265,7 @@ Par exemple, pour une entropie de 256 bits, le résultat $\text{ENT} \Vert \text
 
 ### Conversion de la séquence binaire en une phrase mnémonique
 
-La séquence de bits $\text{ENT} \Vert \text{CS}$ est ensuite découpée en segments de 11 bits. Chaque segment de 11 bits, une fois converti en décimal, correspond à un nombre compris entre 0 et 2047, qui désigne la position d’un mot [dans une liste de 2048 mots standardisée par le BIP39](https://github.com/Plan ₿-Network/bitcoin-educational-content/blob/dev/resources/bet/bip39-wordlist/assets/BIP39-WORDLIST.pdf).
+La séquence de bits $\text{ENT} \Vert \text{CS}$ est ensuite découpée en segments de 11 bits. Chaque segment de 11 bits, une fois converti en décimal, correspond à un nombre compris entre 0 et 2047, qui désigne la position d’un mot [dans une liste de 2048 mots standardisée par le BIP39](https://github.com/Planb-Network/bitcoin-educational-content/blob/dev/resources/bet/bip39-wordlist/assets/BIP39-WORDLIST.pdf).
 
 ![CYP201](assets/fr/037.webp)
 
@@ -1307,7 +1307,7 @@ Une phrase de 12 mots, qui offre également 128 bits de sécurité, est donc act
 
 Pour aller plus loin et découvrir concrètement comment générer manuellement une phrase mnémonique de test, je vous conseille de découvrir ce tutoriel :
 
-https://planb.network/tutorials/wallet/generate-mnemonic-phrase
+https://planb.network/tutorials/wallet/backup/generate-mnemonic-phrase-47507d90-e6af-4cac-b01b-01a14d7a8228
 
 Avant de poursuivre la dérivation du portefeuille à partir de cette phrase mnémonique, je vais vous présenter, dans le chapitre suivant, la passphrase BIP39, car celle-ci joue un rôle dans la dérivation, et elle se situe au même niveau que la phrase mnémonique.
 
@@ -1522,27 +1522,27 @@ xpub6CTNzMUkzpurBWaT4HQoYzLP4uBbGJuWY358Rj7rauiw4rMHCyq3Rfy9w4kyJXJzeFfyrKLUar2r
 
 Cette clé étendue se décompose en plusieurs éléments distincts :
 
-1. **Version** : `0488B21E`
+- **Version** : `0488B21E`
 
 Les 4 premiers octets sont la version. Ici, cela correspond à une clé publique étendue sur le Mainnet avec un objectif de dérivation soit _Legacy_, soit _SegWit v1_.
 
-2. **Profondeur** : `03`
+- **Profondeur** : `03`
 
 Ce champ indique le niveau hiérarchique de la clé dans le portefeuille HD. Dans ce cas, une profondeur de `03` signifie que cette clé est à trois niveaux de dérivation en dessous de la clé maîtresse.
 
-3. **Empreinte parent** : `6D5601AD`
+- **Empreinte parent** : `6D5601AD`
 
 Ce sont les 4 premiers octets du hash HASH160 de la clé publique parent ayant servi à dériver cette `xpub`.
 
-4. **Numéro d'index** : `80000000`
+- **Numéro d'index** : `80000000`
 
 Cet index indique la position de la clé parmi les enfants de ses clés parent. Le préfixe `0x80` indique que la clé est dérivée de manière endurcie, et puisque le reste est rempli de zéros, cela indique que cette clé est la première parmi ses éventuelles sœurs.
 
-5. **Code de chaîne** : `C605DF9FBD77FD6965BD02B77831EC5C78646AD3ACA14DC3984186F72633A893`
+- **Code de chaîne** : `C605DF9FBD77FD6965BD02B77831EC5C78646AD3ACA14DC3984186F72633A893`
 
-6. **Clé publique** : `03772CCB99F4EF346078D167065404EED8A58787DED31BFA479244824DF5065805`
+- **Clé publique** : `03772CCB99F4EF346078D167065404EED8A58787DED31BFA479244824DF5065805`
 
-7. **Somme de contrôle** : `1F067C3A`
+- **Somme de contrôle** : `1F067C3A`
 
 La checksum correspond aux 4 premiers octets du hachage (double SHA256) de tout le reste.
 
@@ -1564,8 +1564,8 @@ Découvrons ensemble comment fonctionne cette dérivation déterministe.
 
 Nous l'avons abordé rapidement dans le chapitre précédent : les clés enfants se divisent en deux types principaux :
 
-1. **Les clés enfants normales** ($k_{\text{CHD}}^n, K_{\text{CHD}}^n$) : Elles sont dérivées à partir de la clé publique étendue parent ($K_{\text{PAR}}$), ou de la clé privée étendue ($k_{\text{PAR}}$), en dérivant d'abord la clé publique.
-2. **Les clés enfants endurcies** ($k_{\text{CHD}}^h, K_{\text{CHD}}^h$) : Elles ne peuvent être dérivées qu'à partir de la clé privée étendue ($k_{\text{PAR}}$) et sont donc invisibles aux observateurs disposant uniquement de la clé publique étendue.
+- **Les clés enfants normales** ($k_{\text{CHD}}^n, K_{\text{CHD}}^n$) : Elles sont dérivées à partir de la clé publique étendue parent ($K_{\text{PAR}}$), ou de la clé privée étendue ($k_{\text{PAR}}$), en dérivant d'abord la clé publique.
+- **Les clés enfants endurcies** ($k_{\text{CHD}}^h, K_{\text{CHD}}^h$) : Elles ne peuvent être dérivées qu'à partir de la clé privée étendue ($k_{\text{PAR}}$) et sont donc invisibles aux observateurs disposant uniquement de la clé publique étendue.
 
 Chaque paire de clés enfant est identifiée par un **index** de 32 bits (nommé $i$ dans nos calculs). Les index pour les clés normales vont de $0$ à $2^{31}-1$, tandis que ceux des clés endurcies vont de $2^{31}$ à $2^{32}-1$. Ces numéros servent à distinguer les paires de clés sœurs lors de la dérivation. En effet, chaque paire de clés parent doit être capable de dériver plusieurs paires de clés enfants. Si l’on appliquait systématiquement le même calcul depuis les clés parent, toutes les clés sœurs obtenues seraient identiques, ce qui n’est pas souhaitable. L’index introduit donc une variable qui modifie le calcul de dérivation, permettant ainsi de différencier chaque paire sœur. Sauf utilisation spécifique dans certains protocoles et standards de dérivation, on commence généralement par dériver la première clé enfant avec l’index `0`, la seconde avec l’index `1`, et ainsi de suite.
 
@@ -1637,7 +1637,7 @@ $$
 $$
 
 $$
-h_1 = \text{hash}[:32] \quad, \quad h_2 = \text{hash}[32:]
+h_1 = \text{hash}_{[:32]} \quad, \quad h_2 = \text{hash}_{[32:]}
 $$
 
 La clé privée enfant $k_{\text{CHD}}^h$ est alors calculée comme cela :
@@ -1677,7 +1677,7 @@ $$
 $$
 
 $$
-h_1 = \text{hash}[:32] \quad, \quad h_2 = \text{hash}[32:]
+h_1 = \text{hash}_{[:32]} \quad, \quad h_2 = \text{hash}_{[32:]}
 $$
 
 La clé publique enfant $K_{\text{CHD}}^n$ est alors calculée comme cela :
@@ -2068,7 +2068,7 @@ Cependant, pour rendre cette charge utile plus facilement utilisable par les hum
 $$
 \begin{array}{|c|c|}
 \hline
-\text{Groupes de 5 bits} & \text{Valeur décimale} \\
+\text{5 bits} & \text{Decimal} \\
 \hline
 10011 & 19 \\
 11110 & 30 \\
@@ -2312,7 +2312,7 @@ Et voilà ! Nous arrivons à la fin de cette formation CYP201. Si ce cours vous 
 
 <partId>58111408-b734-54db-9ea7-0d5b67f99f99</partId>
 
-## Évaluez ce cours
+## Avis & Notes
 
 <chapterId>0cd71541-a7fd-53db-b66a-8611b6a28b04</chapterId>
 <isCourseReview>true</isCourseReview>
@@ -2325,35 +2325,4 @@ Et voilà ! Nous arrivons à la fin de cette formation CYP201. Si ce cours vous 
 ## Conclusion
 
 <chapterId>d291428b-3cfa-5394-930e-4b514be82d5a</chapterId>
-
-Nous arrivons à la fin de la formation CYP201. J’espère qu’elle vous a été utile dans votre apprentissage de Bitcoin et qu’elle vous a permis de mieux comprendre le fonctionnement des portefeuilles HD que vous utilisez au quotidien. Merci d’avoir suivi ce cours jusqu’à son terme !
-
-Selon moi, ces connaissances sur les portefeuilles sont fondamentales, car elles relient un aspect théorique de Bitcoin à son utilisation pratique. En effet, si vous utilisez Bitcoin, vous manipulez forcément des logiciels de portefeuille. Comprendre leurs rouages vous permet de mettre en place des stratégies de sécurisation efficaces, tout en maîtrisant les mécanismes sous-jacents, les risques et les éventuelles faiblesses. Ainsi, vous pouvez utiliser Bitcoin de manière plus sûre et en toute confiance.
-
-Si vous ne l’avez pas encore fait, je vous invite à noter et à commenter cette formation. Cela m’aiderait énormément. Vous pouvez également partager cette formation sur vos réseaux sociaux pour diffuser ces connaissances au plus grand nombre.
-
-Pour poursuivre votre parcours dans le terrier du lapin, je vous recommande vivement la formation **BTC204**, que j’ai également produite sur Plan ₿ Network. Elle est dédiée à la confidentialité sur Bitcoin et explore des thématiques clés : Quel est le modèle de confidentialité ? Comment fonctionne l’analyse de chaîne ? Comment utiliser Bitcoin de manière optimale pour maximiser votre confidentialité ? Une suite logique pour approfondir vos compétences !
-
-https://planb.network/courses/btc204
-
-De plus, pour continuer à approfondir vos connaissances dans l'univers du Bitcoin, nous vous invitons à explorer d'autres cours disponibles sur Plan ₿ Network comme :
-
-#### Apprenez à créer votre communauté Bitcoin avec
-
-https://planb.network/courses/btc302
-
-#### Découvrez le réseau Lightning avec
-
-https://planb.network/courses/lnp201
-
-#### Découvrez la pensée économique de l'École autrichienne avec
-
-https://planb.network/courses/eco201
-
-#### Découvrez l'histoire des origines de Bitcoin avec
-
-https://planb.network/courses/his201
-
-#### Découvrez l'évolution de la liberté à travers les âges avec
-
-https://planb.network/courses/phi201
+<isCourseConclusion>true</isCourseConclusion>

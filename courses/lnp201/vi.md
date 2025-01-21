@@ -28,8 +28,8 @@ Chúc bạn khám phá thú vị!
 ## Hiểu về Lightning Network
 
 <chapterId>df6230ae-ff35-56ea-8651-8e65580730a8</chapterId>
+![video en](https://youtu.be/QDQ8NG0l3hk)
 
-![Hiểu về Lightning Network](https://youtu.be/PszWk046x-I)
 
 Chào mừng bạn đến với khóa học LNP201, mục tiêu là giải thích về cách thức kỹ thuật của Lightning Network.
 
@@ -85,8 +85,8 @@ Hãy lấy một ví dụ: nếu Alice có 130,000 satoshis ở phía của mìn
 ## Bitcoin, Địa Chỉ, UTXO, và Giao Dịch
 
 <chapterId>0cfb7e6b-96f0-508b-9210-90bc1e28649d</chapterId>
+![video en](https://youtu.be/U9l5IVriCss)
 
-![bitcoin, addresses, utxo, and transactions](https://youtu.be/cadCJ2V7zTg)
 Chương này khá đặc biệt vì nó không trực tiếp nói về Lightning, mà về Bitcoin. Thực tế, Mạng Lưới Lightning là một lớp nằm trên Bitcoin. Do đó, việc hiểu một số khái niệm cơ bản của Bitcoin là cần thiết để nắm bắt được cách thức hoạt động của Lightning trong các chương tiếp theo. Trong chương này, chúng ta sẽ xem xét cơ bản về địa chỉ nhận Bitcoin, UTXOs, cũng như cách thức hoạt động của giao dịch Bitcoin.
 
 ### Địa Chỉ Bitcoin, Khóa Riêng và Khóa Công Khai
@@ -150,8 +150,8 @@ Chương này về Bitcoin đã cho chúng ta xem xét lại một số khái ni
 ## Mở Kênh
 
 <chapterId>96243eb0-f6b5-5b68-af1f-fffa0cc16bfe</chapterId>
+![video en](https://youtu.be/Ty80WuN5X-g)
 
-![mở một kênh](https://youtu.be/B2caBC0Rxko)
 
 Trong chương này, chúng ta sẽ xem xét cụ thể hơn cách mở một kênh thanh toán trên Mạng Lưới Lightning và hiểu mối liên kết giữa hoạt động này và hệ thống Bitcoin cơ bản.
 
@@ -213,8 +213,8 @@ Trong chương tiếp theo, chúng ta sẽ khám phá cách thức kỹ thuật 
 ## Giao Dịch Cam Kết
 
 <chapterId>7d3fd135-129d-5c5a-b306-d5f2f1e63340</chapterId>
+![video en](https://youtu.be/dzPMGiR_JSE)
 
-![Giao dịch Lightning & giao dịch cam kết](https://youtu.be/aPqI34tpypM)
 
 Trong chương này, chúng ta sẽ khám phá cách thức kỹ thuật của một giao dịch trong một kênh trên Mạng Lưới Lightning, tức là khi tiền được chuyển từ một phía của kênh sang phía kia.
 
@@ -271,7 +271,7 @@ Tuy nhiên, hệ thống này có một khuyết điểm tiềm ẩn, chúng ta 
 ## Khóa Huỷ Bỏ
 
 <chapterId>f2f61e5b-badb-5947-9a81-7aa530b44e59</chapterId>
-![transactions part 2](https://youtu.be/RRvoVTLRJ84)
+![video en](https://youtu.be/veCs39uVFUk)
 Trong chương này, chúng ta sẽ đi sâu hơn vào cách giao dịch hoạt động trên Mạng Lưới Sét bằng cách thảo luận về các cơ chế được đặt ra để bảo vệ chống lại gian lận, đảm bảo rằng mỗi bên tuân thủ các quy tắc trong kênh.
 
 ### Nhắc lại: Giao Dịch Cam Kết
@@ -347,8 +347,8 @@ Tại thời điểm này trong quá trình đào tạo, bạn đã biết cách
 ## Đóng Kênh
 
 <chapterId>29a72223-2249-5400-96f0-3756b1629bc2</chapterId>
+![video en](https://youtu.be/zmAa2fj_V7w)
 
-![đóng một kênh](https://youtu.be/FVmQvNpVW8Y)
 
 Trong chương này, chúng ta sẽ thảo luận về **việc đóng một kênh** trên Mạng Lưới Lightning, được thực hiện thông qua một giao dịch Bitcoin, giống như khi mở một kênh. Sau khi thấy cách các giao dịch trong một kênh hoạt động, bây giờ là lúc để xem cách đóng một kênh và thu hồi quỹ trên blockchain Bitcoin.
 
@@ -433,8 +433,8 @@ Có ba cách để đóng một kênh:
 ## Mạng Lưới Lightning
 
 <chapterId>45a7252c-fa4f-554b-b8bb-47449532918e</chapterId>
+![video en](https://youtu.be/44oBdNdXtEQ)
 
-![mạng lưới lightning](https://youtu.be/RAZAa3v41DM)
 
 Trong chương này, chúng ta sẽ khám phá cách thức các khoản thanh toán trên Mạng Lưới Lightning có thể đến được với người nhận ngay cả khi họ không được kết nối trực tiếp qua một kênh thanh toán. Lightning thực sự là một **mạng lưới các kênh thanh toán**, cho phép gửi tiền đến một nút xa thông qua các kênh của các bên tham gia khác. Chúng ta sẽ khám phá cách thức các khoản thanh toán được định tuyến qua mạng lưới, cách thanh khoản di chuyển giữa các kênh, và cách tính phí giao dịch.
 
@@ -546,8 +546,8 @@ Trong chương này, chúng ta đã khám phá việc định tuyến thanh toá
 ## HTLC – Hợp Đồng Thời Gian Khóa Băm
 
 <chapterId>4369b85a-1365-55d8-99e1-509088210116</chapterId>
+![video en](https://youtu.be/jI4nM297aHA)
 
-![HTLC](https://youtu.be/-JC4mkq7H48)
 
 Trong chương này, chúng ta sẽ khám phá cách Lightning cho phép thanh toán di chuyển qua các nút trung gian mà không cần phải tin tưởng họ, nhờ vào **HTLC** (_Hợp Đồng Thời Gian Khóa Băm_). Những hợp đồng thông minh này đảm bảo rằng mỗi nút trung gian chỉ nhận được tiền từ kênh của mình nếu nó chuyển tiếp thanh toán cho người nhận cuối cùng, nếu không, thanh toán sẽ không được xác nhận.
 
@@ -621,15 +621,23 @@ Nếu trong quá trình thanh toán, một trong các nút trung gian, hoặc n�
 ![LNP201](assets/en/55.webp)
 
 Sau đó là HTLC từ Alice đến Suzie.
+
+![LNP201](assets/en/56.webp)
+
 Nếu thứ tự hết hạn của HTLC được đảo ngược, Alice có thể thu hồi thanh toán của mình trước khi Suzie có thể bảo vệ mình khỏi khả năng bị lừa. Thực sự, nếu Bob quay lại để yêu cầu HTLC của mình trong khi Alice đã loại bỏ HTLC của mình, Suzie sẽ ở vào thế bất lợi. Do đó, thứ tự hết hạn của HTLC theo cấp độ này đảm bảo rằng không có nút trung gian nào phải chịu tổn thất không công bằng.
 
 ### Biểu diễn của HTLCs trong các giao dịch cam kết
 
 Các giao dịch cam kết biểu diễn HTLCs theo cách mà các điều kiện họ áp đặt lên Lightning có thể được chuyển sang Bitcoin trong trường hợp đóng kênh ép buộc trong thời gian sống của một HTLC. Như một lời nhắc nhở, các giao dịch cam kết đại diện cho trạng thái hiện tại của kênh giữa hai người dùng và cho phép đóng kênh một cách ép buộc trong trường hợp có vấn đề. Với mỗi trạng thái mới của kênh, 2 giao dịch cam kết được tạo ra: một cho mỗi bên. Hãy xem xét lại ví dụ của chúng tôi với Alice, Suzie và Bob, nhưng nhìn kỹ hơn vào những gì xảy ra ở cấp độ kênh giữa Alice và Suzie khi HTLC được tạo.
+![LNP201](assets/en/57.webp)
 
 Trước khi bắt đầu thanh toán 40,000 sats giữa Alice và Bob, Alice có 100,000 sats trong kênh của mình với Suzie, trong khi Suzie giữ 30,000. Các giao dịch cam kết của họ như sau:
 
+![LNP201](assets/en/58.webp)
+
 Alice vừa nhận được hóa đơn của Bob, đáng chú ý chứa _r_, băm của bí mật. Do đó, cô ấy có thể tạo một HTLC 40,000 satoshis với Suzie. HTLC này được biểu diễn trong các giao dịch cam kết mới nhất như một đầu ra được gọi là "**_HTLC Out_**" ở phía Alice, vì các quỹ đang đi ra, và "**_HTLC In_**" ở phía Suzie, vì các quỹ đang đi vào.
+
+![LNP201](assets/en/59.webp)
 
 Các đầu ra liên quan đến HTLC chia sẻ chính xác cùng một điều kiện, cụ thể là:
 
@@ -640,6 +648,8 @@ Những điều kiện này chỉ áp dụng nếu kênh được đóng (tức 
 
 Hơn nữa, nếu kênh được đóng trong khi nhiều HTLCs đang chờ xử lý, sẽ có nhiều đầu ra bổ sung tương ứng với số lượng HTLCs đang diễn ra.
 Nếu kênh không được đóng, sau khi thanh toán Lightning hết hạn hoặc thành công, các giao dịch cam kết mới được tạo ra để phản ánh trạng thái mới, ổn định của kênh, tức là không có HTLCs nào đang chờ xử lý. Các đầu ra liên quan đến HTLCs do đó có thể được loại bỏ khỏi các giao dịch cam kết.
+![LNP201](assets/en/60.webp)
+
 Cuối cùng, trong trường hợp đóng kênh hợp tác khi một HTLC đang hoạt động, Alice và Suzie ngừng chấp nhận thanh toán mới và chờ đợi sự giải quyết hoặc hết hạn của các HTLC đang diễn ra. Điều này cho phép họ công bố một giao dịch đóng kênh nhẹ nhàng hơn, không bao gồm các đầu ra liên quan đến HTLCs, từ đó giảm phí và tránh việc chờ đợi một khóa thời gian có thể xảy ra.
 
 **Bạn nên rút ra điều gì từ chương này?**
@@ -655,8 +665,8 @@ Trong chương tiếp theo, chúng ta sẽ khám phá cách một nút phát hà
 ## Tìm Đường Đi
 
 <chapterId>7e2ae959-c2a1-512e-b5d6-8fd962e819da</chapterId>
+![video en](https://youtu.be/CqetCElRjUQ)
 
-![tìm đường đi](https://youtu.be/wnUGJjOxd9Q)
 
 Trong các chương trước, chúng ta đã thấy cách sử dụng các kênh của nút khác để chuyển hướng thanh toán và đạt được một nút mà không cần kết nối trực tiếp với nó qua một kênh. Chúng ta cũng đã thảo luận cách đảm bảo an toàn cho việc chuyển giao mà không cần tin tưởng các nút trung gian. Trong chương này, chúng ta sẽ tập trung vào việc tìm tuyến đường tốt nhất có thể để đạt được nút mục tiêu.
 
@@ -742,7 +752,7 @@ Trong chương tiếp theo, chúng ta sẽ cụ thể nghiên cứu về cách h
 ## Hóa Đơn, LNURL, và Keysend
 
 <chapterId>e34c7ecd-2327-52e3-b61e-c837d9e5e8b0</chapterId>
-![hóa đơn, LNURL, Keysend](https://youtu.be/CHnXJuZTarU)
+![video en](https://youtu.be/XANzf1Qqp9I)
 Trong chương này, chúng ta sẽ xem xét kỹ lưỡng hơn về cách thức hoạt động của **hóa đơn** Lightning, tức là yêu cầu thanh toán được gửi bởi nút nhận đến nút gửi. Mục tiêu là hiểu cách thức thanh toán và nhận thanh toán trên Lightning. Chúng ta cũng sẽ thảo luận về 2 phương án thay thế cho hóa đơn truyền thống: LNURL và Keysend.
 ![LNP201](assets/en/68.webp)
 
@@ -851,8 +861,8 @@ Trong chương tiếp theo, chúng ta sẽ xem xét cách một người vận h
 ## Quản Lý Tính Thanh Khoản của Bạn
 
 <chapterId>cc76d0c4-d958-57f5-84bf-177e21393f48</chapterId>
+![video en](https://youtu.be/MIbej28La7Y)
 
-![quản lý tính thanh khoản của bạn](https://youtu.be/YuPrbhEJXbg)
 
 Trong chương này, chúng ta sẽ khám phá các chiến lược để quản lý tính thanh khoản một cách hiệu quả trên Mạng Lưới Lightning. Việc quản lý tính thanh khoản thay đổi tùy thuộc vào loại người dùng và bối cảnh. Chúng ta sẽ xem xét các nguyên tắc chính và các kỹ thuật hiện có để hiểu rõ hơn cách tối ưu hóa việc quản lý này.
 
@@ -921,8 +931,8 @@ Trong chương tiếp theo, tôi đề xuất xem lại các khái niệm quan t
 ## Kết Luận Đào Tạo
 
 <chapterId>a65a571c-561b-5e1c-87bf-494644653c22</chapterId>
+![video en](https://youtu.be/coaskEGRjiU)
 
-![kết luận](https://youtu.be/MaWpD0rbkVo)
 Trong chương cuối cùng này, đánh dấu sự kết thúc của khóa học LNP201, tôi đề xuất ôn lại những khái niệm quan trọng mà chúng ta đã cùng nhau tìm hiểu.
 Mục tiêu của khóa học này là cung cấp cho bạn một hiểu biết toàn diện và kỹ thuật về Lightning Network. Chúng ta đã khám phá cách mà Lightning Network dựa vào blockchain Bitcoin để thực hiện các giao dịch ngoại tuyến, trong khi vẫn giữ được những đặc điểm cơ bản của Bitcoin, đặc biệt là không cần phải tin tưởng các nút khác.
 
@@ -975,7 +985,7 @@ Chúng ta đã thấy rằng quản lý tính thanh khoản là một thách th�
 
 <partId>b8715c1c-7ae2-49b7-94c7-35bf85346ad3</partId>
 
-## Đánh giá khóa học này
+## Nhận xét & Đánh giá
 
 <chapterId>38814c99-eb7b-5772-af49-4386ee2ce9b0</chapterId>
 <isCourseReview>true</isCourseReview>
@@ -988,41 +998,4 @@ Chúng ta đã thấy rằng quản lý tính thanh khoản là một thách th�
 ## Kết luận
 
 <chapterId>afc0d72b-4fbc-5893-90b2-e27fb519ad02</chapterId>
-Chúc mừng! 🎉
-
-Bạn đã hoàn thành khóa đào tạo LNP 201 - Giới thiệu về Lightning Network!
-
-Bạn có thể tự hào về bản thân, vì đây không phải là một chủ đề dễ dàng.
-
-Rất ít người đi sâu vào hang thỏ Bitcoin đến như vậy.
-
-Xin cảm ơn **Fanis Michalakis** rất nhiều vì đã cung cấp khóa học miễn phí tuyệt vời này về cách hoạt động kỹ thuật của Lightning Network.
-
-Hãy theo dõi anh ấy trên [Twitter](https://x.com/FanisMichalakis), trên [blog của anh ấy](https://fanismichalakis.fr/) hoặc thông qua công việc của anh ấy tại [LN Markets](https://lnmarkets.com/).
-
-Giờ đây, khi bạn đã thành thạo Lightning Network, tôi mời bạn khám phá các khóa học miễn phí khác của chúng tôi trên Plan ₿ Network để đào sâu hiểu biết về các khía cạnh khác của phát minh của Satoshi Nakamoto:
-
-#### Hiểu cách hoạt động của ví Bitcoin với
-
-https://planb.network/courses/cyp201
-
-#### Khám phá lịch sử nguồn gốc của Bitcoin với
-
-https://planb.network/courses/his201
-
-#### Cấu hình máy chủ thanh toán BTC với
-
-https://planb.network/courses/btc305
-
-#### Nắm vững các nguyên tắc quyền riêng tư trong Bitcoin
-
-https://planb.network/courses/btc204
-
-#### Khám phá những điều cơ bản về khai thác với
-
-https://planb.network/courses/min201
-
-#### Học cách tạo cộng đồng Bitcoin của bạn với
-
-https://planb.network/courses/btc302
-
+<isCourseConclusion>true</isCourseConclusion>

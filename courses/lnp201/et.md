@@ -28,8 +28,8 @@ Nautige avastamist!
 ## Lightning Network'i mõistmine
 
 <chapterId>df6230ae-ff35-56ea-8651-8e65580730a8</chapterId>
+![video en](https://youtu.be/QDQ8NG0l3hk)
 
-![Lightning Network'i mõistmine](https://youtu.be/PszWk046x-I)
 
 Tere tulemast LNP201 kursusele, mille eesmärk on selgitada Lightning Network'i tehnilist toimimist.
 
@@ -85,8 +85,8 @@ See on selle esimese peatüki lõpp, kus oleme pannud aluse Lightning Networkile
 ## Bitcoin, Aadressid, UTXO ja Tehingud
 
 <chapterId>0cfb7e6b-96f0-508b-9210-90bc1e28649d</chapterId>
+![video en](https://youtu.be/U9l5IVriCss)
 
-![bitcoin, aadressid, utxo ja tehingud](https://youtu.be/cadCJ2V7zTg)
 See peatükk on veidi eriline, kuna see ei ole otseselt pühendatud Lightning'ule, vaid Bitcoinile. Tõepoolest, Lightning Network on kiht Bitcoin'i peal. Seetõttu on oluline mõista teatud Bitcoin'i põhimõisteid, et korralikult mõista Lightning'i toimimist järgnevates peatükkides. Selles peatükis vaatame üle Bitcoin'i vastuvõtu aadresside, UTXO-de ning Bitcoin'i tehingute toimimise alused.
 
 ### Bitcoin'i Aadressid, Privaatvõtmed ja Avalikud Võtmed
@@ -150,8 +150,8 @@ See peatükk Bitcoinist on võimaldanud meil üle vaadata mõned olulised mõist
 ## Kanali Avamine
 
 <chapterId>96243eb0-f6b5-5b68-af1f-fffa0cc16bfe</chapterId>
+![video en](https://youtu.be/Ty80WuN5X-g)
 
-![ava kanal](https://youtu.be/B2caBC0Rxko)
 
 Sel peatükis vaatame täpsemalt, kuidas avada maksekanalit Lightning Networkis ja mõistame selle operatsiooni seost aluseks oleva Bitcoin süsteemiga.
 
@@ -213,8 +213,8 @@ Järgmises peatükis uurime Lightningi tehingu tehnilist toimimist kanalis.
 ## Pühendumise Tehing
 
 <chapterId>7d3fd135-129d-5c5a-b306-d5f2f1e63340</chapterId>
+![video en](https://youtu.be/dzPMGiR_JSE)
 
-![Lightningi tehing & pühendumise tehing](https://youtu.be/aPqI34tpypM)
 
 Sel peatükis avastame tehnilist toimimist tehingu puhul kanalis Lightningi võrgus, see tähendab, kui vahendid liiguvad ühelt kanali poolelt teisele.
 
@@ -222,9 +222,13 @@ Sel peatükis avastame tehnilist toimimist tehingu puhul kanalis Lightningi võr
 
 Nagu varem nähtud, algab Lightning kanal **avamisega** läbi Bitcoin'i tehingu. Kanalit saab **sulgeda** igal ajal, samuti läbi Bitcoin'i tehingu. Nende kahe hetke vahel saab kanalis toimuda peaaegu lõputu arv tehinguid, ilma et peaks minema läbi Bitcoin'i plokiahela. Vaatame, mis toimub kanalis tehingu ajal.
 
+![LNP201](assets/en/17.webp)
+
 ### Kanali algseisund
 
 Kanali avamise hetkel deposiit Alice **130 000 satoshi** kanali multisignatuuri aadressile. Seega, algseisundis on kõik vahendid Alice'i poolel. Enne kanali avamist lasi Alice Bobil allkirjastada ka **väljavõtte tehingu**, mis võimaldaks tal oma vahendid tagasi saada, kui ta sooviks kanali sulgeda.
+
+![LNP201](assets/en/18.webp)
 
 ### Avaldamata Tehingud: Kohustuslikud Tehingud
 
@@ -235,6 +239,7 @@ Võtame näiteks, kus Alice saadab 30 000 satoshi Bobile:
 - **Alguses**: Alice'il on 130 000 satoshi.
 - **Pärast tehingut**: Alice'il on 100 000 satoshi ja Bobil 30 000 satoshi.
   Selle ülekande valideerimiseks loovad Alice ja Bob uue **avaldamata Bitcoin'i tehingu**, mis saadaks **100 000 satoshi Alice'ile** ja **30 000 satoshi Bobile** multisignatuuri aadressilt. Mõlemad pooled konstrueerivad selle tehingu iseseisvalt, kuid sama andmetega (summad ja aadressid). Kui konstruktsioon on valmis, allkirjastab igaüks tehingu ja vahetab teisega oma allkirja. See võimaldab kummalgi poolel tehingu igal ajal avaldada, kui see on vajalik, et taastada oma osa kanalist peamisel Bitcoin'i plokiahelal.
+  ![LNP201](assets/en/19.webp)
 
 ### Ülekandeprotsess: Arve
 
@@ -242,12 +247,16 @@ Kui Bob soovib vahendeid vastu võtta, saadab ta Alice'ile **_arve_** 30 000 sat
 
 Iga kohustuslik tehing esindab kanalis vahendite uut jaotust pärast ülekannet. Selles näites, pärast tehingut, on Bobil 30 000 satoshi ja Alice'il 100 000 satoshi. Kui üks kahest osalejast otsustaks selle kohustusliku tehingu plokiahelale avaldada, tulemuseks oleks kanali sulgemine ja vahendid jaotataks vastavalt sellele viimasele jaotusele.
 
+![LNP201](assets/en/20.webp)
+
 ### Uus Seisund Pärast Teist Tehingut
 
 Võtame teise näite: pärast esimest tehingut, kus Alice saatis 30 000 satoshi Bobile, otsustab Bob saata **10 000 satoshi tagasi Alice'ile**. See loob kanali uue seisundi. Uus **kohustuslik tehing** esindab seda uuendatud jaotust:
 
 - **Alice**l on nüüd **110 000 satoshi**.
 - **Bob**il on **20 000 satoshi**.
+
+![LNP201](assets/en/21.webp)
 
 Jällegi, seda tehingut ei avaldata plokiahelas, kuid seda saab igal ajal teha, juhul kui kanal suletakse.
 
@@ -261,7 +270,7 @@ Siiski on selles süsteemis potentsiaalne viga, mida käsitleme järgmises peat�
 ## Tühistamisvõti
 
 <chapterId>f2f61e5b-badb-5947-9a81-7aa530b44e59</chapterId>
-![transactions part 2](https://youtu.be/RRvoVTLRJ84)
+![video en](https://youtu.be/veCs39uVFUk)
 Sel peatükis süveneme sellele, kuidas tehingud Lightning Network'is toimivad, arutades mehhanisme, mis on paigas petmise vastu kaitsmiseks, tagades, et mõlemad pooled järgivad kanalis reegleid.
 
 ### Meeldetuletus: Kohustuslikud Tehingud
@@ -337,8 +346,8 @@ Selles koolituse etapis te nüüd teate, kuidas Lightning kanalid avatakse ja ku
 ## Kanali Sulgemine
 
 <chapterId>29a72223-2249-5400-96f0-3756b1629bc2</chapterId>
+![video en](https://youtu.be/zmAa2fj_V7w)
 
-![kanali sulgemine](https://youtu.be/FVmQvNpVW8Y)
 
 Sel peatükis arutame **kanali sulgemist** Lightning võrgus, mida tehakse läbi Bitcoin tehingu, just nagu kanali avamine. Pärast seda, kui oleme näinud, kuidas tehingud kanalis toimivad, on nüüd aeg vaadata, kuidas sulgeda kanal ja taastada vahendid Bitcoin'i plokiahelas.
 
@@ -422,8 +431,8 @@ On kolm viisi kanali sulgemiseks:
 ## Lightning Network
 
 <chapterId>45a7252c-fa4f-554b-b8bb-47449532918e</chapterId>
+![video en](https://youtu.be/44oBdNdXtEQ)
 
-![lightning network](https://youtu.be/RAZAa3v41DM)
 
 Sel peatükis uurime, kuidas makseid Lightning Networkis saab saajani jõuda isegi siis, kui nad ei ole otse ühendatud maksekanaliga. Lightning on tõepoolest **maksekanalite võrk**, mis võimaldab vahendeid saata kaugemale sõlmele läbi teiste osalejate kanalite. Avastame, kuidas makseid võrgus suunatakse, kuidas likviidsus kanalite vahel liigub ja kuidas tehingutasusid arvutatakse.
 
@@ -535,8 +544,8 @@ Sel peatükis uurisime maksete suunamist Lightningi võrgus. Kuid tekib küsimus
 ## HTLC – Hashed Time Locked Contract
 
 <chapterId>4369b85a-1365-55d8-99e1-509088210116</chapterId>
+![video en](https://youtu.be/jI4nM297aHA)
 
-![HTLC](https://youtu.be/-JC4mkq7H48)
 
 Sel peatükis avastame, kuidas Lightning võimaldab makseid suunata läbi vahendajasõlmede ilma, et peaks neid usaldama, tänu **HTLC**-le (_Hashed Time-Locked Contracts_). Need nutilepingud tagavad, et iga vahendajasõlm saab oma kanalist rahad kätte ainult siis, kui ta edastab makse lõppsaajale, vastasel juhul makset ei valideerita.
 
@@ -650,8 +659,8 @@ Järgmises peatükis avastame, kuidas sõlm, mis väljastab Lightning tehingu, l
 ## Oma Tee Leidmine
 
 <chapterId>7e2ae959-c2a1-512e-b5d6-8fd962e819da</chapterId>
+![video en](https://youtu.be/CqetCElRjUQ)
 
-![oma tee leidmine](https://youtu.be/wnUGJjOxd9Q)
 
 Eelmistes peatükkides nägime, kuidas kasutada teiste sõlmede kanaleid maksete suunamiseks ja sõlmele jõudmiseks, ilma et oleksime sellega otse kanali kaudu ühendatud. Samuti arutasime, kuidas tagada ülekande turvalisus, ilma et peaksime vahepealseid sõlmi usaldama. Selles peatükis keskendume parima võimaliku marsruudi leidmisele sihtsõlme jõudmiseks.
 
@@ -737,7 +746,7 @@ Järgmises peatükis uurime spetsiifiliselt arvete toimimist, lisaks mõningaid 
 ## Arve, LNURL ja Keysend
 
 <chapterId>e34c7ecd-2327-52e3-b61e-c837d9e5e8b0</chapterId>
-![arve, LNURL, Keysend](https://youtu.be/CHnXJuZTarU)
+![video en](https://youtu.be/XANzf1Qqp9I)
 Selles peatükis vaatame lähemalt Lightning **arvete** tööpõhimõtet, see tähendab maksepäringuid, mida saaja sõlm saadab saatja sõlmele. Eesmärk on mõista, kuidas Lightningis makseid teha ja vastu võtta. Arutleme ka kahe klassikalisele arvetele alternatiivi üle: LNURL ja Keysend.
 ![LNP201](assets/en/68.webp)
 
@@ -846,8 +855,8 @@ Järgmises peatükis vaatleme, kuidas sõlmeoperaator saab hallata oma kanalites
 ## Oma Likviidsuse Haldamine
 
 <chapterId>cc76d0c4-d958-57f5-84bf-177e21393f48</chapterId>
+![video en](https://youtu.be/MIbej28La7Y)
 
-![oma likviidsuse haldamine](https://youtu.be/YuPrbhEJXbg)
 
 Sel peatükis uurime strateegiaid likviidsuse efektiivseks haldamiseks Lightning võrgus. Likviidsuse haldamine varieerub sõltuvalt kasutaja tüübist ja kontekstist. Vaatleme peamisi põhimõtteid ja olemasolevaid tehnikaid, et paremini mõista, kuidas seda haldust optimeerida.
 
@@ -916,8 +925,8 @@ Järgmises peatükis pakun üle vaadata selle koolituse kõige olulisemad kontse
 ## Koolituse järeldus
 
 <chapterId>a65a571c-561b-5e1c-87bf-494644653c22</chapterId>
+![video en](https://youtu.be/coaskEGRjiU)
 
-![järeldus](https://youtu.be/MaWpD0rbkVo)
 Selles viimases peatükis, mis tähistab LNP201 koolituse lõppu, teen ettepaneku vaadata üle olulised kontseptsioonid, mida oleme koos käsitletud.
 Selle koolituse eesmärk oli anda teile põhjalik ja tehniline arusaam Lightning Networkist. Avastasime, kuidas Lightning Network toetub Bitcoin'i plokiahelale, et teostada off-chain tehinguid, säilitades samal ajal Bitcoin'i põhilised omadused, eriti vajaduse puudumise usaldada teisi sõlmi.
 
@@ -970,7 +979,7 @@ Oleme näinud, et likviidsuse haldamine on Lightningis väljakutse, et tagada ma
 
 <partId>b8715c1c-7ae2-49b7-94c7-35bf85346ad3</partId>
 
-## Hinda seda kursust
+## Hinnangud & Reitingud
 
 <chapterId>38814c99-eb7b-5772-af49-4386ee2ce9b0</chapterId>
 <isCourseReview>true</isCourseReview>
@@ -983,41 +992,4 @@ Oleme näinud, et likviidsuse haldamine on Lightningis väljakutse, et tagada ma
 ## Kokkuvõte
 
 <chapterId>afc0d72b-4fbc-5893-90b2-e27fb519ad02</chapterId>
-Palju õnne! 🎉
-
-Olete läbinud LNP 201 koolituse - Sissejuhatus Lightning Network'i!
-
-Võite enda üle uhke olla, sest see pole lihtne teema.
-
-Vähesed inimesed sukelduvad nii sügavale Bitcoini küülikuauku.
-
-Suur tänu **Fanis Michalakisele** selle suurepärase tasuta kursuse eest Lightning Network'i tehnilise toimimise kohta.
-
-Jälgige teda [Twitteris](https://x.com/FanisMichalakis), [tema blogis](https://fanismichalakis.fr/) või tema töö kaudu [LN Markets'is](https://lnmarkets.com/).
-
-Nüüd, kui valdate Lightning Network'i, kutsun teid uurima meie teisi tasuta kursusi Plan ₿ Network'is, et süveneda Satoshi Nakamoto leiutise teistesse aspektidesse:
-
-#### Mõistke, kuidas Bitcoin'i rahakott töötab
-
-https://planb.network/courses/cyp201
-
-#### Avastage Bitcoin'i päritolu ajalugu
-
-https://planb.network/courses/his201
-
-#### Seadistage BTC makseserver
-
-https://planb.network/courses/btc305
-
-#### Omandage Bitcoin'i privaatsuse põhimõtted
-
-https://planb.network/courses/btc204
-
-#### Avastage kaevandamise põhitõed
-
-https://planb.network/courses/min201
-
-#### Õppige looma oma Bitcoin'i kogukonda
-
-https://planb.network/courses/btc302
-
+<isCourseConclusion>true</isCourseConclusion>

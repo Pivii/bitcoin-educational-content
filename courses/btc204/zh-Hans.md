@@ -293,8 +293,12 @@ Coinbase交易的独特之处在于，它是唯一可以凭空创建比特币的
 因此，在我们使用比特币时，也有必要能够面对区块链分析。通过这种方式，我们可以最小化我们活动的聚合，并限制一个入口点对我们隐私的影响。
 ![BTC204](assets/notext/31/5.webp)
 
-实际上，为了更好地对抗区块链分析，比熟悉区块链分析中使用的方法更好的方法是什么呢？如果你想知道如何在比特币上提高你的隐私，你必须理解这些方法。这将使你能够更好地掌握像[coinjoin](https://planb.network/fr/tutorials/privacy/coinjoin-samourai-wallet)或[payjoin](https://planb.network/fr/tutorials/privacy/payjoin)（我们将在培训的最后部分研究的技术）这样的技术，并减少你可能犯的错误。
+实际上，为了更好地对抗区块链分析，比熟悉区块链分析中使用的方法更好的方法是什么呢？如果你想知道如何在比特币上提高你的隐私，你必须理解这些方法。这将使你能够更好地掌握像coinjoin或payjoin（我们将在培训的最后部分研究的技术）这样的技术，并减少你可能犯的错误。
 在这里，我们可以用密码学和密码分析作一个类比。一个优秀的密码学家首先是一个优秀的密码分析师。要想象一个新的加密算法，必须知道它将面临什么样的攻击，同时也要研究为什么之前的算法被破解。这一原则同样适用于比特币上的隐私保护。理解区块链分析的方法是保护免受其侵害的关键。这就是为什么我在这次培训中提议整个部分都关于区块链分析。
+
+https://planb.network/tutorials/privacy/on-chain/coinjoin-samourai-wallet-e566803d-ab3f-4d98-9136-5462009262ef
+
+https://planb.network/fr/tutorials/privacy/on-chain/payjoin-848b6a23-deb2-4c5f-a27e-93e2f842140f
 
 ### 区块链分析的方法
 
@@ -1098,7 +1102,7 @@ _分支定界法_（BNB），通常被昵称为“Murch's algorithm”，以其�
 
 如果你想学习如何标记你的UTXO，我们已经创建了一个关于现有主要比特币钱包软件的完整教程：
 
-https://planb.network/tutorials/privacy/utxo-labelling
+https://planb.network/tutorials/privacy/on-chain/utxo-labelling-d997f80f-8a96-45b5-8a4e-a3e1b7788c52
 
 ## KYC和关键识别
 
@@ -1223,26 +1227,38 @@ KYC特指一些公司实施的一种监管程序，用于验证和记录其客�
 
 关于解决方案，我个人一直使用[Bisq](https://bisq.network/)，对此非常满意。他们的系统建立得很好，看起来很可靠。然而，Bisq只能在PC上使用，其界面对初学者来说可能过于复杂。另一个缺点是Bisq仅与链上交易一起操作，这在比特币交易费用高昂的时期可能变得昂贵。
 
-[-> 查看我们关于Bisq的教程。](https://planb.network/en/tutorials/exchange/bisq)
+-> 查看我们关于Bisq的教程。
+
+https://planb.network/tutorials/exchange/peer-to-peer/bisq-fe244bfa-dcc4-4522-8ec7-92223373ed04
 
 对于更简单的选项，您可以尝试[Peach](https://peachbitcoin.com/)，这是一个移动应用程序，通过集成的争议解决系统促进买家和卖家之间的联系。其过程比Bisq的更直观。
 
-[-> 查看我们关于Peach的教程。](https://planb.network/en/tutorials/exchange/peach-wallet)
+-> 查看我们关于Peach的教程。
 另一个在线选项是[HodlHodl](https://hodlhodl.com/)，这是一个建立良好的平台，提供良好的流动性，尽管我个人没有测试过它。
-[-> 查看我们关于HodlHodl的教程。](https://planb.network/en/tutorials/exchange/hodlhodl)
+-> 查看我们关于HodlHodl的教程。
+
+https://planb.network/tutorials/exchange/peer-to-peer/peach-wallet-db64fe42-17ca-4b24-abb8-e7d4c03b2028
+
+https://planb.network/tutorials/exchange/peer-to-peer/hodlhodl-d7344cd5-6b18-40f5-8e78-2574a93a3879
 
 对于基于闪电网络的解决方案，您可以尝试[RoboSats](https://learn.robosats.com/)和[LNP2PBot](https://lnp2pbot.com/)。RoboSats可以通过网站访问，使用起来相对简单。LNP2PBot更为特别，因为它通过Telegram消息应用程序上的交换系统操作。
 
-[-> 查看我们关于RoboSats的教程。](https://planb.network/en/tutorials/exchange/robosats)
-[-> 查看我们关于LNP2PBot的教程。](https://planb.network/en/tutorials/exchange/lnp2pbot)
+-> 查看我们关于RoboSats的教程。
+-> 查看我们关于LNP2PBot的教程。
+
+https://planb.network/tutorials/exchange/peer-to-peer/robosats-b60e4f7c-533a-4295-9f6d-5368152e8c06
+
+https://planb.network/tutorials/exchange/peer-to-peer/lnp2pbot-6b12c3af-b787-4bd1-8f78-72a8f0ad215f
 
 ### 不需要KYC的受监管平台
 
 根据您居住的国家，您可能可以访问不需要进行KYC程序就能买卖比特币的受监管平台。例如，在瑞士，您可以使用像[Relai](https://relai.app/)和[MtPelerin](https://www.mtpelerin.com/)这样的平台。
 
-[-> 查看我们关于Relai的教程。](https://planb.network/en/tutorials/exchange/relai)
+-> 查看我们关于Relai的教程。
 正如我们在上一章中看到的，这类平台免除了与KYC程序相关的风险，但它们在关键识别方面呈现出更高的风险水平。就比特币的隐私而言，这些平台因此提供比带KYC的购买方法更好的保护，但它们不如P2P交易所有趣。
 然而，在个人安全方面，使用这些平台的风险显著低于P2P交易所。它们通常也比促进P2P交易的平台更简单易用。
+
+https://planb.network/tutorials/exchange/centralized/relai-2f202e4b-9711-4dd9-85b6-e61868c70b8e
 
 ### ATM机
 
@@ -1260,6 +1276,9 @@ ATM机的主要缺点在于它们通常有很高的兑换费用，这些费用�
 
 一些不要求KYC程序的平台提供了将比特币换成可在主要商店使用的礼品卡的可能性。在这些平台中，我们找到了[CoinsBee](https://www.coinsbee.com/)、[The Bitcoin Company](https://thebitcoincompany.com/)和[Bitrefill](https://www.bitrefill.com/)。这些平台极大地方便了你日常使用比特币，允许你在不需要转换成法币的情况下访问广泛的产品和服务。
 
+https://planb.network/tutorials/exchange/centralized/bitrefill-8c588412-1bfc-465b-9bca-e647a647fbc1
+
+
 ![BTC204](assets/notext/44/10.webp)
 
 ### 其他获取方式
@@ -1268,7 +1287,9 @@ ATM机的主要缺点在于它们通常有很高的兑换费用，这些费用�
 
 另一种方法是通过工作换取比特币。这种获取方法可能很有趣，但所需的身份识别程度根据情况而大不相同。
 
-_写这一章时，我使用了由[@pivi\_\_\_](https://x.com/pivi___)在Plan ₿ Network上创建的课程[BTC205](https://planb.network/fr/courses/btc205)（目前仅提供法语版本）。_
+_写这一章时，我使用了由[@pivi\_\_\_](https://x.com/pivi___)在Plan ₿ Network上创建的课程BTC205（目前仅提供法语版本）。_
+
+
 
 ## 合并、UTXO管理和CIOH
 
@@ -1817,11 +1838,11 @@ Whirlpool在设计时考虑了两个重要要求：
 
 在下一章中，我们将发现什么是“匿名集”（anonsets），如何计算这些指标，以及它们如何帮助我们估计coinjoin周期的有效性。
 
-https://planb.network/tutorials/privacy/coinjoin-sparrow-wallet
+https://planb.network/tutorials/privacy/on-chain/coinjoin-sparrow-wallet-84def86d-faf5-4589-807a-83be60720c8b
 
-https://planb.network/tutorials/privacy/coinjoin-samourai-wallet
+https://planb.network/tutorials/privacy/on-chain/coinjoin-samourai-wallet-e566803d-ab3f-4d98-9136-5462009262ef
 
-https://planb.network/tutorials/privacy/coinjoin-dojo
+https://planb.network/tutorials/privacy/on-chain/coinjoin-dojo-c4b20263-5b30-4c74-ae59-dc8d0f8715c2
 
 ## 匿名集
 
@@ -1884,7 +1905,7 @@ CoinJoin的效用在于它能够通过将您的币浸入一组无法区分的币
 
 正如我们在本章中所看到的，只有当coinjoins的结构具有一定的同质性时，才能计算匿名集。而确切地说，在下一章中，我们将发现如何在比特币交易中量化这种同质性，无论它是coinjoin还是更传统的交易。
 
-https://planb.network/tutorials/privacy/wst-anonsets
+https://planb.network/tutorials/privacy/analysis/wst-anonsets-0354b793-c301-48af-af75-f87569756375
 
 ## 熵
 
@@ -2119,7 +2140,7 @@ $$
 不幸的是，随着Samourai的创始人被逮捕，这些工具目前无法使用。
 现在我们已经详细讨论了coinjoins，我们将在我们培训的最后一部分探索比特币上可用的其他隐私技术。我们将检查payjoins、特定的交易类型伪coinjoins、静态地址协议，以及旨在增强隐私的措施，不仅在交易层面上，而且在节点网络层面上。
 
-https://planb.network/tutorials/privacy/boltzmann-entropy
+https://planb.network/tutorials/privacy/analysis/boltzmann-entropy-738e45af-18a6-4ce6-af1a-1bf58e15f1fe
 
 # 理解其他高级隐私技术的关键点
 
@@ -2198,9 +2219,9 @@ payjoin最先进的实现只有Samourai Wallet上的Stowaway。然而，由于�
 
 使用payjoin的难点在于它依赖于商家的参与。作为顾客，如果商家不支持payjoin，使用payjoin是不可能的。这在购买过程中增加了额外的难度：不仅找到接受比特币的商家很复杂，如果还寻找支持payjoins的商家，那就更加复杂了。
 一种解决方案是使用引入链分析歧义的交易结构，而不需要收款人的合作。这将允许我们在不依赖商家主动参与的情况下，提高我们支付的隐私性。这正是我们将在下一章中研究的内容。
-https://planb.network/tutorials/privacy/payjoin-sparrow-wallet
+https://planb.network/tutorials/privacy/on-chain/payjoin-sparrow-wallet-087a0e49-61cd-41f5-8440-ac7b157bdd62
 
-https://planb.network/tutorials/privacy/payjoin-samourai-wallet
+https://planb.network/tutorials/privacy/on-chain/payjoin-samourai-wallet-48a5c711-ee3d-44db-b812-c55913080eab
 
 ## 支付迷你-Coinjoins
 
@@ -2311,9 +2332,9 @@ Stonewall和Stonewall x2交易都可以在Samourai Wallet应用程序和Sparrow 
 
 在下一章中，我们将研究另一种隐私技术，这种技术相对不为人知，但是作为我们已经研究的内容的补充非常有用。
 
-https://planb.network/tutorials/privacy/stonewall
+https://planb.network/tutorials/privacy/on-chain/stonewall-033daa45-d42c-40e1-9511-cea89751c3d4
 
-https://planb.network/tutorials/privacy/stonewall-x2
+https://planb.network/tutorials/privacy/on-chain/stonewall-x2-05120280-f6f9-4e14-9fb8-c9e603f73e5b
 
 ## Ricochets
 
@@ -2377,7 +2398,7 @@ Ricochet 本质上涉及将比特币发送给自己。完全可以在任何钱�
 
 在接下来的章节中，我们将探讨不同的秘密财产转移技术。这些方法与我们迄今为止审查的方法在操作和结果上有着根本的不同。
 
-https://planb.network/tutorials/privacy/ricochet
+https://planb.network/tutorials/privacy/on-chain/ricochet-e0bb1afe-becd-44a6-a940-88a463756589
 
 ## 秘密财产转移
 
@@ -2601,7 +2622,16 @@ m/47'/0'/0'/
 ![BTC204](assets/notext/66/6.webp)
 
 尽管这些机器人在BIP47框架内没有特定的技术功能，但它们通过提供易于识别的视觉身份，在促进用户之间的互动中发挥作用。
-在本章接下来关于BIP47的部分，我们将详细检查其工作原理，特别强调所使用的加密方法。要完全理解这些有些技术性的解释，首先了解HD钱包的结构、密钥派生过程以及基于椭圆曲线的加密基本原则是必要的。如果您希望深入了解这些概念，Plan ₿网络上还提供了另一门免费课程：[CRYPTO 301](https://planb.network/en/courses/crypto301)。我仍然建议您跟随它们，因为理解BIP47的技术工作原理将使您更容易理解我们将在接下来的章节中讨论的其他类似提议。
+
+---
+*在本章关于BIP47的接下来的部分中，我们将详细探讨其工作原理，特别关注所使用的加密方法。要完全掌握这些稍显技术性的解释，首先需要了解HD钱包的结构、密钥派生过程以及基于椭圆曲线的加密原理。如果您希望进一步深入了解这些概念，Plan ₿ Network提供了一个免费的培训课程：*
+
+https://planb.network/courses/cyp201
+
+*我强烈建议您参加，因为理解BIP47的技术功能将使您更容易理解我们将在后续章节中讨论的其他类似提议。*
+
+---
+
 
 ### 可重用支付代码
 
@@ -3222,7 +3252,7 @@ Bob可以以与Alice发送给他支付相同的方式退款给Alice。角色颠�
 
 ![BTC204](assets/en/66/26.webp)
 _非常感谢[Fanis Michalakis](https://x.com/FanisMichalakis)对启发本章写作的文章进行审查和提供宝贵的专家建议！_
-https://planb.network/tutorials/privacy/paynym-bip47
+https://planb.network/tutorials/privacy/on-chain/paynym-bip47-a492a70b-50eb-4f95-a766-bae2c5535093
 
 ## 静默支付
 
@@ -3587,7 +3617,7 @@ _为了创建这一章节关于Silent Payments，我使用了[Silent Payments解
 
 <partId>2aee56c0-b285-4799-b4f7-373a552ee2b2</partId>
 
-## 评价此课程
+## 评价 & 评分
 
 <chapterId>195d149f-80fa-5816-8b46-995a9226d082</chapterId>
 <isCourseReview>true</isCourseReview>
@@ -3600,38 +3630,4 @@ _为了创建这一章节关于Silent Payments，我使用了[Silent Payments解
 ## 总结
 
 <chapterId>cd8e5c67-50e4-4dcd-8e04-88ba5ec95305</chapterId>
-恭喜您完成这个比特币隐私培训！
-
-在这个培训中，我们涵盖了许多高级和技术性的主题，但并不是必须使用所有介绍的工具。主要目的是让您能够选择在使用比特币时想要披露哪些信息，以及更倾向于保持哪些信息的机密性。这体现了隐私保护的本质。要对分享或隐藏哪些信息做出明智的选择，我们需要意识到自己行为的影响。我希望这个培训帮助您获得了这些知识。
-
-如果要我选择这个培训中最重要的部分，我会选择专门讨论链分析的部分。了解潜在攻击者使用的技术是保护自己的最好方法。因此，我的建议是仔细回顾这部分内容，并试图掌握其所有细节。
-
-在这个培训中，我们专注于主链上的比特币隐私。第二层系统（如闪电网络和侧链）的隐私问题也很重要，并且具有非常特殊的特点。虽然使用链下交易可能是规避我们所学到的许多比特币可追踪风险的有效策略，但它也会使您面临其他同样重要的风险。这就是为什么这些主题将在 Plan ₿ Network 未来的专门培训中讨论。
-
-如果您喜欢这个培训，我将非常感谢您能与亲朋好友分享并在社交媒体上传播。谢谢！:)
-
-为了继续深化您在比特币领域的知识，我们邀请您探索 Plan ₿ Network 上的其他课程，如：
-
-#### 了解比特币钱包的工作原理
-
-https://planb.network/courses/cyp201
-
-#### 学习创建您的比特币社区
-
-https://planb.network/courses/btc302
-
-#### 探索比特币起源的历史
-
-https://planb.network/courses/his201
-
-#### 配置 BTC 支付服务器
-
-https://planb.network/courses/btc305
-
-#### 探索闪电网络
-
-https://planb.network/courses/lnp201
-
-#### 探索自由在历史长河中的演变
-
-https://planb.network/courses/phi201
+<isCourseConclusion>true</isCourseConclusion>

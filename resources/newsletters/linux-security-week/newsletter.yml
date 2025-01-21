@@ -3,7 +3,8 @@ title: Linux Security Week
 author: LinuxSecurity Team
 publication_date: 1996-01-01
 level: expert
-website: https://linuxsecurity.com/newsletters/linux-security-week
+link:
+  - website: https://linuxsecurity.com/newsletters/linux-security-week
 language:
   - en
 description: |

@@ -28,8 +28,8 @@ Buona scoperta!
 ## Comprendere la Lightning Network
 
 <chapterId>df6230ae-ff35-56ea-8651-8e65580730a8</chapterId>
+![video en](https://youtu.be/QDQ8NG0l3hk)
 
-![Comprendere la Lightning Network](https://youtu.be/PszWk046x-I)
 
 Benvenuto al corso LNP201, che mira a spiegare il funzionamento tecnico della Lightning Network.
 
@@ -85,8 +85,8 @@ Questo è la fine di questo primo capitolo, dove abbiamo gettato le basi per la 
 ## Bitcoin, Indirizzi, UTXO e Transazioni
 
 <chapterId>0cfb7e6b-96f0-508b-9210-90bc1e28649d</chapterId>
+![video en](https://youtu.be/U9l5IVriCss)
 
-![bitcoin, indirizzi, utxo e transazioni](https://youtu.be/cadCJ2V7zTg)
 Questo capitolo è un po' speciale poiché non sarà dedicato direttamente a Lightning, ma a Bitcoin. Infatti, la Lightning Network è uno strato aggiuntivo su Bitcoin. È quindi essenziale comprendere alcuni concetti fondamentali di Bitcoin per afferrare correttamente il funzionamento di Lightning nei capitoli successivi. In questo capitolo, esamineremo le basi degli indirizzi di ricezione di Bitcoin, gli UTXO, così come il funzionamento delle transazioni Bitcoin.
 
 ### Indirizzi Bitcoin, Chiavi Private e Chiavi Pubbliche
@@ -150,8 +150,8 @@ Questo capitolo su Bitcoin ci ha permesso di rivedere alcune nozioni essenziali 
 ## Apertura del Canale
 
 <chapterId>96243eb0-f6b5-5b68-af1f-fffa0cc16bfe</chapterId>
+![video en](https://youtu.be/Ty80WuN5X-g)
 
-![apri un canale](https://youtu.be/B2caBC0Rxko)
 
 In questo capitolo, vedremo più precisamente come aprire un canale di pagamento sulla Lightning Network e capire il collegamento tra questa operazione e il sistema Bitcoin sottostante.
 
@@ -213,8 +213,8 @@ Nel prossimo capitolo, esploreremo il funzionamento tecnico di una transazione a
 ## Transazione di Impegno
 
 <chapterId>7d3fd135-129d-5c5a-b306-d5f2f1e63340</chapterId>
+![video en](https://youtu.be/dzPMGiR_JSE)
 
-![Transazione Lightning & transazione di impegno](https://youtu.be/aPqI34tpypM)
 
 In questo capitolo, scopriremo il funzionamento tecnico di una transazione all'interno di un canale sulla rete Lightning, ovvero quando i fondi vengono spostati da un lato all'altro del canale.
 
@@ -222,9 +222,13 @@ In questo capitolo, scopriremo il funzionamento tecnico di una transazione all'i
 
 Come visto in precedenza, un canale Lightning inizia con un'**apertura** tramite una transazione Bitcoin. Il canale può essere **chiuso** in qualsiasi momento, anch'esso tramite una transazione Bitcoin. Tra questi due momenti, un numero quasi infinito di transazioni può essere eseguito all'interno del canale, senza passare attraverso la blockchain di Bitcoin. Vediamo cosa succede durante una transazione nel canale.
 
+![LNP201](assets/en/17.webp)
+
 ### Lo stato iniziale del canale
 
 Al momento dell'apertura del canale, Alice ha depositato **130.000 satoshi** sull'indirizzo multisignature del canale. Pertanto, nello stato iniziale, tutti i fondi sono dalla parte di Alice. Prima di aprire il canale, Alice ha anche fatto firmare a Bob una **transazione di prelievo**, che le avrebbe permesso di recuperare i suoi fondi se avesse desiderato chiudere il canale.
+
+![LNP201](assets/en/18.webp)
 
 ### Transazioni non pubblicate: Le Transazioni di Impegno
 
@@ -235,6 +239,7 @@ Prendiamo un esempio con Alice che invia 30.000 satoshi a Bob:
 - **Inizialmente**: Alice ha 130.000 satoshi.
 - **Dopo la transazione**: Alice ha 100.000 satoshi, e Bob 30.000 satoshi.
   Per convalidare questo trasferimento, Alice e Bob creano una nuova **transazione Bitcoin non pubblicata** che invierebbe **100.000 satoshi ad Alice** e **30.000 satoshi a Bob** dall'indirizzo multisignature. Entrambe le parti costruiscono questa transazione indipendentemente, ma con gli stessi dati (importi e indirizzi). Una volta costruita, ciascuno firma la transazione e scambia la propria firma con l'altro. Questo permette a entrambe le parti di pubblicare la transazione in qualsiasi momento, se necessario, per recuperare la propria quota del canale sulla blockchain principale di Bitcoin.
+  ![LNP201](assets/en/19.webp)
 
 ### Processo di Trasferimento: La Fattura
 
@@ -242,12 +247,16 @@ Quando Bob desidera ricevere fondi, invia ad Alice una **_fattura_** per 30.000 
 
 Ogni transazione di impegno rappresenta la nuova distribuzione dei fondi nel canale dopo il trasferimento. In questo esempio, dopo la transazione, Bob ha 30.000 satoshi e Alice ha 100.000 satoshi. Se uno dei due partecipanti decidesse di pubblicare questa transazione di impegno sulla blockchain, ciò risulterebbe nella chiusura del canale e i fondi sarebbero distribuiti secondo questa ultima distribuzione.
 
+![LNP201](assets/en/20.webp)
+
 ### Nuovo Stato Dopo una Seconda Transazione
 
 Prendiamo un altro esempio: dopo la prima transazione in cui Alice ha inviato 30.000 satoshi a Bob, Bob decide di inviare **10.000 satoshi indietro ad Alice**. Questo crea un nuovo stato del canale. La nuova **transazione di impegno** rappresenterà questa distribuzione aggiornata:
 
 - **Alice** ora ha **110.000 satoshi**.
 - **Bob** ha **20.000 satoshi**.
+
+![LNP201](assets/en/21.webp)
 
 Ancora una volta, questa transazione non viene pubblicata sulla blockchain ma può essere pubblicata in qualsiasi momento nel caso in cui il canale venga chiuso.
 
@@ -261,7 +270,7 @@ Tuttavia, questo sistema presenta una potenziale falla, che affronteremo nel pro
 ## Chiave di Revoca
 
 <chapterId>f2f61e5b-badb-5947-9a81-7aa530b44e59</chapterId>
-![transazioni parte 2](https://youtu.be/RRvoVTLRJ84)
+![video en](https://youtu.be/veCs39uVFUk)
 In questo capitolo, approfondiremo il funzionamento delle transazioni sulla Lightning Network discutendo i meccanismi in atto per proteggersi dalle truffe, assicurando che ciascuna parte rispetti le regole all'interno di un canale.
 
 ### Promemoria: Transazioni di Impegno
@@ -337,8 +346,8 @@ A questo punto della formazione, ora sai come vengono aperti i canali Lightning 
 ## Chiusura del Canale
 
 <chapterId>29a72223-2249-5400-96f0-3756b1629bc2</chapterId>
+![video en](https://youtu.be/zmAa2fj_V7w)
 
-![chiudi un canale](https://youtu.be/FVmQvNpVW8Y)
 
 In questo capitolo, discuteremo della **chiusura di un canale** sulla Lightning Network, che viene effettuata tramite una transazione Bitcoin, proprio come l'apertura di un canale. Dopo aver visto come funzionano le transazioni all'interno di un canale, è ora il momento di vedere come chiudere un canale e recuperare i fondi sulla blockchain di Bitcoin.
 
@@ -422,8 +431,8 @@ Ci sono tre modi per chiudere un canale:
 ## Lightning Network
 
 <chapterId>45a7252c-fa4f-554b-b8bb-47449532918e</chapterId>
+![video en](https://youtu.be/44oBdNdXtEQ)
 
-![lightning network](https://youtu.be/RAZAa3v41DM)
 
 In questo capitolo, esploreremo come i pagamenti sulla Lightning Network possono raggiungere un destinatario anche se non sono direttamente connessi tramite un canale di pagamento. Lightning è, infatti, una **rete di canali di pagamento**, che consente di inviare fondi a un nodo distante attraverso i canali di altri partecipanti. Scopriremo come vengono instradati i pagamenti attraverso la rete, come si muove la liquidità tra i canali e come vengono calcolate le commissioni sulle transazioni.
 
@@ -535,8 +544,8 @@ In questo capitolo, abbiamo esplorato l'instradamento dei pagamenti sulla Lightn
 ## HTLC – Hashed Time Locked Contract
 
 <chapterId>4369b85a-1365-55d8-99e1-509088210116</chapterId>
+![video en](https://youtu.be/jI4nM297aHA)
 
-![HTLC](https://youtu.be/-JC4mkq7H48)
 
 In questo capitolo, scopriremo come Lightning consente ai pagamenti di transitare attraverso nodi intermedi senza la necessità di fidarsi di loro, grazie agli **HTLC** (_Hashed Time-Locked Contracts_). Questi contratti intelligenti assicurano che ciascun nodo intermedio riceverà i fondi dal suo canale solo se inoltra il pagamento al destinatario finale, altrimenti, il pagamento non verrà convalidato.
 
@@ -610,15 +619,24 @@ Per evitare ciò, gli HTLC su Lightning hanno una scadenza che consente di rimuo
 ![LNP201](assets/en/55.webp)
 
 Poi l'HTLC da Alice a Suzie.
+
+![LNP201](assets/en/56.webp)
+
 Se l'ordine di scadenza fosse invertito, Alice potrebbe recuperare il suo pagamento prima che Suzie possa proteggersi da potenziali truffe. Infatti, se Bob tornasse a reclamare il suo HTLC mentre Alice ha già rimosso il suo, Suzie sarebbe in svantaggio. Questo ordine cascata di scadenza degli HTLC assicura quindi che nessun nodo intermediario subisca perdite ingiuste.
 
 ### Rappresentazione degli HTLC nelle transazioni di impegno
 
 Le transazioni di impegno rappresentano gli HTLC in modo tale che le condizioni che impongono su Lightning possano essere trasferite a Bitcoin in caso di chiusura forzata del canale durante la durata di un HTLC. Come promemoria, le transazioni di impegno rappresentano lo stato attuale del canale tra i due utenti e consentono una chiusura forzata unilaterale in caso di problemi. Con ogni nuovo stato del canale, vengono create 2 transazioni di impegno: una per ciascuna parte. Rivisitiamo il nostro esempio con Alice, Suzie e Bob, ma guardiamo più da vicino cosa succede a livello di canale tra Alice e Suzie quando viene creato l'HTLC.
 
+![LNP201](assets/en/57.webp)
+
 Prima dell'inizio del pagamento di 40.000 satoshi tra Alice e Bob, Alice ha 100.000 satoshi nel suo canale con Suzie, mentre Suzie ne detiene 30.000. Le loro transazioni di impegno sono le seguenti:
 
+![LNP201](assets/en/58.webp)
+
 Alice ha appena ricevuto la fattura di Bob, che contiene in modo notevole _r_, l'hash del segreto. Può quindi costruire un HTLC di 40.000 satoshi con Suzie. Questo HTLC è rappresentato nelle ultime transazioni di impegno come un output chiamato "**_HTLC Out_**" dal lato di Alice, poiché i fondi sono in uscita, e "**_HTLC In_**" dal lato di Suzie, poiché i fondi sono in entrata.
+
+![LNP201](assets/en/59.webp)
 
 Questi output associati all'HTLC condividono esattamente le stesse condizioni, ovvero:
 
@@ -629,7 +647,11 @@ Queste condizioni si applicano solo se il canale viene chiuso (cioè, una transa
 
 Inoltre, se il canale viene chiuso mentre sono in sospeso diversi HTLC, ci saranno tanti output aggiuntivi quanti sono gli HTLC in corso.
 Se il canale non viene chiuso, allora dopo la scadenza o il successo del pagamento Lightning, vengono create nuove transazioni di impegno per riflettere il nuovo stato stabile del canale, cioè senza HTLC in sospeso. Gli output relativi agli HTLC possono quindi essere rimossi dalle transazioni di impegno.
+
+![LNP201](assets/en/60.webp)
+
 Infine, nel caso di una chiusura cooperativa del canale mentre un HTLC è attivo, Alice e Suzie smettono di accettare nuovi pagamenti e attendono la risoluzione o la scadenza degli HTLC in corso. Ciò consente loro di pubblicare una transazione di chiusura più leggera, senza gli output relativi agli HTLC, riducendo così le commissioni ed evitando l'attesa per un possibile timelock.
+
 **Cosa dovresti ricavare da questo capitolo?**
 
 Gli HTLC consentono il routing dei pagamenti Lightning attraverso più nodi senza doverli fidare. Ecco i punti chiave da ricordare:
@@ -643,8 +665,8 @@ Nel prossimo capitolo, scopriremo come un nodo che emette una transazione Lightn
 ## Trovare la Tua Strada
 
 <chapterId>7e2ae959-c2a1-512e-b5d6-8fd962e819da</chapterId>
+![video en](https://youtu.be/CqetCElRjUQ)
 
-![trovare la tua strada](https://youtu.be/wnUGJjOxd9Q)
 
 Nei capitoli precedenti, abbiamo visto come utilizzare i canali di altri nodi per instradare i pagamenti e raggiungere un nodo senza essere direttamente connessi ad esso tramite un canale. Abbiamo anche discusso su come garantire la sicurezza del trasferimento senza fidarsi dei nodi intermedi. In questo capitolo, ci concentreremo sul trovare la migliore rotta possibile per raggiungere un nodo target.
 
@@ -730,7 +752,7 @@ Nel capitolo seguente, studieremo specificamente il funzionamento delle fatture,
 ## Fattura, LNURL e Keysend
 
 <chapterId>e34c7ecd-2327-52e3-b61e-c837d9e5e8b0</chapterId>
-![fattura, LNURL, Keysend](https://youtu.be/CHnXJuZTarU)
+![video en](https://youtu.be/XANzf1Qqp9I)
 In questo capitolo, esamineremo più da vicino il funzionamento delle **fatture** Lightning, ovvero le richieste di pagamento inviate dal nodo destinatario al nodo mittente. L'obiettivo è capire come pagare e ricevere pagamenti su Lightning. Discuteremo anche di 2 alternative alle fatture classiche: LNURL e Keysend.
 ![LNP201](assets/en/68.webp)
 
@@ -813,6 +835,8 @@ Le fatture vengono poi codificate in **bech32**, lo stesso formato utilizzato pe
 In una transazione tradizionale, come un acquisto in negozio, viene generata una fattura per l'importo totale da pagare. Una volta presentata la fattura (sotto forma di codice QR o stringa di caratteri), il cliente può scansionarla e finalizzare la transazione. Il pagamento segue quindi il processo tradizionale che abbiamo studiato nella sezione precedente. Tuttavia, questo processo può talvolta essere molto ingombrante per l'esperienza utente, poiché richiede al destinatario di inviare informazioni al mittente tramite la fattura.
 Per certe situazioni, come il prelievo di bitcoin da un servizio online, il processo tradizionale è troppo ingombrante. In tali casi, la soluzione di prelievo **LNURL** semplifica questo processo visualizzando un codice QR che il portafoglio del destinatario scansiona per creare automaticamente la fattura. Il servizio paga quindi la fattura e l'utente vede semplicemente un prelievo istantaneo.
 
+![LNP201](assets/en/69.webp)
+
 LNURL è un protocollo di comunicazione che specifica un insieme di funzionalità progettate per semplificare le interazioni tra nodi Lightning e clienti, così come applicazioni di terze parti. Il prelievo LNURL, come abbiamo appena visto, è quindi solo un esempio tra altre funzionalità.
 Questo protocollo si basa su HTTP e consente la creazione di link per varie operazioni, come una richiesta di pagamento, una richiesta di prelievo o altre funzionalità che migliorano l'esperienza utente. Ogni LNURL è un URL codificato in bech32 con il prefisso lnurl, che, una volta scansionato, innesca una serie di azioni automatiche sul portafoglio Lightning.
 Ad esempio, la funzionalità LNURL-withdraw (LUD-03) consente di prelevare fondi da un servizio scansionando un codice QR, senza la necessità di generare manualmente una fattura. Allo stesso modo, LNURL-auth (LUD-04) consente l'accesso ai servizi online utilizzando una chiave privata sul proprio portafoglio Lightning invece di una password.
@@ -822,6 +846,8 @@ Ad esempio, la funzionalità LNURL-withdraw (LUD-03) consente di prelevare fondi
 Un altro caso interessante è il trasferimento di fondi senza aver ricevuto una fattura in precedenza, noto come "**Keysend**". Questo protocollo consente di inviare fondi aggiungendo un preimmagine nei dati di pagamento crittografati, accessibile solo dal destinatario. Questo preimmagine consente al destinatario di sbloccare l'HTLC, recuperando così i fondi senza aver generato una fattura in precedenza.
 
 Per semplificare, in questo protocollo, è il mittente a generare il segreto utilizzato negli HTLC, piuttosto che il destinatario. Praticamente, ciò consente al mittente di effettuare un pagamento senza aver dovuto interagire con il destinatario in precedenza.
+
+![LNP201](assets/en/70.webp)
 
 **Cosa dovresti ricavare da questo capitolo?**
 
@@ -834,6 +860,7 @@ Nel capitolo seguente, vedremo come un operatore di nodo può gestire la liquidi
 ## Gestire la Tua Liquidità
 
 <chapterId>cc76d0c4-d958-57f5-84bf-177e21393f48</chapterId>
+![video en](https://youtu.be/MIbej28La7Y)
 
 In questo capitolo, esploreremo strategie per gestire efficacemente la liquidità sulla rete Lightning. La gestione della liquidità varia a seconda del tipo di utente e del contesto. Esamineremo i principi principali e le tecniche esistenti per capire meglio come ottimizzare questa gestione.
 
@@ -902,8 +929,8 @@ Nel prossimo capitolo, propongo di rivedere i concetti più importanti di questa
 ## Conclusione della formazione
 
 <chapterId>a65a571c-561b-5e1c-87bf-494644653c22</chapterId>
+![video en](https://youtu.be/coaskEGRjiU)
 
-![conclusione](https://youtu.be/MaWpD0rbkVo)
 In questo capitolo finale che segna la conclusione del corso LNP201, propongo di rivedere insieme i concetti importanti che abbiamo coperto.
 
 L'obiettivo di questo corso era fornirvi una comprensione completa e tecnica della Lightning Network. Abbiamo scoperto come la Lightning Network si basi sulla blockchain di Bitcoin per eseguire transazioni off-chain, mantenendo al contempo le caratteristiche fondamentali di Bitcoin, in particolare l'assenza della necessità di fidarsi degli altri nodi.
@@ -957,7 +984,7 @@ Abbiamo visto che la gestione della liquidità è una sfida su Lightning per gar
 
 <partId>b8715c1c-7ae2-49b7-94c7-35bf85346ad3</partId>
 
-## Valuta questo corso
+## Recensioni & Valutazioni
 
 <chapterId>38814c99-eb7b-5772-af49-4386ee2ce9b0</chapterId>
 <isCourseReview>true</isCourseReview>
@@ -970,40 +997,4 @@ Abbiamo visto che la gestione della liquidità è una sfida su Lightning per gar
 ## Conclusione
 
 <chapterId>afc0d72b-4fbc-5893-90b2-e27fb519ad02</chapterId>
-Congratulazioni! 🎉
-
-Hai completato il corso LNP 201 - Introduzione al Lightning Network!
-
-Puoi essere orgoglioso di te stesso, perché non è un argomento facile.
-
-Poche persone si addentrano così profondamente nella tana del coniglio di Bitcoin.
-
-Un grande ringraziamento a **Fanis Michalakis** per averci offerto questo eccellente corso gratuito sul funzionamento tecnico del Lightning Network.
-
-Non esitare a seguirlo su [Twitter](https://x.com/FanisMichalakis), sul [suo blog](https://fanismichalakis.fr/) o attraverso il suo lavoro su [LN Markets](https://lnmarkets.com/).
-
-Ora che padroneggi il Lightning Network, ti invito a esplorare i nostri altri corsi gratuiti su Plan ₿ Network per approfondire gli altri aspetti dell'invenzione di Satoshi Nakamoto:
-
-#### Comprendi il funzionamento di un portafoglio Bitcoin con
-
-https://planb.network/courses/cyp201
-
-#### Scopri la storia delle origini di Bitcoin con
-
-https://planb.network/courses/his201
-
-#### Configura un server di pagamento BTC con
-
-https://planb.network/courses/btc305
-
-#### Padroneggia i principi della privacy in Bitcoin
-
-https://planb.network/courses/btc204
-
-#### Scopri le basi del mining con
-
-https://planb.network/courses/min201
-
-#### Impara a creare la tua comunità Bitcoin con
-
-https://planb.network/courses/btc302
+<isCourseConclusion>true</isCourseConclusion>
