@@ -84,34 +84,26 @@ Veuillez suivre les étapes d'installation appropriées pour votre système d'ex
 
 ### 3. Premier Démarrage
 
-![Configuration initiale](assets/fr/02.webp)
+- Lancez Bisq 2 et acceptez les conditions d'utilisation
+![Conditions d'utilisation](assets/fr/01.webp)
 
-image 01 et 02 et 03
-
-- Lancez Bisq 2
-- Choisissez si vous souhaitez partager des données d'utilisation
 - Créez un nouveau profil en choisissant un nom ainsi qu'un avatar
+![Création du profil](assets/fr/02.webp)
+
+- Vous accédez ensuite au tableau de bord principal de l'application qui vous permet de lancer Bisq Easy pour acheter ou vendre vos premiers bitcoins
+![Page d'accueil de Bisq 2](assets/fr/03.webp)
 
 ### 4. Configuration des Méthodes de Paiement
 
-![Configuration des paiements](assets/fr/03.webp)
-image 03 et 04
+- Accédez à la section des comptes de paiement depuis le menu principal
+![Liste des comptes de paiement](assets/fr/04.webp)
+
+- Ajoutez une nouvelle méthode de paiement en remplissant les informations requises
+![Création d'un nouveau compte de paiement](assets/fr/05.webp)
 
 La configuration préalable des méthodes de paiement est optionnelle, mais recommandée pour gagner du temps lors des échanges. Vous pouvez également configurer vos méthodes de paiement directement pendant un trade en communiquant avec votre partenaire d'échange.
 
-Si vous souhaitez les configurer à l'avance :
-- Accédez aux paramètres
-- Sélectionnez "Payment Accounts"
-- Ajoutez vos méthodes de paiement préférées :
-  - SEPA (virements européens)
-  - Revolut
-  - Wise
-  - PayPal
-  - Et bien d'autres...
-
 ### 5. Sécurisation du Compte
-
-![Sécurisation du compte](assets/fr/04.webp)
 
 **Sauvegarde des données :**
 - Contrairement à Bisq 1, Bisq 2 n'intègre pas de portefeuille Bitcoin pour l'instant : les transactions se font donc via vos propres portefeuilles externes
@@ -126,8 +118,6 @@ Si vous souhaitez les configurer à l'avance :
 ## Acheter et Vendre des Bitcoins
 
 ### Comment Acheter des Bitcoins
-
-![Processus d'achat](assets/fr/05.webp)
 
 **Option 1 : Prendre une offre existante**
 - Sur l'écran principal, sélectionnez "Bisq Easy" puis "Getting started"
@@ -147,7 +137,6 @@ Si vous souhaitez les configurer à l'avance :
   - Définissez le montant (fixe ou plage)
   - Vérifiez le récapitulatif et publiez l'offre
 
-![Finalisation de l'achat](assets/fr/06.webp)
 
 Une fois l'échange initié :
 - Recevez les coordonnées bancaires du vendeur
@@ -157,8 +146,6 @@ Une fois l'échange initié :
 - Attendez la réception des bitcoins
 
 ### Comment Vendre des Bitcoins
-
-![Création d'une offre de vente](assets/fr/07.webp)
 
 **Option 1 : Créer une offre de vente**
 - Sélectionnez "Bisq Easy" puis "Offerbook"
@@ -175,8 +162,6 @@ Une fois l'échange initié :
 - Filtrez par devise et méthode de paiement
 - Sélectionnez une offre qui vous convient
 - Vérifiez les détails et acceptez l'offre
-
-![Gestion des ventes](assets/fr/08.webp)
 
 **Processus de vente :**
 1. Une fois l'échange initié :
