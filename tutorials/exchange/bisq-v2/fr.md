@@ -120,30 +120,45 @@ La configuration préalable des méthodes de paiement est optionnelle, mais reco
 ### Comment Acheter des Bitcoins
 
 **Option 1 : Prendre une offre existante**
-- Sur l'écran principal, sélectionnez "Bisq Easy" puis "Getting started"
-- Cliquez sur "Start trade wizard"
+- Sur l'écran principal, sélectionnez "Bisq Easy", onglet "Getting started" puis cliquez sur "Start trade wizard"
+![Lancer trade wizard](assets/fr/06.webp)
 - Choisissez "Buy Bitcoin" et sélectionnez votre devise
+![Sélection achat Bitcoin](assets/fr/07.webp)
+![Choix de la devise](assets/fr/08.webp)
 - Configurez vos méthodes de paiement préférées (SEPA, Revolut, etc.)
-- Définissez le montant (entre 6 et 600 USD équivalent)
-- Sélectionnez une offre dans la liste (privilégiez les vendeurs avec une réputation élevée)
-- Vérifiez les détails et confirmez le trade
+![Configuration méthodes de paiement](assets/fr/09.webp)
+- A ce moment là, soit vous avez une liste d'offre correspondante à vos précédent critères, soit vous devez aller sur l'"Offerbook"
+![Liste des offres](assets/fr/10.webp)
+- Dans le second cas, vous pouvez afficher et filtrer les offres avec les boutons en haut à droite de l'interface
+![Filtres des offres](assets/fr/11.webp)
+- Une fois votre offre choisie, vous n'avez plus qu'à choisir les modalités de paiements puis valider le récapitulatif du trade
+![Choix modalités de paiement](assets/fr/12.webp)
+![Configuration du trade](assets/fr/13.webp)
+![Récapitulatif du trade](assets/fr/14.webp)
 
 **Option 2 : Créer votre propre offre**
 - Sélectionnez "Bisq Easy" puis "Offerbook"
 - Choisissez votre paire de trading (ex: BTC/EUR)
 - Cliquez sur "Create offer"
 - Suivez l'assistant de création d'offre :
-  - Sélectionnez les méthodes de paiement acceptées
   - Définissez le montant (fixe ou plage)
+![Configuration du montant](assets/fr/20.webp)
+  - Sélectionnez les méthodes de paiement acceptées
+![Sélection méthodes de paiement](assets/fr/21.webp)
   - Vérifiez le récapitulatif et publiez l'offre
-
+![Récapitulatif et publication](assets/fr/22.webp)
 
 Une fois l'échange initié :
+- Envoyez votre adresse Bitcoin ou la facture Lightning au vendeur
+![Envoi adresse Bitcoin](assets/fr/15.webp)
 - Recevez les coordonnées bancaires du vendeur
-- Envoyez votre adresse Bitcoin au vendeur
+![Réception coordonnées bancaires](assets/fr/16.webp)
+![Détails coordonnées bancaires](assets/fr/17.webp)
 - Effectuez le paiement (sans mentionner "Bisq" ou "Bitcoin")
 - Notifiez le vendeur du paiement effectué
+![Notification paiement](assets/fr/18.webp)
 - Attendez la réception des bitcoins
+![Attente réception](assets/fr/19.webp)
 
 ### Comment Vendre des Bitcoins
 
