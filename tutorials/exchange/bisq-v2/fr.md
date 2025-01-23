@@ -162,6 +162,8 @@ Une fois l'échange initié :
 
 ### Comment Vendre des Bitcoins
 
+Le processus de vente sur Bisq 2 suit une logique similaire à celle de l'achat, avec les mêmes étapes principales mais dans l'ordre inverse. Vous pouvez soit créer votre propre offre de vente, soit répondre à une offre d'achat existante. Voici le détail des différentes options et étapes du processus :
+
 **Option 1 : Créer une offre de vente**
 - Sélectionnez "Bisq Easy" puis "Offerbook"
 - Cliquez sur "Create offer" et choisissez "Sell Bitcoin"
@@ -255,7 +257,10 @@ Une fois l'échange initié :
 
 ### Inconvénients de Bisq 2
 
-- **Liquidité limitée** : Nouveau protocole en phase de démarrage
+- **Liquidité limitée** : 
+  - Nouveau protocole en phase de démarrage
+  - Peu d'offres de vente disponibles
+  - Délais d'attente potentiellement longs pour trouver un acheteur
 - **Limites de trading** : Maximum de 600 USD par transaction (Bisq easy)
 - **Desktop uniquement** : Pas d'application mobile
 
