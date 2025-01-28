@@ -37,7 +37,7 @@ Ce guide se concentre exclusivement sur "Bisq Easy", le seul protocole actuellem
 **Pour les acheteurs :**
 - Pas de dépôt de garantie requis
 - Pas de frais de trading
-- Pas de frais miniers
+- Pas de frais de minage
 - Sécurité basée sur la réputation des vendeurs
 - Limites de trading plus basses (équivalent à 600 USD)
 
@@ -47,7 +47,7 @@ Ce guide se concentre exclusivement sur "Bisq Easy", le seul protocole actuellem
 - Possibilité de brûler des BSQ ou de créer des obligations BSQ
 - Prime de vente potentiellement plus élevée (10-15% au-dessus du marché)
 
-**Note importante :** Une fois que le protocole Bisq Multisig sera implémenté dans Bisq 2, l'ancienne version de Bisq pourra être progressivement abandonnée. Bisq 1 continuera cependant d'être utilisé comme outil de gestion du DAO Bisq et pour les échanges BSQ-BTC.
+**Note importante :** Une fois que le protocole Bisq Multisig sera implémenté dans Bisq 2, l'ancienne version de Bisq pourra être progressivement abandonnée. Bisq 1 continuera cependant d'être utilisé comme outil de gestion de la DAO Bisq et pour les échanges BSQ-BTC.
 
 ### Processus d'échange
 
@@ -62,7 +62,7 @@ Ce guide se concentre exclusivement sur "Bisq Easy", le seul protocole actuellem
 
 - Avant l'échange des détails de paiement, l'échange peut être annulé sans justification
 - Après l'échange des détails, ne pas respecter ses obligations peut entraîner un bannissement
-- Pour les virements, ne JAMAIS utiliser les termes "Bisq" ou "Bitcoin" dans le motif du paiement
+- Pour les virements bancaires, **ne jamais utiliser les termes "Bisq" ou "Bitcoin"** dans le motif du paiement (cela pourrait entraîner le gel des fonds ou même provoquer le blocage du compte bancaire du destinataire ou du payeur)
 - Les traders doivent se connecter au moins une fois par jour pour suivre le processus
 - En cas de problème, les traders peuvent faire appel à un médiateur
 
@@ -106,18 +106,16 @@ La configuration préalable des méthodes de paiement est optionnelle, mais reco
 ### 5. Sécurisation du Compte
 
 **Sauvegarde des données :**
-- Contrairement à Bisq 1, Bisq 2 n'intègre pas de portefeuille Bitcoin pour l'instant : les transactions se font donc via vos propres portefeuilles externes
-- Il est néanmoins recommandé de sauvegarder régulièrement votre dossier de données Bisq 2
-- Pour localiser votre dossier de données, consultez le [wiki officiel de Bisq](https://bisq.wiki/Backing_up_application_data#Back_up_the_entire_Bisq_data_directory)
+
+Contrairement à Bisq 1, Bisq 2 n'intègre pas de portefeuille Bitcoin pour l'instant : les transactions se font donc via vos propres portefeuilles externes. Il est néanmoins recommandé de sauvegarder régulièrement votre dossier de données Bisq 2. Pour localiser votre dossier de données, consultez le [wiki officiel de Bisq](https://bisq.wiki/Backing_up_application_data#Back_up_the_entire_Bisq_data_directory).
 
 **Gestion des identités :**
-- Bisq 2 permet de créer plusieurs identités
-- Chaque identité peut être utilisée pour différents types de transactions
-- Vos identités sont stockées dans le dossier de données
+
+Bisq 2 permet de créer plusieurs identités. Chaque identité peut être utilisée pour différents types de transactions. Vos identités sont stockées dans le dossier de données.
 
 ## Acheter et Vendre des Bitcoins
 
-### Comment Acheter des Bitcoins
+### Comment Acheter des Bitcoins ?
 
 **Option 1 : Prendre une offre existante**
 - Sur l'écran principal, sélectionnez "Bisq Easy", onglet "Getting started" puis cliquez sur "Start trade wizard"
@@ -140,11 +138,13 @@ La configuration préalable des méthodes de paiement est optionnelle, mais reco
 - Sélectionnez "Bisq Easy" puis "Offerbook"
 - Choisissez votre paire de trading (ex: BTC/EUR)
 - Cliquez sur "Create offer"
-- Suivez l'assistant de création d'offre :
-  - Définissez le montant (fixe ou plage)
+- Suivez l'assistant de création d'offre : Définissez le montant (fixe ou plage)
 ![Configuration du montant](assets/fr/20.webp)
-  - Sélectionnez les méthodes de paiement acceptées
+
+- Sélectionnez les méthodes de paiement acceptées
+
 ![Sélection méthodes de paiement](assets/fr/21.webp)
+  
   - Vérifiez le récapitulatif et publiez l'offre
 ![Récapitulatif et publication](assets/fr/22.webp)
 
@@ -160,7 +160,7 @@ Une fois l'échange initié :
 - Attendez la réception des bitcoins
 ![Attente réception](assets/fr/19.webp)
 
-### Comment Vendre des Bitcoins
+### Comment Vendre des Bitcoins ?
 
 Le processus de vente sur Bisq 2 suit une logique similaire à celle de l'achat, avec les mêmes étapes principales mais dans l'ordre inverse. Vous pouvez soit créer votre propre offre de vente, soit répondre à une offre d'achat existante. Voici le détail des différentes options et étapes du processus :
 
@@ -168,10 +168,10 @@ Le processus de vente sur Bisq 2 suit une logique similaire à celle de l'achat,
 - Sélectionnez "Bisq Easy" puis "Offerbook"
 - Cliquez sur "Create offer" et choisissez "Sell Bitcoin"
 - Configurez votre offre :
-  - Sélectionnez la devise (EUR, USD, etc.)
-  - Choisissez les méthodes de paiement acceptées
-  - Définissez le montant (entre 6 et 600 USD équivalent)
-  - Fixez votre prix (fixe ou % par rapport au marché)
+	- Sélectionnez la devise (EUR, USD, etc.)
+	- Choisissez les méthodes de paiement acceptées
+	- Définissez le montant (entre 6 et 600 USD équivalent)
+	- Fixez votre prix (fixe ou % par rapport au marché)
 - Vérifiez les détails et publiez l'offre
 
 **Option 2 : Prendre une offre d'achat existante**
@@ -181,18 +181,19 @@ Le processus de vente sur Bisq 2 suit une logique similaire à celle de l'achat,
 - Vérifiez les détails et acceptez l'offre
 
 **Processus de vente :**
-1. Une fois l'échange initié :
+
+Une fois l'échange initié :
    - Envoyez vos coordonnées bancaires à l'acheteur
    - Attendez l'adresse Bitcoin de l'acheteur
    - Vérifiez que l'adresse est valide
 
-2. Après notification du paiement :
+Après notification du paiement :
    - Vérifiez la réception du paiement sur votre compte
    - Confirmez que le montant et les détails correspondent
    - Envoyez les bitcoins à l'adresse fournie
    - Marquez la transaction comme complétée
 
-3. Finalisation :
+Finalisation :
    - Attendez la confirmation de l'acheteur
    - Laissez un feedback sur la transaction
    - Construisez votre réputation pour les futures ventes
@@ -222,10 +223,7 @@ Le processus de vente sur Bisq 2 suit une logique similaire à celle de l'achat,
 
 ### Construction de la Réputation (pour les vendeurs)
 
-- Effectuez des transactions régulières
-- Maintenez une communication professionnelle
-- Envisagez de créer une obligation BSQ
-- Répondez rapidement aux acheteurs
+Pour améliorer votre réputation sur Bisq en tant que vendeur, réalisez des transactions régulières et maintenez une communication professionnelle avec les acheteurs. Répondez rapidement aux demandes des acheteurs afin d'assurer une expérience positive. Vous pouvez également créer une obligation en BSQ pour montrer votre engagement envers la plateforme. Ces actions renforceront la confiance et attireront davantage d'acheteurs.
 
 ### Résolution des Litiges
 
@@ -235,12 +233,14 @@ Le processus de vente sur Bisq 2 suit une logique similaire à celle de l'achat,
 - Suivez les instructions du médiateur
 
 ### Protection de la vie privée :
+
 - Aucune inscription ou vérification d'identité centralisée requise
 - Toutes les connexions passent par le réseau Tor (et bientôt I2P)
 - Aucun serveur central ne stocke les données
 - Les détails des transactions sont uniquement lisibles par les parties concernées
 
 ### Protection contre la censure :
+
 - Réseau P2P entièrement distribué
 - Utilisation du réseau Tor (et bientôt I2P) pour la résistance à la censure
 - Projet open source géré par une DAO, sans entité légale centralisée
@@ -257,19 +257,16 @@ Le processus de vente sur Bisq 2 suit une logique similaire à celle de l'achat,
 
 ### Inconvénients de Bisq 2
 
-- **Liquidité limitée** : 
-  - Nouveau protocole en phase de démarrage
-  - Peu d'offres de vente disponibles
-  - Délais d'attente potentiellement longs pour trouver un acheteur
-- **Limites de trading** : Maximum de 600 USD par transaction (Bisq easy)
+- **Liquidité limitée** (pour le moment) : 
+	- Nouveau protocole en phase de démarrage
+	- Peu d'offres de vente disponibles
+	- Délais d'attente potentiellement longs pour trouver un acheteur
+- **Limites de trading** : Maximum de 600 USD par transaction (avec Bisq easy)
 - **Desktop uniquement** : Pas d'application mobile
-
 
 ## Futurs Protocoles
 
 Bien que Bisq Easy soit actuellement le seul protocole disponible, plusieurs autres protocoles sont en développement pour Bisq 2 :
-
-### Protocoles d'Échange Prévus
 
 - **Bisq Lightning** : Protocole d'échange basé sur un système d'entiercement utilisant la cryptographie à calcul multipartite sur le réseau Lightning.
 
