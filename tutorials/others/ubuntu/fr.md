@@ -60,12 +60,72 @@ Vous pouvez utiliser plusieurs outils, par exemple Balena Etcher :
 	- Sauvegardez (Save) et redémarrez
 
 **4.2 Lancement de l'installation**
-Sur l'écran d'accueil :
-- Choisissez votre langue
-- Sélectionnez vos paramètres d'accessibilité si nécessaire
-- Choisissez votre disposition de clavier
-- Connectez-vous à votre réseau (recommandé pour télécharger les mises à jour pendant l'installation)
-- Choisissez entre "Essayer Ubuntu" ou "Installer Ubuntu"
+
+**Écran de démarrage**
+Lors du démarrage sur la clé USB, vous verrez cet écran qui vous permet de démarrer Ubuntu.
+![Écran de démarrage Ubuntu](fr/06.webp)
+
+**Choix de la langue**
+Choisissez votre langue préférée pour l'installation et le système.
+
+![Sélection de la langue](fr/07.webp)
+
+**Options d'accessibilité**
+Configurez les options d'accessibilité si nécessaire (lecteur d'écran, contraste élevé, etc.).
+
+![Options d'accessibilité](fr/08.webp)
+
+**Configuration du clavier**
+Sélectionnez la disposition de votre clavier. Un champ de test est disponible pour vérifier que les touches correspondent bien à votre configuration.
+
+![Configuration du clavier](fr/09.webp)
+
+**Connexion réseau**
+Connectez-vous à votre réseau Wi-Fi ou filaire pour permettre le téléchargement des mises à jour pendant l'installation.
+
+![Configuration réseau](fr/10.webp)
+
+**Type d'installation**
+Choisissez entre "Essayer Ubuntu" (pour tester sans installer) ou "Installer Ubuntu".
+
+![Choix du type d'installation](fr/11.webp)
+
+**Mode d'installation**
+Sélectionner l'installation interactive.
+
+![Mode d'installation](fr/12.webp)
+
+**Sélection des applications**
+Choisissez entre l'installation par défaut ou une sélection étendue d'applications.
+
+![Sélection des applications](fr/13.webp)
+
+**Applications tierces**
+Décidez d'installer ou non les pilotes et logiciels propriétaires additionnels.
+
+![Installation applications tierces](fr/14.webp)
+
+**Type de partitionnement**
+Deux options principales s'offrent à vous :
+- "Effacer le disque et installer Ubuntu" : utilise tout le disque pour Ubuntu
+- "Installation manuelle" : permet de créer un double démarrage (dual boot) avec Windows ou de personnaliser vos partitions
+
+![Choix du partitionnement](fr/15.webp)
+
+**Création du compte utilisateur**
+Définissez votre nom d'utilisateur et mot de passe pour votre compte Ubuntu.
+
+![Création du compte](fr/16.webp)
+
+**Fuseau horaire**
+Sélectionnez votre zone géographique pour configurer l'heure système.
+
+![Sélection du fuseau horaire](fr/17.webp)
+
+**Résumé de l'installation**
+Vérifiez tous vos choix avant de lancer l'installation définitive. Une fois que vous cliquez sur "Installer", le processus commence.
+
+![Résumé de l'installation](fr/18.webp)
 
 **4.3 Mettre à jour Ubuntu après l'installation**
 
