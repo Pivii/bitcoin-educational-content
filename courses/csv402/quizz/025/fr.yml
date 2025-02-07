@@ -5,5 +5,5 @@ wrong_answers:
   - Genesis, Interface, Transition et Extension
   - Genesis, Interface, Interface Implementation et Extension
 explanation: |
-  Un contrat RGB se compose de quatre éléments distincts : la Genesis, le Schema, l’Interface et l’Interface Implementation.
+  Un contrat RGB se compose de quatre éléments distincts ; la Genesis, le Schema, l’Interface et l’Interface Implementation.
 reviewed: false

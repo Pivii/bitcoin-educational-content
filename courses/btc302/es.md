@@ -1307,11 +1307,13 @@ Para lograr esto, comenzaremos con la experiencia de varias comunidades francesa
 Por supuesto, **en otros países, la legislación y el funcionamiento de las asociaciones son diferentes**. Sin embargo, muchos puntos serán muy útiles para crear una asociación u organizar un evento importante; y **esperamos que otros bitcoiners vengan a complementar esta formación de una manera específica para su país**.
 
 
+# Conclusión
+<partId>e9bdddf4-54c9-4de9-bbce-c3eade8c32e5</partId>
 
 ## Reseñas & Valoraciones
 <chapterId>08a35d2a-204b-519a-9bb1-588665a037fa</chapterId>
 <isCourseReview>true</isCourseReview>
 
-## Cuida de Ti Mismo
+## Conclusión
 <chapterId>cf1631cb-ddbe-55c7-be8c-26a5652979a0</chapterId>
 <isCourseConclusion>true</isCourseConclusion>

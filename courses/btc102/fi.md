@@ -160,7 +160,9 @@ Kryptovaluuttahuijausten ja taloudellisten huijausten lisäksi bitcoineja menett
 - Pidä tietokoneesi ajan tasalla ja vapaana haittaohjelmista,
 - Arvosta yksityisyyttäsi käyttämällä omistautuneita työkaluja (Signal, Tor, ProtonMail).
 
-Jos tämä aihe on sinulle täysin tuntematon, SECU 101 -koulutus voi olla mielenkiintoinen tapa perehtyä siihen yksityiskohtaisesti.
+Jos tämä aihe on sinulle täysin tuntematon, SCU 101 -koulutus voi olla mielenkiintoinen tapa perehtyä siihen yksityiskohtaisesti.
+
+https://planb.network/courses/scu101
 
 On ratkaisevan tärkeää pitää tietokoneesi optimaalisessa työskentelykunnossa, olitpa kiinnostunut Bitcoinista tai et. Päivitys ei ole vain uusien ominaisuuksien lisäämistä varten: se myös korjaa bugeja ja parantaa ohjelmistosi turvallisuutta. Joten varmista, että:
 
@@ -670,7 +672,7 @@ https://planb.network/tutorials/wallet/hardware/trezor-441fa7a1-4aac-4b6a-984f-3
 
 DCA-alusta Bitcoinin kerryttämiseen.
 
-https://planb.network/tutorials/exchange/centralized/relai-2f202e4b-9711-4dd9-85b6-e61868c70b8e
+https://planb.network/tutorials/exchange/centralized/relai-v2-30a9671d-e407-459d-9203-4c3eae15b30e
 https://planb.network/tutorials/exchange/centralized/bull-bitcoin-60a58596-e54c-41ba-855d-f9edb76cfb0e
 
 Tämäntyyppinen profiili voi tietenkin myös käyttää välittäjää tekemään suuren ostoksen kerralla kuten hodler, mutta yleensä stacking on säännöllisesti satsien lisäämisen konsepti lompakkoon. Yleisempi lähestymistapa olisi oppia käyttämään Bitcoinia vertaisverkkotavalla ja siten ostaa Bitcoinia suoraan käteisellä ystäviltä tai Bitcoin-yhteisön jäseniltä.
@@ -799,9 +801,6 @@ https://planb.network/tutorials/exchange/peer-to-peer/hodlhodl-d7344cd5-6b18-40f
 
 Paranoian henkilön mielessä varovaisuus, turvallisuus ja nimettömyys ovat ensisijaisia. Nämä prioriteetit ohjaavat harkittua ja hyvin suunniteltua lähestymistapaa Bitcoinin käyttöön, edistäen omavaraisuutta ja varovaisuutta. Paranoiainen henkilö on valmis investoimaan aikaa ja vaivaa bitcoinsiensa turvallisuuden ja yksityisyyden varmistamiseen samalla taitavasti navigoiden ekosysteemissä välttääkseen tarpeetonta altistumista. Vaikka jotkut saattavat pitää sitä liiallisena varovaisuutena, paranoiainen henkilö pitää huolellisuuttaan ja yksityiskohtien huomioimista olennaisena menestyksekkääseen ja turvalliseen osallistumiseen Bitcoinin maailmassa.
 
-# Bitcoinin tulevaisuus
-
-<partId>98199b14-ad0f-5da7-ae99-8e5f5819f153</partId>
 
 ## Perintösuunnitelman luominen
 
@@ -978,10 +977,6 @@ Onnittelut! Sinulla on ensimmäinen versio perintösuunnitelmastasi, ja se on hi
 
 _Cryptoasset Inheritance Planning, Yksinkertainen opas omistajille, Pamela Morgan, ESQ. Tekijänoikeus 2018 Merkle Bloom LLC, Kaikki oikeudet pidätetään. CC-BY_ Suuri kiitos Pamela Morganille hänen arvokkaasta työstään ja siitä, että sain jakaa sen. Kiitos myös kaikille, jotka osallistuivat sen kirjoittamiseen.
 Te olette parhaita :D Myös tiimini ja oppilaani kiittävät!
-
-# Kiitokset ja jatka kaninkolon tutkimista
-
-<partId>2a6ec097-a3e7-5f1d-a1ec-ae2b0b199e40</partId>
 
 ## Onnittelut! OLET TOP 0,1%:SSA
 

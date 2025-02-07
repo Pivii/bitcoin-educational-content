@@ -159,7 +159,9 @@ I tillegg til svindel med kryptovaluta og finansiell svindel, er hovedårsaken t
 - Hold datamaskinen din oppdatert og fri for skadelig programvare,
 - Verdi ditt privatliv ved å bruke dedikerte verktøy (Signal, Tor, ProtonMail).
 
-Hvis dette emnet er helt ukjent for deg, kan SECU 101-treningen være interessant å fordype seg i detaljene.
+Hvis dette emnet er helt ukjent for deg, kan SCU 101-treningen være interessant å fordype seg i detaljene.
+
+https://planb.network/courses/scu101
 
 Det er avgjørende å holde datamaskinen din i optimal arbeidstilstand, enten du er interessert i Bitcoin eller ikke. En oppdatering er ikke bare der for å legge til nye funksjoner: den fikser også feil og forbedrer sikkerheten til programvaren din. Så sørg for å:
 
@@ -671,7 +673,7 @@ https://planb.network/tutorials/wallet/hardware/trezor-441fa7a1-4aac-4b6a-984f-3
 
 En DCA-plattform for å akkumulere Bitcoin.
 
-https://planb.network/tutorials/exchange/centralized/relai-2f202e4b-9711-4dd9-85b6-e61868c70b8e
+https://planb.network/tutorials/exchange/centralized/relai-v2-30a9671d-e407-459d-9203-4c3eae15b30e
 https://planb.network/tutorials/exchange/centralized/bull-bitcoin-60a58596-e54c-41ba-855d-f9edb76cfb0e
 
 Denne typen profil kan også, selvfølgelig, bruke en megler for å gjøre et stort kjøp på en gang som en hodler, men generelt er stacking konseptet med regelmessig å legge til sats i lommeboken deres. En mer vanlig tilnærming ville være å lære hvordan man bruker Bitcoin på en peer-to-peer måte og dermed kjøpe Bitcoin direkte i kontanter med venner eller medlemmer av Bitcoin-samfunnet.
@@ -799,9 +801,6 @@ https://planb.network/tutorials/exchange/peer-to-peer/hodlhodl-d7344cd5-6b18-40f
 
 I tankesettet til den paranoide personen er forsiktighet, sikkerhet og anonymitet av største viktighet. Disse prioriteringene dikterer en gjennomtenkt og veloverveid tilnærming til bruk av Bitcoin, fremmer selvstendighet og forsiktighet. Den paranoide personen er villig til å investere tid og krefter for å sikre sikkerheten og privatlivet til sine bitcoins mens de dyktig navigerer i økosystemet for å unngå unødvendig eksponering. Selv om det kan virke overforsiktig for noen, anser den paranoide personen sin grundighet og oppmerksomhet på detaljer som essensiell for vellykket og sikker deltakelse i Bitcoin-verdenen.
 
-# Fremtiden med Bitcoin
-
-<partId>98199b14-ad0f-5da7-ae99-8e5f5819f153</partId>
 
 ## Lage en arveplan
 
@@ -975,12 +974,6 @@ Gratulerer! Du har en første versjon av din arveplan, og det er en flott start!
 
 _Cryptoasset Inheritance Planning, En enkel guide for eiere, Pamela Morgan, ESQ. Copyright 2018 av Merkle Bloom LLC, Alle rettigheter forbeholdt. CC-BY_ En stor takk til Pamela Morgan for hennes verdifulle arbeid og for å tillate meg å dele det. Takk også til alle som bidro til dets skriving.
 Dere er de beste :D Mitt team og mine studenter takker deg også!
-
-# Anerkjennelser og fortsett å grave i kaninhullet
-
-<partId>2a6ec097-a3e7-5f1d-a1ec-ae2b0b199e40</partId>
-
-## Gratulerer! DU ER I TOPP 0.1%
 
 <chapterId>5f4cfab9-9af1-584b-a1fe-a0769a991f19</chapterId>
 

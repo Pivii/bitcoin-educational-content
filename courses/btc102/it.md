@@ -161,7 +161,9 @@ Oltre alle truffe legate alle criptovalute e alla finanza, la prima ragione per 
 - Mantenere il proprio computer aggiornato e privo di malware,
 - Valorizzare la propria privacy utilizzando strumenti dedicati (Signal, Tor, ProtonMail).
 
-Se questo argomento vi è completamente sconosciuto, il corso SECU 101 potrebbe essere interessante per approfondirlo in dettaglio.
+Se questo argomento vi è completamente sconosciuto, il corso SCU 101 potrebbe essere interessante per approfondirlo in dettaglio.
+
+https://planb.network/courses/scu101
 
 È fondamentale mantenere il proprio computer in uno stato di funzionamento ottimale, che siate interessati a Bitcoin o meno. Un aggiornamento non serve solo ad aggiungere nuove funzionalità: corregge anche bug e migliora la sicurezza del vostro software. Assicuratevi quindi di:
 
@@ -675,7 +677,7 @@ https://planb.network/tutorials/wallet/hardware/trezor-441fa7a1-4aac-4b6a-984f-3
 
 Una piattaforma DCA per accumulare Bitcoin.
 
-https://planb.network/tutorials/exchange/centralized/relai-2f202e4b-9711-4dd9-85b6-e61868c70b8e
+https://planb.network/tutorials/exchange/centralized/relai-v2-30a9671d-e407-459d-9203-4c3eae15b30e
 https://planb.network/tutorials/exchange/centralized/bull-bitcoin-60a58596-e54c-41ba-855d-f9edb76cfb0e
 
 Questo tipo di profilo può anche, ovviamente, utilizzare un broker per fare un grande acquisto in una volta come un hodler, ma generalmente, fare stacking significa aggiungere regolarmente sats al proprio portafoglio. Un approccio più comune sarebbe imparare come usare Bitcoin in modo peer-to-peer e quindi comprare Bitcoin direttamente in contanti con amici o membri della comunità Bitcoin.
@@ -806,9 +808,6 @@ https://planb.network/tutorials/exchange/peer-to-peer/hodlhodl-d7344cd5-6b18-40f
 
 Nello spirito del Paranoico, la prudenza, la sicurezza e l'anonimato sono fondamentali. Queste priorità guidano un approccio deliberato e ben ponderato all'uso di Bitcoin, promuovendo l'autosufficienza e la cautela. Il Paranoico è disposto a investire tempo ed energie per garantire la sicurezza e la privacy dei suoi bitcoin, navigando abilmente nell'ecosistema per evitare esposizioni inutili. Sebbene possa sembrare eccessivamente prudente per alcuni, il Paranoico ritiene che la sua diligenza e attenzione ai dettagli siano essenziali per una partecipazione di successo e sicura nel mondo di Bitcoin.
 
-# Il futuro con Bitcoin
-
-<partId>98199b14-ad0f-5da7-ae99-8e5f5819f153</partId>
 
 ## Creazione di un piano di eredità
 
@@ -978,9 +977,6 @@ Ora verifichiamo il nostro lavoro (Tratto da "Cryptoasset Inheritance Planning" 
 _Pianificazione dell'eredità di cryptoasset, una guida semplice per i proprietari, Pamela Morgan, ESQ. Copyright 2018 di Merkle Bloom LLC, tutti i diritti riservati. CC-BY_ Un grande ringraziamento a Pamela Morgan per il suo prezioso lavoro e per avermi autorizzato a condividerlo. Grazie anche a tutti coloro che hanno contribuito alla sua stesura.
 Siete i migliori :D Anche il mio team e i miei studenti vi ringraziano!
 
-# Ringraziamenti e continuate a scavare la tana del coniglio
-
-<partId>2a6ec097-a3e7-5f1d-a1ec-ae2b0b199e40</partId>
 
 ## Congratulazioni! FAI PARTE DEL TOP 0,1%
 

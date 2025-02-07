@@ -160,7 +160,9 @@ Lisaks krüptoraha pettustele ja finantspettustele on bitcoine kaotamise peamine
 - Hoidke oma arvuti ajakohane ja vaba pahavarast,
 - Hinnake oma privaatsust, kasutades spetsiaalseid tööriistu (Signal, Tor, ProtonMail).
 
-Kui see teema on teile täiesti tundmatu, võib SECU 101 koolitus olla huvitav, et sellesse detailsemalt süveneda.
+Kui see teema on teile täiesti tundmatu, võib SCU 101 koolitus olla huvitav, et sellesse detailsemalt süveneda.
+
+https://planb.network/courses/scu101
 
 On oluline hoida oma arvuti optimaalses töökorras, olenemata sellest, kas olete huvitatud Bitcoinist või mitte. Uuendus ei ole ainult uute funktsioonide lisamiseks: see parandab ka vigu ja tõstab teie tarkvara turvalisust. Seega veenduge, et:
 
@@ -670,7 +672,7 @@ https://planb.network/tutorials/wallet/hardware/trezor-441fa7a1-4aac-4b6a-984f-3
 
 DCA platvorm Bitcoini kogumiseks.
 
-https://planb.network/tutorials/exchange/centralized/relai-2f202e4b-9711-4dd9-85b6-e61868c70b8e
+https://planb.network/tutorials/exchange/centralized/relai-v2-30a9671d-e407-459d-9203-4c3eae15b30e
 https://planb.network/tutorials/exchange/centralized/bull-bitcoin-60a58596-e54c-41ba-855d-f9edb76cfb0e
 
 See profiilitüüp võib muidugi kasutada ka maaklerit, et teha korraga suur ost nagu hodler, kuid üldiselt on stacking kontseptsioon, mis seisneb regulaarselt satside lisamises oma rahakotti. Levinum lähenemine oleks õppida, kuidas kasutada Bitcoini peer-to-peer viisil ja seega osta Bitcoin otse sularahas sõpradelt või Bitcoin kogukonna liikmetelt.
@@ -798,9 +800,6 @@ https://planb.network/tutorials/exchange/peer-to-peer/hodlhodl-d7344cd5-6b18-40f
 
 Paranoilise isiku mõtteviisis on ettevaatlikkus, turvalisus ja anonüümsus ülimad. Need prioriteedid dikteerivad läbimõeldud ja hästi kaalutletud lähenemise Bitcoini kasutamisele, edendades iseseisvust ja ettevaatlikkust. Paranoiline isik on valmis investeerima aega ja vaeva, et tagada oma bitcoinide turvalisus ja privaatsus, samal ajal oskuslikult navigeerides ökosüsteemis, et vältida tarbetut kokkupuudet. Kuigi mõne jaoks võib see tunduda liiga ettevaatlik, peab paranoiline isik oma hoolsust ja detailidele tähelepanu pööramist eduka ja turvalise osalemise jaoks Bitcoini maailmas hädavajalikuks.
 
-# Tulevik Bitcoini abil
-
-<partId>98199b14-ad0f-5da7-ae99-8e5f5819f153</partId>
 
 ## Pärandiplaani loomine
 
@@ -974,9 +973,6 @@ Palju õnne! Teil on esimene versioon oma pärandiplaanist ja see on suurepäran
 _Krüptoassetide Pärandamise Planeerimine, Lihtne juhend omanikele, Pamela Morgan, ESQ. Autoriõigus 2018 Merkle Bloom LLC poolt, Kõik õigused kaitstud. CC-BY_ Suur tänu Pamela Morganile tema väärtusliku töö eest ja luba seda jagada. Tänu ka kõigile, kes aitasid selle kirjutamisele kaasa.
 Te olete parimad :D Minu meeskond ja minu õpilased tänavad teid samuti!
 
-# Tunnustused ja jätkake küülikuurgu uurimist
-
-<partId>2a6ec097-a3e7-5f1d-a1ec-ae2b0b199e40</partId>
 
 ## Palju õnne! TE OLETE TOP 0.1%-S
 

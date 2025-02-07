@@ -1477,6 +1477,7 @@ Thirdly, Bitcoin grew organically. It was able to develop discreetly, attracting
 Fourthly, Bitcoin was an altruistic creation. Satoshi Nakamoto offered Bitcoin to the world. He released the program under a free license. He sought neither fame, profit, nor power. He ensured the mining security of the network for more than a year, without asking for any compensation. Even though he accumulated more than a million bitcoins, he never spent them. He finally disappeared, mainly due to fears related to the attention created by the WikiLeaks case, leaving the project to rest on a community, without a single dominant figure.
 
 In 2011, Satoshi disappeared, but Bitcoin survived. The cryptocurrency even definitively took off, both from a media and economic viewpoint. The machine was launched and no one could stop it.
+
 # Conclusion
 <partId>89532d9b-af1f-49f3-b87a-b11987e303d5</partId>
 ## Reviews & Ratings

@@ -1,3 +1,4 @@
+id: baab46d3-b2aa-490d-b41f-254c271dc0eb
 name: Bitcoin Chiang Mai
 category: communities
 address_line_1: Chiang Mai, Thailand
@@ -31,7 +32,7 @@ proofreading:
     urgency: 1
     contributors_id:
       - jramos0
-    reward: 1333
+    reward: 0.1
   - language: es
     last_contribution_date:
     urgency: 1

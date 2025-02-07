@@ -1302,11 +1302,13 @@ Para alcançar isso, começaremos com a experiência de várias comunidades fran
 Claro, **em outros países, a legislação e o funcionamento das associações são diferentes**. Muitos pontos, no entanto, serão muito úteis para criar uma associação ou organizar um grande evento; e **esperamos que outros bitcoiners venham a complementar este treinamento de uma maneira específica para o seu país**.
 
 
+# Conclusão
+<partId>e9bdddf4-54c9-4de9-bbce-c3eade8c32e5</partId>
 
 ## Avaliações & Notas
 <chapterId>08a35d2a-204b-519a-9bb1-588665a037fa</chapterId>
 <isCourseReview>true</isCourseReview>
 
-## Cuide de Você Mesmo
+## Conclusão
 <chapterId>cf1631cb-ddbe-55c7-be8c-26a5652979a0</chapterId>
 <isCourseConclusion>true</isCourseConclusion>

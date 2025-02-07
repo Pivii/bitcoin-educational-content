@@ -1562,11 +1562,13 @@ Tentu saja, **di negara lain, legislasi dan fungsi asosiasi berbeda**. Namun, ba
 
 
 
+# Kesimpulan
+<partId>e9bdddf4-54c9-4de9-bbce-c3eade8c32e5</partId>
+
 ## Ulasan & Penilaian
 <chapterId>08a35d2a-204b-519a-9bb1-588665a037fa</chapterId>
 <isCourseReview>true</isCourseReview>
 
-## Jaga Diri Anda
-
+## Kesimpulan
 <chapterId>cf1631cb-ddbe-55c7-be8c-26a5652979a0</chapterId>
 <isCourseConclusion>true</isCourseConclusion>

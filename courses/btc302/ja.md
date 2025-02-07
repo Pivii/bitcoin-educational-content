@@ -1288,10 +1288,13 @@ Breizh Bitcoinからのフィードバックは明確です:それはうまく�
 
 
 
+# まとめ
+<partId>e9bdddf4-54c9-4de9-bbce-c3eade8c32e5</partId>
+
 ## レビュー & 評価
 <chapterId>08a35d2a-204b-519a-9bb1-588665a037fa</chapterId>
 <isCourseReview>true</isCourseReview>
 
-## 自分を大切に
+## まとめ
 <chapterId>cf1631cb-ddbe-55c7-be8c-26a5652979a0</chapterId>
 <isCourseConclusion>true</isCourseConclusion>

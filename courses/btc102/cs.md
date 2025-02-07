@@ -160,7 +160,9 @@ Kromě podvodů s kryptoměnami a finančních podvodů je hlavním důvodem ztr
 - Udržujte svůj počítač aktuální a bez malware,
 - Oceňujte své soukromí používáním speciálních nástrojů (Signal, Tor, ProtonMail).
 
-Pokud je pro vás toto téma zcela neznámé, školení SECU 101 může být zajímavé pro podrobné prozkoumání.
+Pokud je pro vás toto téma zcela neznámé, školení SCU 101 může být zajímavé pro podrobné prozkoumání.
+
+https://planb.network/courses/scu101
 
 Je zásadní udržovat váš počítač ve vynikajícím pracovním stavu, ať už vás Bitcoin zajímá, nebo ne. Aktualizace není jen pro přidání nových funkcí: také opravuje chyby a zlepšuje bezpečnost vašeho softwaru. Takže se ujistěte, že:
 
@@ -669,7 +671,7 @@ https://planb.network/tutorials/wallet/hardware/trezor-441fa7a1-4aac-4b6a-984f-3
 
 Platforma DCA pro nahromadění Bitcoinu.
 
-https://planb.network/tutorials/exchange/centralized/relai-2f202e4b-9711-4dd9-85b6-e61868c70b8e
+https://planb.network/tutorials/exchange/centralized/relai-v2-30a9671d-e407-459d-9203-4c3eae15b30e
 https://planb.network/tutorials/exchange/centralized/bull-bitcoin-60a58596-e54c-41ba-855d-f9edb76cfb0e
 
 Tento typ profilu může samozřejmě také použít brokera k provedení jednorázového velkého nákupu jako hodler, ale obecně je koncept stackingu pravidelné přidávání sats do jejich peněženky. Běžnějším přístupem by bylo naučit se, jak používat Bitcoin v peer-to-peer způsobem a tím kupovat Bitcoin přímo v hotovosti od přátel nebo členů komunity Bitcoinu.
@@ -796,10 +798,6 @@ https://planb.network/tutorials/exchange/peer-to-peer/hodlhodl-d7344cd5-6b18-40f
   Přestože si cení anonymity a bezpečnosti, paranoidní jedinec zůstává pragmatický ve svých volbách, používá osvědčená a spolehlivá řešení k zabezpečení svých bitcoinů při navigaci ekosystémem kryptoměn.
 
 V myšlení paranoidního jedince jsou opatrnost, bezpečnost a anonymita na prvním místě. Tyto priority dikutují promyšlený a dobře zvážený přístup k používání Bitcoinu, podporují soběstačnost a opatrnost. Paranoidní jedinec je ochoten investovat čas a úsilí, aby zajistil bezpečnost a soukromí svých bitcoinů, zatímco zručně naviguje ekosystémem, aby se vyhnul zbytečnému vystavení. I když se to některým může zdát přehnaně opatrné, paranoidní jedinec považuje svou pečlivost a pozornost k detailům za nezbytné pro úspěšnou a bezpečnou účast ve světě Bitcoinu.
-
-# Budoucnost s Bitcoinem
-
-<partId>98199b14-ad0f-5da7-ae99-8e5f5819f153</partId>
 
 ## Vytvoření plánu dědictví
 
@@ -976,10 +974,6 @@ Gratulujeme! Máte první verzi vašeho plánu dědictví a je to skvělý zač�
 
 _Plánování dědictví kryptoaktiv, Jednoduchý průvodce pro majitele, Pamela Morgan, ESQ. Copyright 2018 Merkle Bloom LLC, Všechna práva vyhrazena. CC-BY_ Velké díky Pamely Morgan za její cennou práci a za to, že mi umožnila ji sdílet. Díky také všem, kdo přispěli k jejímu napsání.
 Jste nejlepší :D Můj tým a moji studenti vám také děkují!
-
-# Poděkování a pokračujte ve sledování zajíce do díry
-
-<partId>2a6ec097-a3e7-5f1d-a1ec-ae2b0b199e40</partId>
 
 ## Gratulujeme! JSTE V TOP 0,1%
 

@@ -159,7 +159,9 @@ Selain penipuan kriptokurensi dan penipuan finansial, alasan utama kehilangan bi
 - Jaga komputer Anda tetap terbaru dan bebas dari malware,
 - Hargai privasi Anda dengan menggunakan alat khusus (Signal, Tor, ProtonMail).
 
-Jika topik ini sepenuhnya baru bagi Anda, pelatihan SECU 101 bisa menjadi menarik untuk mendalami secara detail.
+Jika topik ini sepenuhnya baru bagi Anda, pelatihan SCU 101 bisa menjadi menarik untuk mendalami secara detail.
+
+https://planb.network/courses/scu101
 
 Sangat penting untuk menjaga komputer Anda dalam kondisi kerja optimal, apakah Anda tertarik dengan Bitcoin atau tidak. Pembaruan tidak hanya ada untuk menambahkan fitur baru: itu juga memperbaiki bug dan meningkatkan keamanan perangkat lunak Anda. Jadi, pastikan untuk:
 
@@ -669,7 +671,7 @@ https://planb.network/tutorials/wallet/hardware/trezor-441fa7a1-4aac-4b6a-984f-3
 
 Platform DCA untuk mengumpulkan Bitcoin.
 
-https://planb.network/tutorials/exchange/centralized/relai-2f202e4b-9711-4dd9-85b6-e61868c70b8e
+https://planb.network/tutorials/exchange/centralized/relai-v2-30a9671d-e407-459d-9203-4c3eae15b30e
 https://planb.network/tutorials/exchange/centralized/bull-bitcoin-60a58596-e54c-41ba-855d-f9edb76cfb0e
 
 Tipe profil ini juga, tentu saja, dapat menggunakan broker untuk melakukan pembelian besar sekaligus seperti hodler, tetapi umumnya, stacking adalah konsep menambahkan sats secara reguler ke dompet mereka. Pendekatan yang lebih umum adalah belajar cara menggunakan Bitcoin secara peer-to-peer dan dengan demikian membeli Bitcoin langsung dengan tunai dari teman atau anggota komunitas Bitcoin.
@@ -797,9 +799,6 @@ https://planb.network/tutorials/exchange/peer-to-peer/hodlhodl-d7344cd5-6b18-40f
 
 Dalam pola pikir individu Paranoid, kehati-hatian, keamanan, dan anonimitas adalah yang utama. Prioritas ini menentukan pendekatan yang disengaja dan dipikirkan dengan baik dalam menggunakan Bitcoin, mempromosikan kemandirian dan kehati-hatian. Individu Paranoid bersedia menginvestasikan waktu dan usaha untuk memastikan keamanan dan privasi bitcoin mereka sambil dengan terampil menavigasi ekosistem untuk menghindari paparan yang tidak perlu. Meskipun mungkin tampak terlalu hati-hati bagi sebagian orang, individu Paranoid menganggap kecermatan dan perhatian terhadap detail mereka penting untuk partisipasi yang sukses dan aman dalam dunia Bitcoin.
 
-# Masa Depan dengan Bitcoin
-
-<partId>98199b14-ad0f-5da7-ae99-8e5f5819f153</partId>
 
 ## Membuat rencana warisan
 
@@ -974,9 +973,6 @@ Selamat! Anda memiliki versi pertama dari rencana warisan Anda, dan itu adalah a
 _Cryptoasset Inheritance Planning, Panduan sederhana untuk pemilik, Pamela Morgan, ESQ. Hak cipta 2018 oleh Merkle Bloom LLC, Semua hak dilindungi. CC-BY_ Terima kasih besar kepada Pamela Morgan atas karya berharganya dan karena telah mengizinkan saya untuk membagikannya. Terima kasih juga kepada semua orang yang berkontribusi dalam penulisannya.
 Kalian adalah yang terbaik :D Tim saya dan murid-murid saya juga berterima kasih!
 
-# Pengakuan dan terus menggali lubang kelinci
-
-<partId>2a6ec097-a3e7-5f1d-a1ec-ae2b0b199e40</partId>
 
 ## Selamat! ANDA BERADA DI TOP 0.1%
 

@@ -1307,11 +1307,13 @@ For å oppnå dette, vil vi starte med erfaringen fra flere franske fellesskap s
 Selvfølgelig, **i andre land, er lovgivningen og funksjonen av foreninger forskjellige**. Mange punkter vil imidlertid være svært nyttige for å skape en forening eller organisere en større hendelse; og **vi håper at andre bitcoinere vil komme til å supplere denne opplæringen på en måte som er spesifikk for deres land**.
 
 
+# Konklusjon
+<partId>e9bdddf4-54c9-4de9-bbce-c3eade8c32e5</partId>
 
 ## Vurderinger & Karakterer
 <chapterId>08a35d2a-204b-519a-9bb1-588665a037fa</chapterId>
 <isCourseReview>true</isCourseReview>
 
-## Ta vare på deg selv
+## Konklusjon
 <chapterId>cf1631cb-ddbe-55c7-be8c-26a5652979a0</chapterId>
 <isCourseConclusion>true</isCourseConclusion>

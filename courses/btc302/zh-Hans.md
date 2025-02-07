@@ -1576,11 +1576,14 @@ Breizh Bitcoin的反馈很清楚：这种方式效果很好，新人们在报纸
 当然，**在其他国家，立法和协会的运作是不同的**。然而，许多因素对于创建协会或组织一次重大活动将非常有助；并且**我们希望其他比特币爱好者能以适合自己国家的方式来丰富这个培训的内容**。
 
 
+# 结论
+<partId>e9bdddf4-54c9-4de9-bbce-c3eade8c32e5</partId>
+
 ## 评价 & 评分
 <chapterId>08a35d2a-204b-519a-9bb1-588665a037fa</chapterId>
 <isCourseReview>true</isCourseReview>
 
-## 照顾好自己
+## 结论
 
 <chapterId>cf1631cb-ddbe-55c7-be8c-26a5652979a0</chapterId>
 <isCourseConclusion>true</isCourseConclusion>

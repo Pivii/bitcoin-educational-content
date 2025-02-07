@@ -1311,11 +1311,13 @@ Um dies zu erreichen, beginnen wir mit den Erfahrungen mehrerer französischer G
 Natürlich sind **in anderen Ländern die Gesetzgebung und die Funktionsweise von Vereinen unterschiedlich**. Viele Punkte werden jedoch sehr nützlich sein, um einen Verein zu gründen oder eine Großveranstaltung zu organisieren; und **wir hoffen, dass andere Bitcoiner diese Ausbildung in einer Weise ergänzen werden, die spezifisch für ihr Land ist**.
 
 
+# Schlussfolgerung
+<partId>e9bdddf4-54c9-4de9-bbce-c3eade8c32e5</partId>
 
 ## Bewertungen & Noten
 <chapterId>08a35d2a-204b-519a-9bb1-588665a037fa</chapterId>
 <isCourseReview>true</isCourseReview>
 
-## Kümmern Sie sich um sich selbst
+## Schlussfolgerung
 <chapterId>cf1631cb-ddbe-55c7-be8c-26a5652979a0</chapterId>
 <isCourseConclusion>true</isCourseConclusion>

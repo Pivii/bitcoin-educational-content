@@ -1423,10 +1423,14 @@ Seul(e), il est vrai que l'on peut rapidement explorer une des nombreuses galeri
 
 Alors qu'**en créant et/ou en intégrant une communauté de bitcoiners, en partageant et en échangeant avec eux régulièrement, vous avancerez en même temps dans toutes les directions du terrier**.
 
+
+# Conclusion
+<partId>e9bdddf4-54c9-4de9-bbce-c3eade8c32e5</partId>
+
 ## Avis & Notes
 <chapterId>08a35d2a-204b-519a-9bb1-588665a037fa</chapterId>
 <isCourseReview>true</isCourseReview>
 
-## Formation BTC302, la suite
+## Conclusion
 <chapterId>8bf10b77-80ee-5d50-87bc-0ef32574a675</chapterId>
 <isCourseConclusion>true</isCourseConclusion>
