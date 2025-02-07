@@ -175,3 +175,7 @@ sudo apt install vlc
 ### 6. Conclusion et ressources complémentaires
 
 Vous voilà prêt à utiliser Ubuntu au quotidien : sécuriser votre système, naviguer, faire de la bureautique, installer des logiciels et maintenir votre OS à jour !
+
+Pour aller plus loin dans la sécurisation de votre vie numérique, nous vous recommandons de consulter notre, un service de messagerie chiffré qui s'inscrit parfaitement dans une démarche de protection de la vie privée, en complément de votre installation Ubuntu :
+
+https://planb.network/tutorials/others/proton-mail
