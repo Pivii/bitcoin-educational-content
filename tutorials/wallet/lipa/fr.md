@@ -8,6 +8,10 @@ Un portefeuille Bitcoin Lightning est une application mobile permettant d'effect
 
 Les portefeuilles Lightning, comme tous les portefeuilles mobiles, sont considérés comme des portefeuilles "chauds" car ils sont connectés à Internet. Ils sont donc principalement destinés à la gestion de petits montants pour vos dépenses courantes. Pour des montants plus importants, il est préférable d'utiliser des solutions de stockage plus sécurisées comme les hardware wallets.
 
+Si vous souhaitez approfondir vos connaissances sur le réseau Lightning et comprendre son fonctionnement technique, je vous conseille de suivre ce cours :
+
+https://planb.network/courses/lnp201
+
 Dans ce tutoriel, nous allons découvrir **Lipa**, un portefeuille Lightning simple et efficace développé en Suisse.
 
 ## Présentation de Lipa
@@ -125,7 +129,7 @@ Enfin vous n'avez plus qu'à utiliser votre banque pour effectuer le virement du
 - NFC support
 
 ### Inconvénients
-- Pas possible d'envoyer des bitcoin on chain
+- Pas possible d'envoyer des bitcoins on chain
 - Paiement un peu plus long que la moyenne
 
 Lipa est un excellent choix pour débuter avec Bitcoin Lightning, particulièrement adapté aux utilisateurs recherchant une solution simple pour les paiements quotidiens. Sa facilité d'utilisation et son interface épurée en font un portefeuille idéal pour les débutants, tout en offrant les fonctionnalités essentielles pour une utilisation quotidienne du réseau Lightning.
