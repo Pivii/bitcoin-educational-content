@@ -19,12 +19,10 @@ Parmi ses principales caractéristiques :
 - Gestion autonome des canaux Lightning
 - Support du protocole LNURL
 - Possibilité d'acheter des bitcoins directement dans l'application
-- Sauvegarde chiffrée sur le cloud
-- Support multilingue
 
 ## Installation et configuration de Lipa
 
-La première étape consiste à télécharger l'application Lipa. Pour le moment, elle n'est disponible que sur iOS (version 15.0 minimum) :
+La première étape consiste à télécharger l'application Lipa. Pour le moment, elle n'est disponible que sur iOS :
 - [Pour Apple](https://apps.apple.com/app/lipa-bitcoin-lightning/id1602180066)
 
 La version Android est actuellement en cours de développement et sera bientôt disponible.
@@ -74,54 +72,60 @@ Ce geste révèle des fonctionnalités additionnelles comme :
 
 ## Sauvegarder votre portefeuille
 
-La sauvegarde de votre portefeuille est une étape cruciale. Lipa propose une sauvegarde chiffrée sur le cloud, ce qui facilite la récupération de vos fonds en cas de perte de votre téléphone.
+Pour sauvegarder votre portefeuille, rendez-vous dans l'onglet "Paramètres" puis sélectionnez "Recovery phrase". Lipa utilise une phrase de récupération qu'il est essentiel de noter soigneusement sur un support physique (papier, métal). Cette phrase est la seule façon de récupérer vos fonds en cas de perte ou de vol de votre téléphone. Pour valider votre sauvegarde, l'application vous demandera de confirmer 3 mots aléatoires de votre phrase.
 
 ![Backup](assets/fr/04.webp)
 
 ## Recevoir des bitcoins
 
-Pour recevoir des bitcoins, cliquez sur le bouton "Recevoir". Vous pouvez générer une facture Lightning (QR code) pour un montant spécifique ou utiliser une adresse Lightning statique.
+Pour recevoir des bitcoins, vous avez deux choix possibles. Pour accéder à ces options, retournez sur l'écran d'accueil puis tirez l'écran vers le bas. Ensuite, vous pouvez soit :
+- Sélectionner "Transfer BTC" pour recevoir des bitcoins on-chain. Ensuite il suffit de scanner le QR code avec votre autre protefeuille et finaliser la transaction.
+- Sélectionner "Request" pour recevoir via le réseau Lightning et taper le montant que vous souhaitez recevoir. 
 
-![Recevoir des bitcoins](assets/fr/05.webp)
+Dans les deux cas, vous devrez payer des frais équivalents à 0,4% du montant ou environ 2500 sats si l'application doit ouvrir un nouveau canal de paiement (ce qui sera forcément le cas pour le premier paiement).
 
-L'application affichera un QR code que l'expéditeur pourra scanner pour effectuer le paiement.
+![Recevoir des bitcoins on chain](assets/fr/05.webp)
 
-![QR Code de réception](assets/fr/06.webp)
+![Recevoir des bitcoins lightning](assets/fr/06.webp)
 
 ## Envoyer des bitcoins
 
-Pour envoyer des bitcoins, cliquez sur le bouton "Envoyer". Vous pouvez scanner un QR code ou coller une facture Lightning.
+Pour envoyer des bitcoins, il faut se rendre sur l'écran d'accueil et tirer l'écran vers le bas puis sélectionner "Pay". Ensuite, il vous suffit de soit :
+- saisir une adresse lightning LNURL 
+- scanner un QR code lightning pour effectuer le paiement. 
+
+Vous pouvez également vous rendre sur le deuxième onglet en bas de l'écran pour scanner directement un QR code.
 
 ![Envoi de bitcoins](assets/fr/07.webp)
 
 ## Acheter des bitcoins
 
-Lipa permet d'acheter des bitcoins directement dans l'application via des partenaires de confiance.
+Lipa offre la possibilité d'acheter des bitcoins directement dans l'application moyennant des frais de 1,5%. Pour effectuer un achat, rendez-vous sur l'écran d'accueil et tirez vers le bas pour afficher le menu. Sélectionnez ensuite "Buy BTC". Trois écrans d'introduction vous guideront à travers le processus d'achat.
 
 ![Menu d'achat](assets/fr/08.webp)
 
-Sélectionnez le montant désiré et votre méthode de paiement.
+Ensuite, il vous suffit de renseigner votre RIB de votre compte en banque avec lequel vous allez effectuer l'achat. Choisissez votre devise puis indiquez votre adresse mail.
+
+Après l'écran de chargement, vous allez retrouver la référence qu'il faudra mentionner dans le virement que vous allez effectuer ainsi que les coordonnées bancaires de l'échange.
 
 ![Sélection du montant](assets/fr/09.webp)
 
-Confirmez votre achat et suivez les instructions pour finaliser la transaction.
+Enfin vous n'avez plus qu'à utiliser votre banque pour effectuer le virement du montant désiré, paramétrer le transfert en indiquant le RIB précédemment récupéré ainsi que d'indiquer la référence au moment de la transaction pour que Lipa puisse associer ce mouvement bancaire à votre wallet Lipa.
 
 ![Confirmation d'achat](assets/fr/10.webp)
 
 ## Avantages et inconvénients
 
 ### Avantages
-- Interface très simple et intuitive
-- Transactions Lightning instantanées
-- Frais de transaction minimes
-- Sauvegarde cloud sécurisée
-- Achat de bitcoins intégré
-- Application non-custodial
+- Interface intuitive
+- Frais de service correct
+- Non custodial
+- Solution d'achat de bitcoin intégré
+- Intégration de BTCmap
+- NFC support
 
 ### Inconvénients
-- Limité au réseau Lightning (pas de transactions on-chain)
-- Nécessite une connexion Internet active
-- Capacité de stockage limitée (à utiliser pour de petits montants)
-- Gestion automatique des canaux (moins de contrôle pour l'utilisateur avancé)
+- Pas possible d'envoyer des bitcoin on chain
+- Paiement un peu plus long que la moyenne
 
 Lipa est un excellent choix pour débuter avec Bitcoin Lightning, particulièrement adapté aux utilisateurs recherchant une solution simple pour les paiements quotidiens. Sa facilité d'utilisation et son interface épurée en font un portefeuille idéal pour les débutants, tout en offrant les fonctionnalités essentielles pour une utilisation quotidienne du réseau Lightning.
