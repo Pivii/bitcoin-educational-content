@@ -128,7 +128,7 @@ Enfin vous n'avez plus qu'à utiliser votre banque pour effectuer le virement du
 - Interface intuitive
 - Frais de service correct
 - Non custodial
-- Solution d'achat de bitcoin intégré
+- Solution d'achat de bitcoin intégrée
 - Intégration de BTCmap
 - NFC support
 
