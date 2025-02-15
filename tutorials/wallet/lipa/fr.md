@@ -126,7 +126,7 @@ Enfin vous n'avez plus qu'à utiliser votre banque pour effectuer le virement du
 
 ### Avantages
 - Interface intuitive
-- Frais de service correct
+- Frais de service corrects
 - Non custodial
 - Solution d'achat de bitcoin intégrée
 - Intégration de BTCmap
