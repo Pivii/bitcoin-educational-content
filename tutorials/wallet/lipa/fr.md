@@ -1,5 +1,5 @@
 ---
-name: Lipa - Mobile
+name: Lipa
 description: Configuration et utilisation du wallet mobile lightning Lipa
 ---
 ![cover](assets/cover.webp)
