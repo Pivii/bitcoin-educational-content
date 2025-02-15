@@ -136,7 +136,7 @@ Enfin vous n'avez plus qu'à utiliser votre banque pour effectuer le virement du
 - Pas possible d'envoyer des bitcoins on chain
 - Paiement un peu plus long que la moyenne
 
-Lipa est un excellent choix pour débuter avec Bitcoin Lightning, particulièrement adapté aux utilisateurs recherchant une solution simple pour les paiements quotidiens. Sa facilité d'utilisation et son interface épurée en font un portefeuille idéal pour les débutants, tout en offrant les fonctionnalités essentielles pour une utilisation quotidienne du réseau Lightning.
+Lipa est un excellent choix pour débuter avec le Lightning Network, particulièrement adapté aux utilisateurs recherchant une solution simple pour les paiements quotidiens. Sa facilité d'utilisation et son interface épurée en font un portefeuille idéal pour les débutants, tout en offrant les fonctionnalités essentielles pour une utilisation quotidienne de Lightning.
 
 ## Ressources
 
