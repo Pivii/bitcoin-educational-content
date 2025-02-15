@@ -80,6 +80,10 @@ Pour sauvegarder votre portefeuille, rendez-vous dans l'onglet "Paramètres" pui
 
 ![Backup](assets/fr/04.webp)
 
+Pour plus d'informations sur la manière adéquate de sauvegarder et de gérer votre phrase de récupération, je vous recommande vivement de suivre cet autre tutoriel, particulièrement si vous êtes débutant :
+
+https://planb.network/tutorials/wallet/backup/backup-mnemonic-22c0ddfa-fb9f-4e3a-96f9-46e2a7954270
+
 ## Recevoir des bitcoins
 
 Pour recevoir des bitcoins, vous avez deux choix possibles. Pour accéder à ces options, retournez sur l'écran d'accueil puis tirez l'écran vers le bas. Ensuite, vous pouvez soit :
