@@ -43,7 +43,7 @@ Après avoir choisi votre option, l'application vous invite à activer les notif
 
 L'application présente ensuite ses principales fonctionnalités à travers une série d'écrans d'introduction :
 
-- **Réception de paiements transparente** : Les utilisateurs peuvent recevoir des paiements Bitcoin même lorsque l'application est fermée, garantissant une fiabilité et une commodité inégalées.
+- **Réception de paiements transparente** : Les utilisateurs peuvent recevoir des paiements Bitcoin même lorsque l'application est fermée, garantissant fiabilité et commodité.
 
 - **Adresses Lightning non-custodiales** : Lipa supporte désormais les adresses Lightning non-custodiales, renforçant la confidentialité et la sécurité en donnant aux utilisateurs un contrôle total sur leurs bitcoins.
 
